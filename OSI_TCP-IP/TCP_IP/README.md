@@ -84,6 +84,9 @@ vi /etc/nginx/nginx.conf
     2. Tầng mạng (Internet)
     3. Tầng giao vận (Transport)
     4. Tầng ứng dụng (Application)
+
+![Mô hình TCP/IP](https://user-images.githubusercontent.com/52046920/178252428-bd73243c-fc3a-4a16-9102-410e859bc8d4.PNG)
+
 * Đi vào chi tiết các tầng như sau
 ## ***1. Tầng vật lý (Network Access)***
 * Là sự kết hợp của tầng Datalink và Physical trong mô hình OSI.
@@ -121,7 +124,7 @@ vi /etc/nginx/nginx.conf
 * TCP/IP là kết hợp của 2 giao thức:
     * IP(Giao thức liên mạng) cho phép các gói tin được gửi đến đích đã định sẵn bằng việc thêm thông tin dẫn đường vào các gói tin.
     * TCP(Giao thức truyền vận) đóng vai trò kiểm tra, đảm bảo an toàn cho các gói tin đi qua mỗi trạm. Nếu TCP nhận thấy gói tin lỗi nó sẽ phát tín hiệu yêu cầu hệ thống gửi lại gói tin khác
-
+![Cách thức hoạt động](https://user-images.githubusercontent.com/52046920/178252630-4b7ed7c1-0616-4e48-b596-ba8386adc945.PNG)
 # ***II.	So sánh với OSI***
 ## ***1. Giống nhau***
 * 2 mô hình có những điểm tương đồng sau:
