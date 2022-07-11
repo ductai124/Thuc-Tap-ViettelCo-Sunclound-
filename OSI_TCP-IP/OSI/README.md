@@ -124,6 +124,7 @@ nối,…
 * Chỉ có duy nhất 1 giai đoạn là truyền dữ liệu.
 * Dữ liệu được truyền độc lập trên các tuyến khác nhau
 # ***III. Phương thức hoạt động của mô hình OSI***
+![Cách thức hoạt động](https://user-images.githubusercontent.com/52046920/178251528-e0e7c6a2-30d8-4424-99f9-75b030b86507.PNG)
 ## ***1. Bên máy gửi***
 * Tại tầng 7 (Tầng ứng dụng/Application) người dùng đưa thông tin vào máy tính dưới dạng văn bản, hình ảnh,...
 * Tại tầng 6 (Tầng trình diễn/Presentation) tiếp nhận thông tin được chuyển đến từ tầng 7, thông tin sẽ được tiến hành mã hóa và nén dữ liệu. Sau khi được mã hóa và nén, dữ liệu được chuyển đến tầng 5.
