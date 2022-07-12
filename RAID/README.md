@@ -131,7 +131,7 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
 ![Raid 6](https://user-images.githubusercontent.com/52046920/178406755-b2702ef1-a97d-4da1-bfdb-696131d5c271.png)
 
 # ***I.	Cài đặt RAID***
-## ***1. Thiết lập RAID 1***
+## ***1. Thiết lập RAID 1 trên centos7***
 * Bước 1: Cập nhật hệ thống và cài đặt mdadm để quản lý RAID
 
 Để thiết lập RAID1 trên hệ điều hành Linux chúng ta cần thực hiện cập nhật (update) hệ thống và cài đặt gói mdadm.
@@ -225,3 +225,27 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
             mount -av
         ```
     ![Kiểm tra](https://user-images.githubusercontent.com/52046920/178436851-c62c6af1-f6fb-45e8-adaf-d18ee1be3b39.png)
+
+## ***2. Thiết lập RAID 5 trên Windows server 2016***
+* Chuẩn bị 3 ổ cứng.
+* Mở thiết lập Disk Management.
+![Mở Disk Managerment](https://user-images.githubusercontent.com/52046920/178456061-a5f577dc-f8d6-4d2b-9159-e7ec23c19e18.png)
+![3 ổ cứng đã chuẩn bị](https://user-images.githubusercontent.com/52046920/178456050-d1e07dff-df54-44a2-92b3-3d06895b42ee.png)
+* Chọn 1 ổ trống click chuột phải sau đó chọn "New RAID-5 Volume Wizard".
+![Chọn New RAID-5 Volume](https://user-images.githubusercontent.com/52046920/178456064-6e15d0c4-1777-46ba-9c88-be395bbe1e7c.png)
+* 1 cửa sổ sẽ hiện ra sau đó nhấp vào next.
+![](https://user-images.githubusercontent.com/52046920/178456068-6fdc4c62-1f9c-4e86-905e-288bb3f9c13e.png)
+* Sau đó chọn những ổ còn lại đã chuẩn bị cho Raid rồi bấm vào add
+![](https://user-images.githubusercontent.com/52046920/178456072-26a3ac8b-2f17-49f6-8410-6c953e9052f1.png)
+* Sau đó gán ký tự ổ đĩa cho ổ đĩa RAID 5 và định dạng ổ đĩa và nhấp vào "Next" và "Next" tiếp tục ở bước tiếp theo.
+![](https://user-images.githubusercontent.com/52046920/178456075-de9380b8-999c-4d09-bf82-20756007e03d.png)
+![](https://user-images.githubusercontent.com/52046920/178456078-e1a527c7-8ad6-4cf6-a641-916476dfd2cf.png)
+* Sau đó bấm Finish và chờ đợi thiết lập Raid trên 3 ổ đó
+![](https://user-images.githubusercontent.com/52046920/178456080-0a902ea9-20a0-42f6-8550-e74db866e1e4.png)
+
+* 3 ổ đang tiến hành thiết lập RAID
+![](https://user-images.githubusercontent.com/52046920/178456083-4f20e424-0721-4345-97f7-ff4efa44d810.png)
+* Sau khi thiết lập xong ta có kết quả
+![](https://user-images.githubusercontent.com/52046920/178456084-b81385b3-0deb-49ee-beac-affcbb142895.png)
+* Ổ E là RAID 5 tạo ra từ 3 ổ mỗi ổ 10GB của dung lượng cuối là 20GB
+![](https://user-images.githubusercontent.com/52046920/178456087-2efe4e48-65b3-4140-b242-3a371c09fe6a.png)
