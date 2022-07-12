@@ -175,6 +175,7 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
 
     * Tiếp theo chạy lệnh sau để kiểm tra xem các đĩa hiện có tham gia RAID nào không:
     ```bash
+    fdisk -l | grep sd
     mdadm -E /dev/sd[b-c]
     mdadm -E /dev/sd[b-c]1
     ```
@@ -197,19 +198,28 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
 * Bước 5: Tạo file system (ext4) cho thiết bị RAID /dev/md0
 
     * Tiếp theo tạo thư mục gắn kết raid1 để gắn thiết bị /dev/md0 thực hiện như bên dưới.
+        
         ```bash
             mkdir raid1
             mount /dev/md0 raid1/
         ```
     ![Mount](https://user-images.githubusercontent.com/52046920/178436844-95b8c057-8c8d-4315-9909-76ecf938e1ae.png)
-        * Kiểm tra bằng lệnh
-            df -h
+    
+    * Kiểm tra bằng lệnh
+            ```bash
+                df -h
+            ```
     ![Kiểm tra mount](https://user-images.githubusercontent.com/52046920/178436848-1ce8c8a0-60d0-4d91-a227-64d53c31244c.png)
-        * Để tự động gắn kết /dev/md0 khi khởi động lại hệ thống chúng ta cần tạo một mục trong tệp /etc/fstab. Bạn có thể sử dụng trình soạn thảo vi để nhập dòng bên dưới vào:
+        
+    * Để tự động gắn kết /dev/md0 khi khởi động lại hệ thống chúng ta cần tạo một mục trong tệp /etc/fstab. Bạn có thể sử dụng trình soạn thảo vi để nhập dòng bên dưới vào:
+            ```bash
             vi /etc/fstab
-        * Lưu lại và chạy lệnh sau để kiểm tra xem có bất kỳ lỗi nào trong mục /etc/fstab không.
+            ```
+    * Lưu lại và chạy lệnh sau để kiểm tra xem có bất kỳ lỗi nào trong mục /etc/fstab không.
+
     ![Thêm thông tin](https://user-images.githubusercontent.com/52046920/178436850-be0b623b-269e-41ee-8cdf-6b061c3cf306.png)
-        * Nếu có lỗi, không reboot server để tránh tình trạng server không thể khởi động. Kiểm tra cấu hình trong file /etc/fstab và chạy lại lệnh cho tới khi không có thông báo lỗi. Kiểm tra bằng câu lệnh
+        
+    * Nếu có lỗi, không reboot server để tránh tình trạng server không thể khởi động. Kiểm tra cấu hình trong file /etc/fstab và chạy lại lệnh cho tới khi không có thông báo lỗi. Kiểm tra bằng câu lệnh.
         ```bash
             mount a
             mount -av
