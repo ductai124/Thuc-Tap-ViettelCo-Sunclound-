@@ -61,15 +61,23 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. RAID là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/RAID#iraid-l%C3%A0-g%C3%AC)
 
-## &ensp; []()
+## &ensp; [1. RAID 0](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/RAID#1raid-0)
 
-## &ensp; []()
+## &ensp; [2. RAID 1](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/RAID#2raid-1)
 
-## &ensp; []()
+## &ensp; [3. RAID 1+0](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/RAID#3raid-10)
 
-# []()
+## &ensp; [4. RAID 5](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/RAID#4-raid-5)
+
+## &ensp; [5. RAID 6](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/RAID#5-raid-6)
+
+# [II. Cài đặt RAID](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/RAID#ic%C3%A0i-%C4%91%E1%BA%B7t-raid)
+
+## &ensp; [1. Thiết lập RAID 1 trên centos7](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/RAID#1-thi%E1%BA%BFt-l%E1%BA%ADp-raid-1-tr%C3%AAn-centos7)
+
+## &ensp; [2. Thiết lập RAID 5 trên Windows server 2016](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/RAID#2-thi%E1%BA%BFt-l%E1%BA%ADp-raid-5-tr%C3%AAn-windows-server-2016)
 ***
 # ***I.	RAID là gì***
 * Raid là viết tắt của Redundant Array of Independent Disks. Là một giải pháp phòng hộ vì nó cho phép ghi dữ liệu lên nhiều đĩa cững cùng lúc. Về sau, Raid đã có nhiều biến thể giúp không chỉ đảm bảo an toàn dữ liệu mà còn giúp gia tăng đáng kể tốc độ truy xuất.
@@ -130,7 +138,7 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
 * Đối tượng: Ưu tiên sử dụng trong các server ứng dụng và file mà sử dụng nhiều ổ lớn để lưu trữ 
 ![Raid 6](https://user-images.githubusercontent.com/52046920/178406755-b2702ef1-a97d-4da1-bfdb-696131d5c271.png)
 
-# ***I.	Cài đặt RAID***
+# ***II.	Cài đặt RAID***
 ## ***1. Thiết lập RAID 1 trên centos7***
 * Bước 1: Cập nhật hệ thống và cài đặt mdadm để quản lý RAID
 
