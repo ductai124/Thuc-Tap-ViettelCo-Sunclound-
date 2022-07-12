@@ -136,20 +136,20 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
 
 Để thiết lập RAID1 trên hệ điều hành Linux chúng ta cần thực hiện cập nhật (update) hệ thống và cài đặt gói mdadm.
 
-![]()
+![Cài đặt mdadm](https://user-images.githubusercontent.com/52046920/178436809-d3124035-e88f-4eb3-8fc3-441be64dbaf4.png)
 * Bước 2: Kiểm tra thông tin ổ đĩa trên máy:
 
-Trước khi tạo RAID1, chúng ta cần có ít nhất hai ổ đĩa cứng chạy lệnh sau để kiểm tra:
-    ```bashshell
+    * Trước khi tạo RAID1, chúng ta cần có ít nhất hai ổ đĩa cứng chạy lệnh sau để kiểm tra:
+    ```bash
     fdisk -l | grep sd
     ```
-![]()
+    ![Kiểm tra ổ cứng](https://user-images.githubusercontent.com/52046920/178436811-645d00cc-a326-4960-aeda-cc92f1c6bd4e.png)
 
-* Ta thấy có 2 đĩa cứng mới. Thực hiện kiểm tra xem các ổ cứng có sử dụng RAID nào chưa bằng lệnh sau.
-    ```bashshell
-    mdadm -E /dev/sd[b-c]
-    ```
-![]()
+    * Ta thấy có 2 đĩa cứng mới. Thực hiện kiểm tra xem các ổ cứng có sử dụng RAID nào chưa bằng lệnh sau.
+        ```bash
+        mdadm -E /dev/sd[b-c]
+        ```
+        ![Kiểm tra đã có Raid sẵn hay chưa](https://user-images.githubusercontent.com/52046920/178436816-23726b2e-a702-4442-b8fc-61accd42c543.png)
 
 * Bước 3: Tạo phân vùng đĩa cứng. Tạo phân vùng đĩa sdb và sdc cho RAID
     * Tạo phân vùng trên ổ đĩa sdb.
@@ -160,7 +160,7 @@ Trước khi tạo RAID1, chúng ta cần có ít nhất hai ổ đĩa cứng ch
         * Nhập giá trị ban đầu, giá trị kết thúc và nhấn phím Enter.
         * Tiếp theo nhấn p để in phân vùng đã được tạo.
     
-    ![]()
+    ![Phân vùng ổ cứng](https://user-images.githubusercontent.com/52046920/178436819-c9b46992-4758-4fa2-a3d4-590169cbab5e.png)
     
     * Thực hiện các bước sau đây để tạo Linux RAID tự động trên các phân vùng:
         * Nhấn L để liệt kê tất cả các loại có sẵn.
@@ -169,35 +169,49 @@ Trước khi tạo RAID1, chúng ta cần có ít nhất hai ổ đĩa cứng ch
         * Sử dụng phím p để in những thay đổi.
         * Cuối cùng chúng ta nhấn phím w lưu các thay đổi.
 
-    ![]()
+    ![Phân vùng ổ cứng](https://user-images.githubusercontent.com/52046920/178436822-90aa4e01-52f2-4056-a389-997b22eee838.png)
 
-* Tương tự thực hiện tạo phân vùng trên sdc.
+    * Tương tự thực hiện tạo phân vùng trên sdc.
 
-* Tiếp theo chạy lệnh sau để kiểm tra xem các đĩa hiện có tham gia RAID nào không:
-mdadm -E /dev/sd[b-c]
-mdadm -E /dev/sd[b-c]1
-![]()
+    * Tiếp theo chạy lệnh sau để kiểm tra xem các đĩa hiện có tham gia RAID nào không:
+    ```bash
+    mdadm -E /dev/sd[b-c]
+    mdadm -E /dev/sd[b-c]1
+    ```
+    ![](https://user-images.githubusercontent.com/52046920/178436827-c7fdd1b6-9290-4851-9c69-27ff7eea4b2b.png)
+    ![](https://user-images.githubusercontent.com/52046920/178436830-d995cd56-9b07-4b35-8616-9443806905ed.png)
 
 * Bước 4: Tạo RAID1. 
     * Tiếp theo tạo thiết bị RAID1 có tên /dev/md0 bằng cách sử dụng lệnh và xác thực RAID1 đã được tạo.
-        ```bashshell
+        ```bash
         mdadm --create /dev/md0 --level=mirror --raid-devices=2 /dev/sd[b-c]1
         ```
     * Trong quá trình tạo hệ thống yêu cầu chúng ta xác nhận tạo RADI thì bấm phím y để xác nhận.
-
-    * Qua kết quả trên cho chúng ta thấy RAID1 đã được tạo với hai phân vùng sdb1 và sdc1. Chúng ta có thể kiểm tra bằng lệnh bên dưới:
-![]()
+    ![Tạo thiết bị Raid](https://user-images.githubusercontent.com/52046920/178436835-695683c3-8646-4d27-aae4-147848ce80ac.png)
+    * Qua kết quả trên thấy RAID1 đã được tạo với hai phân vùng sdb1 và sdc1. Kiểm tra bằng lệnh:
+    ```bash
+    mdadm --detail /dev/md0
+    ```
+    ![Kiểm tra Raid](https://user-images.githubusercontent.com/52046920/178436838-868b7182-a456-47fa-99a0-9d430b9226e2.png)
 
 * Bước 5: Tạo file system (ext4) cho thiết bị RAID /dev/md0
 
     * Tiếp theo tạo thư mục gắn kết raid1 để gắn thiết bị /dev/md0 thực hiện như bên dưới.
-    ```bashshell
-        mkdir raid1
-        mount /dev/md0 raid1/
-    ```
-    * Kiểm tra bằng lệnh
-        df -h
-    * Để tự động gắn kết /dev/md0 khi khởi động lại hệ thống chúng ta cần tạo một mục trong tệp /etc/fstab. Bạn có thể sử dụng trình soạn thảo vi để nhập dòng bên dưới vào:
-        vi /etc/fstab
-    * Lưu lại và chạy lệnh sau để kiểm tra xem có bất kỳ lỗi nào trong mục /etc/fstab không.
-    * Nếu có lỗi, không reboot server để tránh tình trạng server không thể khởi động. Kiểm tra cấu hình trong file /etc/fstab và chạy lại lệnh cho tới khi không có thông báo lỗi.
+        ```bash
+            mkdir raid1
+            mount /dev/md0 raid1/
+        ```
+    ![Mount](https://user-images.githubusercontent.com/52046920/178436844-95b8c057-8c8d-4315-9909-76ecf938e1ae.png)
+        * Kiểm tra bằng lệnh
+            df -h
+    ![Kiểm tra mount](https://user-images.githubusercontent.com/52046920/178436848-1ce8c8a0-60d0-4d91-a227-64d53c31244c.png)
+        * Để tự động gắn kết /dev/md0 khi khởi động lại hệ thống chúng ta cần tạo một mục trong tệp /etc/fstab. Bạn có thể sử dụng trình soạn thảo vi để nhập dòng bên dưới vào:
+            vi /etc/fstab
+        * Lưu lại và chạy lệnh sau để kiểm tra xem có bất kỳ lỗi nào trong mục /etc/fstab không.
+    ![Thêm thông tin](https://user-images.githubusercontent.com/52046920/178436850-be0b623b-269e-41ee-8cdf-6b061c3cf306.png)
+        * Nếu có lỗi, không reboot server để tránh tình trạng server không thể khởi động. Kiểm tra cấu hình trong file /etc/fstab và chạy lại lệnh cho tới khi không có thông báo lỗi. Kiểm tra bằng câu lệnh
+        ```bash
+            mount a
+            mount -av
+        ```
+    ![Kiểm tra](https://user-images.githubusercontent.com/52046920/178436851-c62c6af1-f6fb-45e8-adaf-d18ee1be3b39.png)
