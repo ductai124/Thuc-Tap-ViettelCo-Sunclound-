@@ -78,7 +78,10 @@ vi /etc/nginx/nginx.conf
     4. Tầng vận chuyển (Transport)
     5. Tầng phiên (Session)
     6. Tầng trình diễn (Presentation) 
-    7. Tầng Ứng dụng (Application) 
+    7. Tầng Ứng dụng (Application)
+
+![Mô hình OSI](https://user-images.githubusercontent.com/52046920/178251580-20cda5a5-abb4-49d8-8d75-7ed5a846bae2.PNG)   
+
 * Đi vào chi tiết các tầng sẽ như sau:
 ## ***1. Tầng vật lý (Physical layer)***
 * Tầng vật lý là tầng thấp nhất trong mô hình dùng để xác định các chức năng, thủ tục về điện, cơ, quang để kích hoạt duy trì và giải phóng các kết nối vật lý giữa các hệ thống mạng. Nói đơn giản thì tầng vật lý định nghĩa tất cả các đặc tả về điện và vật lý cho các thiết bị. Trong đó bao gồm bố trí của các chân cắm, các hiệu điện thế, các đặc tả về cáp 
@@ -121,6 +124,7 @@ nối,…
 * Chỉ có duy nhất 1 giai đoạn là truyền dữ liệu.
 * Dữ liệu được truyền độc lập trên các tuyến khác nhau
 # ***III. Phương thức hoạt động của mô hình OSI***
+![Cách thức hoạt động](https://user-images.githubusercontent.com/52046920/178251528-e0e7c6a2-30d8-4424-99f9-75b030b86507.PNG)
 ## ***1. Bên máy gửi***
 * Tại tầng 7 (Tầng ứng dụng/Application) người dùng đưa thông tin vào máy tính dưới dạng văn bản, hình ảnh,...
 * Tại tầng 6 (Tầng trình diễn/Presentation) tiếp nhận thông tin được chuyển đến từ tầng 7, thông tin sẽ được tiến hành mã hóa và nén dữ liệu. Sau khi được mã hóa và nén, dữ liệu được chuyển đến tầng 5.
