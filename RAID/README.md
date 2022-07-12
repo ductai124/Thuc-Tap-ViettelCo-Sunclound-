@@ -88,18 +88,21 @@ vi /etc/nginx/nginx.conf
 * Ưu điểm: Tăng tốc độ đọc ghi
 * Nhược điểm: Không đảm bảo an toàn về dữ liệu còn tăng khả năng mất dữ liệu, không đúng so với mục đích của Raid.
 * Đối tượng sử dụng: người dùng cá nhân là chủ yếu và có nhu cầu đọc ghi ổ cứng mạnh không quá đề cao việc mất mát dữ liệu.
+![Raid 0](https://user-images.githubusercontent.com/52046920/178389092-79644dbc-961d-4be2-be84-1cb245beae12.png)
 ## ***1.	Raid 1***
 * Đây là dạng Raid cơ bản có khả năng đảm bảo an toàn dữ liệu. Yêu cầu ít nhất 2 ổ cứng. Dữ liệu khi đọc ghi sẽ ghi ở 2 ổ giống hệt nhau. Trong trường hợp 1 ổ gặp sự cố dữ liệu cũng đã được ghi ở ổ còn lại đảm bảo sự an toàn của dữ liệu.
 * Tuy nhiên khi sử dụng Raid 1 ta sẽ phải bỏ 1 ổ để chỉ sử dụng làm Mirroring nên dung lượng thực của hệ thống chỉ có dung lượng của 1 ổ
 * Ưu điểm: An toàn về dữ liệu, khả năng hoạt động liên tục cao
 * Nhược điểm: Hiệu suất không cao, chi phí cao do mất 1 nữa tài nguyên ổ cứng để giúp dữ liệu được an toàn
 * Đối tượng sử dụng: Các dịch vụ lưu trữ, các Website nhỏ đến vừa không yêu cầu quá cao về tốc độ đọc ghi ổ cứng.
+![Raid 1](https://user-images.githubusercontent.com/52046920/178389120-e1991635-8875-4b1e-9687-24416ba3d65c.png)
 ## ***1.	Raid 1+0***
 * Là kết hợp của Raid 1 và Raid 0. Raid 1+0 Sở hữu tốc độ đọc ghi của Raid 0 vầ sự an toàn của Raid 1. Để có thể vận hành Raid 1+0 cần tối thiểu 4 ổ cứng. Dữ liệu sẽ được ghi lên đồng thời cả 4 ổ trong 
 chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi như với Raid 0 đối với 2 ổ ghi và sẽ được sao lưu ra 2 ổ sao lưu giống với Raid 1
 * Ưu điểm: An toàn về dữ liệu, khả năng hoạt động liên tục cao, tốc độ đọc ghi nhanh
 * Nhược điểm: Chi phí cao do mất 1 nữa tài nguyên ổ cứng để giúp dữ liệu được an toàn và cần nhiều ổ để có thể vận hành số ổ bắt buộc phải là số chẵn. Vẫn có khả năng mất dữ liệu nếu cặp ổ ghi và ổ sao lưu cùng chết
 * Đối tượng sử dụng: Raid 1+0 thích hợp với tất cả các đối tượng sử dụng (từ những yêu cầu về hiệu suất đến việc đảm bảo an toàn dữ liệu) Nếu đáp ứng được yêu cầu về chi phí.
+![Raid 1+0](https://user-images.githubusercontent.com/52046920/178389189-669a2659-2ddb-4f7a-85ba-cad214ae93aa.png)
 ## ***Raid 5***
 * Cũng là loại Raid lưu trữ truyền thống có thể tách ra lưu trữ các ổ cứng riêng biệt và vẫn có phương án dự phòng khi có sự cố phát sinh đối với 1 ổ bất kỳ. Để thiết lập Raid 3 cần ít nhất 3 ổ cứng.
 * Dữ liệu và bản sao lưu được chia lên tất cả các ổ cứng. Giả sử có n ổ (n>3)nguyên lý Raid 5 như sau:
@@ -112,3 +115,4 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
 * Ưu điểm: Nâng cao hiệu suất, an toàn dữ liệu
 * Nhược điểm: Chi phí cao. không sử dụng được hết toàn bộ dung lượng của toàn bộ ổ(Tổng dung lượng sau cùng=Tổng dung lượng các ổ cứng trừ đi dung lượng 1 ổ). Khả năng mất dữ liệu là vẫn có nếu có từ 2 ổ bị hỏng trở lên.
 * Đối tượng: Tất cả những website, dịch vụ, ứng dụng có số lượng truy cập và yêu cầu tài nguyên từ nhỏ đến lớn.
+![Raid 5](https://user-images.githubusercontent.com/52046920/178389189-669a2659-2ddb-4f7a-85ba-cad214ae93aa.png)
