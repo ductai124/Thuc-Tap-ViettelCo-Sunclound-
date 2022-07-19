@@ -221,3 +221,51 @@ Giải
 |6|192.168.12.160/27|192.168.12.161/27|192.168.12.191/26|192.168.12.190/27|
 |7|192.168.12.192/27|192.168.12.193/27|192.168.12.223/26|192.168.12.222/27|
 |8|192.168.12.224/27|192.168.12.225/27|192.168.12.255/27|192.168.12.254/27|
+
+### ***b. Bài toán số 2***
+* Bài toán tóm tắt địa chỉ (summary)
+* Mục đích: làm gọn bảng định tuyến của các router. Các địa chỉ mạng sẽ được tóm tắt về một địa chỉ mạng lớn hơn đại diện bao trùm tất cả các mạng được tóm tắt.
+* VD:  Hãy tóm tắt các mạng sau đây thành một địa chỉ mạng duy nhất:
+
+            192.168.0.0/24
+
+            192.168.1.0/24
+
+            192.168.2.0/24
+
+            192.168.3.0/24
+
+* Nguyên tắc: khi tóm tắt là xem xét các octet từ trái qua phải và bắt đầu phân tích từ octet có sự khác nhau đầu tiên ở đây là octet thứ ba là octet khác nhau đầu tiên. Ta xét chi tiết octet này:
+
+            192.168.|000000|00.0
+
+            192.168.|000000|01.0
+
+            192.168.|000000|10.0
+
+            192.168.|000000|11.0
+
+* Ta thấy octet thứ ba còn có thêm 6 bit giống nhau. Vậy ta có mạng tóm tắt là 192.168.0.0/22. Chú ý: subnet mask bây giờ là 255.255.252.0 với prefix là 22.
+### ***c. Bài toán số 3 Cho sơ đồ mạng, xác định số bit mượn phù hợp để chia subnet***
+* Ví dụ: Cho một mạng 192.168.1.0/24. Hãy cung cấp đủ các địa chỉ IP cho 5 mạng như sau:
+![](https://vnpro.vn/upload/images/Th%C6%B0%20vi%E1%BB%87n/Ch%C6%B0%C6%A1ng%201/chuong-1-dia-chi-ip-chia-subnet-vlsm-summary-10.jpg)
+* Nhận thấy có tất cả 5 mạng (tính ra 2 router nối nhau là 1 mạng), mạng nhiều host nhất là mạng có 26 host (cộng thêm một địa chỉ cổng router). Gọi số bit mượn là n số bit host là m. Ta có: 
+* $2^{n}$ ≥ 5 (số mạng chia ra tối thiểu phải bằng 5).
+
+* $2^{m}$ – 2 ≥ 26 (nếu mỗi mạng con đáp ứng được số host của mạng 26 host, nó sẽ đáp ứng được yêu cầu về số host của tất cả các mạng còn lại trên sơ đồ).
+* m + n = 8
+
+n = 3, m = 5 là phù hợp. Vậy ta có tất cả 23 = 8 mạng và mỗi mạng này có 25 – 2 = 30 host, đáp ứng được yêu cầu của sơ đồ trên.
+* Các mạng như sau:
+|Số thứ tự mạng|Địa chỉ mạng|
+|-|-|
+|1|192.168.1.0/27|
+|2|192.168.1.32/27|
+|3|192.168.1.64/27|
+|4|192.168.1.96/27|
+|5|192.168.1.128/27|
+|6|192.168.1.160/27|
+|7|192.168.1.192/27|
+|8|192.168.1.224/27|
+
+### ***d. Bài toán số 4 Chia subnet VLSM***
