@@ -102,7 +102,7 @@ vi /etc/nginx/nginx.conf
     * Nhược điểm :
         * TDMA (Time division multiple access): Mỗi nút bị giới hạn ở băng thông trung bình ngay cả khi nó là nút duy nhất vào kênh truyền. Một nút phải luôn luôn chờ đợi đến lượt của mình, ngay cả khi chỉ có nó là nút cần gửi.
         * FDMA (Frequency division multiple access): Nút bị giới hạn ở băng thông trung bình ngay cả khi nó là nút duy nhất vào kênh truyền.
-        * CDMA (Code division multiple access): Chỉ sử dụng trên điện thoại di động
+        * CDMA (Code division multiple access): Thường chỉ sử dụng trên điện thoại di động
 
 ![](https://user-images.githubusercontent.com/52046920/178717364-8325224d-df4b-42db-9146-f31d19cd68a0.png)
 * Truy nhập ngẫu nhiên (random access): Dữ liệu của node truyền chiếm toàn bộ kênh truyền. Cho phép đa truy nhập, chấp nhận va chạm Khi các node gặp va chạm và sẽ truyền lại frame sau 1 khoảng thời gian chờ. Node có thể phải truyền lại nhiều lần
@@ -115,8 +115,9 @@ vi /etc/nginx/nginx.conf
 * Phát hiện lỗi: nút nhận có thể nhận bit 0 trong khi phía gửi gửi bit 1 hoặc ngược lại. Nguyên nhân bit bị lỗi có thể là do tín hiệu bị suy hao hay nhiều điện từ. Nhiều giao thức tầng liên kết dữ liệu cung cấp cơ chế phát hiện lỗi. Điều này được thực hiện bằng cách phía gửi sẽ thiết lập một số bit phát hiện lỗi trong frame và phía nhận thực hiện việc kiểm tra lỗi.
 * Sửa lỗi: Sửa lỗi cũng tương tự phát hiện lỗi. Tuy nhiên không chỉ xác định được bit có khả năng lỗi mà phía nhận còn có khả năng xác định chính xác vị trí lỗi xuất hiện trong frame và do đó có thể sửa được những lỗi này.
 # ***II. Lớp liên kết dữ liệu được chia thành hai lớp con***
-* Kiểm soát liên kết logic (LLC): dùng để liên kết dữ liệu với tầng trên chỉ ra giao thức hoạt động ở tầng mạng (IP, IPX, Apple talk) đã đòng gói ra packet trong phần data của Frame.
-* Kiểm soát truy cập phương tiện (MAC): tham gia trực tiếp việc đóng gói Packet thành Frame thêm vào địa chỉ Mac nguồn và Mac đích trong Frame, thêm vào các nhóm bit bắt đầu và mã kết thúc của một Frame và điều khiển Frame truy cập đường truyền.
+* LLC(Logical Link Control): Nó có trách nhiệm quản lý và đảm bảo tính toàn vẹn của việc truyền dữ liệu. Chúng cung cấp logic cho liên kết dữ liệu. Nó cũng kiểm soát các chức năng đồng bộ hóa, ghép kênh, kiểm tra lỗi hoặc sửa chữa. Nó cũng cho phép giao tiếp đa điểm trên một loạt các mạng máy tính. . Cung cấp chức năng điều khiển lưu lượng, và phát hiện các gói tin bị bỏ (drop) và truyền lại nếu được yêu cầu.
+* MAC(Media Access Control): Là một dãy số 48-bit của phần cứng máy tính, được nhà sản xuất card mạng nhúng vào. Là một định danh duy nhất (unique identifier). Địa chỉ Mac gồm 6 octet, mỗi octet 8 bits, được biểu diễn bằng 6 cặp chữ số hoặc ký tự khác nhau có thể bao gồm bất kể số nào từ 0 đến 9 hoặc chữ cái từ A đến F và được ngăn cách bởi dấu hai chấm. Địa chỉ MAC cung cấp cho lớp con này một bộ nhận dạng duy nhất để mỗi điểm truy cập mạng có thể truyền thông với mạng. Lớp con MAC cũng có trách nhiệm cho việc truy cập cáp mạng, hoặc môi trường truyền thông.
+
 # ***III. Cấu trúc frame***
 ![Cấu trúc frame](https://user-images.githubusercontent.com/52046920/178717371-f1e80f22-4cb8-4859-9b93-b274f65d2901.PNG)
 * Về cơ bản frame gồm có 3 phần:
@@ -167,8 +168,31 @@ PPP cho phép sử dụng đồng thời nhiều giao thức lớp Mạng.
 
     * CONTROL : 1 byte được đặt thành giá trị không đổi là 11000000.
 
-    * PROTOCOL : 1 hoặc 2 byte xác định loại dữ liệu có trong trường trọng tải.
+    * PROTOCOL : 1 hoặc 2 byte xác định loại dữ liệu có trong INFORMATION.
 
     * INFORMATION :Mang dữ liệu từ lớp mạng. Độ dài tối đa là 1500 byte.
 
     * FCS : Đây là một chuỗi kiểm tra khung 2 byte hoặc 4 byte để phát hiện lỗi. Mã tiêu chuẩn được sử dụng là CRC (mã dự phòng theo chu kỳ).
+## ***3. Công nghệ ETHERNET***
+* Là 1 cộng nghệ mạng sử dụng kết nối các mạng lại với nhau trong mạng cục bộ. Cho phép các thiết bị có thể giao tiếp với nhau qua 1 giao thức và 1 bộ quy tắc hoặc ngôn ngữ mạng chung.
+* Là một giao thức DATALINK nó xác định 2 đơn vị truyền: Packet và Frame.
+* Gói tín của Ethernet Ethernet IEEE 802.3 gồm:
+    * Preamble Gồm 1 dãy các giá trị bit 0 và 1 xen kẽ đế báo hiệu trạm nhận có frame đang tới. Cho phép các thiết bị trên mạng dễ dàng đồng bộ, cung cấp đồng bộ hóa ở mức bit. Độ dài 56 bit(7Byte) như sau:
+    10101010 - 10101010 - 10101010 - 10101010 - 10101010 - 10101010 - 10101010
+    * SFD(Start Frame Delimiter): là 1 chuỗi 8 bit(1 Byte) 10101011. đánh dấu kết thúc của preamble, trường đầu tiên của một packet Ethernet, và chỉ ra điểm bắt đầu của một frame Ethernet bằng 2 bit cuối là 11. SFD được thiết kế để phá vỡ pattern bit của preamble và đánh tín hiệu sự bắt đầu của một frame thực sự. 
+    * Cấu trúc frame Ethernet IEEE 802.3 gồm:
+        * Destination ADDRESS(DA): Gồm 6 Bytes để xác nhận trạm sẽ nhận frame. Chứa địa chỉ MAC của đích sắp đến của gói tin.
+        * Source Address (SA): Gồm 6 bytes chứa địa chỉ MAC của thiết bị cuối cùng chuyển tiếp gói.
+        * EtherType 2 Bytes và có thể dùng cho nhiều mục đích khác nhau. Nếu <= 1500 thì nó được dùng chỉ kích thước payload bằng octet, nếu >= 1536 thì dược dùng chỉ kiểu EtherType, xác định protocol nào được đóng gói trong payload.
+        * Payload có dung lượng lớn nhất 1500 Bytes. Nó chứa dữ liệu từ lớp mạng
+        * Frame check sequence(FCS): Là 1 phương pháp kiểm tra phát hiện lỗi theo chu kỳ, có độ dài 4 Bytes. Nó cho phép kiểm tra và phát hiện dữ liệu bị hỏng bên trong toàn bộ frame theo mã CRC-32
+## ***3. Giao thức ARP***
+* ARP(Address Resolution Protocol) là một giao thức truyền thông phân giải địa chỉ động giữa địa chỉ lớp network và địa chỉ lớp datalink.
+* Quá trình thực hiện bằng cách: một thiết bị IP trong mạng gửi một gói tin broadcast đến toàn mạng yêu cầu thiết bị khác gửi trả lại địa chỉ phần cứng ( địa chỉ lớp datalink ) của mình.
+* Ban đầu ARP chỉ được sử dụng trong mạng Ethernet để phân giải địa chỉ IP và địa chỉ MAC. Nhưng ngày nay ARP đã được ứng dụng rộng rãi và dùng trong các công nghệ khác dựa trên lớp hai.
+* Cách thức hoạt động:
+    * Khi một network device muốn biết MAC address của một network device nào đó mà nó đã biết địa chỉ ở tầng network (IPv4) , nó sẽ gửi một “ARP request” bao gồm địa chỉ MAC address của nó và IP address của network device mà nó cần biết MAC address trên toàn bộ miền broadcast .
+    * Mỗi network device nhận được request này sẽ so sánh địa chỉ IP trong request với IP address của mình . Nếu trùng IP address thì sẽ gửi ngược lại cho network device kia một packet “ARP request” ( trong đó có MAC address của mình ) .
+# ***IV. Các Thiết bị hoạt động trên tầng này***
+* Switch là thiết bị chủ yếu ở tầng này vì nó có chức năng chuyển mạch, cụ thể là chuyển các Frame. Switch hoạt động trên 7 tầng của OSI nhưng nhiệm vụ chuyển mạch là nhiệm vụ chính tại tầng Data link.
+* Bridge là một thiết bị hoạt động ở lớp 2 của mô hình OSI dùng để kết nối các phân đoạn mạng nhỏ có cùng cách đánh địa chỉ và công nghệ mạng lại với nhau và gửi các gói dữ liệu giữa chúng. Việc trao đổi dữ liệu giữa hai phân đoạn mạng được tổ chức một cách thông minh cho phép giảm các tắc nghẽn cổ chai tại các điểm kết nối. Các dữ liệu chỉ trao đổi trong một phân đoạn mạng sẽ không được truyền qua phân đoạn khác, giúp làm giảm lưu lượng trao đổi giữa hai phân đoạn. Bridge có thể nối nhiều hub lại với nhau như hình dưới đây.
