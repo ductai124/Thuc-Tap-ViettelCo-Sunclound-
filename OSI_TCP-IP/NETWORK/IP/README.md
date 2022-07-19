@@ -257,6 +257,7 @@ Giải
 
 n = 3, m = 5 là phù hợp. Vậy ta có tất cả 23 = 8 mạng và mỗi mạng này có 25 – 2 = 30 host, đáp ứng được yêu cầu của sơ đồ trên.
 * Các mạng như sau:
+
 |Số thứ tự mạng|Địa chỉ mạng|
 |-|-|
 |1|192.168.1.0/27|
