@@ -62,7 +62,7 @@ vi /etc/nginx/nginx.conf
 ***
 # Mục lục
 # [I. Mạng máy tính là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#im%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh-l%C3%A0-g%C3%AC)
-# [II. Các đặc điểm của hệ thống mạng](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#ii-c%C3%A1c-%C4%91%E1%BA%B7c-%C4%91i%E1%BB%83m-c%E1%BB%A7a-h%E1%BB%87-th%E1%BB%91ng-m%E1%BA%A1ng)
+# [II. Các đặc điểm của hệ thống mạng](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#ii-c%C3%A1c-%C4%91%E1%BA%B7c-%C4%91i%E1%BB%83m-c%E1%BB%A7a-h%E1%BB%87-th%E1%BB%91ng-m%E1%BA%A1ng-1)
 ## &ensp; [1. Tốc độ(Speed)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#1-t%E1%BB%91c-%C4%91%E1%BB%99speed)
 
 ## &ensp; [2. chi phí(Cost)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#2-chi-ph%C3%ADcost)
