@@ -77,7 +77,7 @@ vi /etc/nginx/nginx.conf
 
 ## &ensp; [7. Mô hình(Topology)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#7-m%C3%B4-h%C3%ACnhtopology)
 
-# [III. Các loại sơ đồ mạng](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#iii-c%C3%A1c-lo%E1%BA%A1i-s%C6%A1-%C4%91%E1%BB%93-m%E1%BA%A1ng)
+# [III. Các loại sơ đồ mạng](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#iii-c%C3%A1c-lo%E1%BA%A1i-s%C6%A1-%C4%91%E1%BB%93-m%E1%BA%A1ng-1)
 
 
 ## &ensp; [1. Mô hình bus](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#1-m%C3%B4-h%C3%ACnh-bus)
