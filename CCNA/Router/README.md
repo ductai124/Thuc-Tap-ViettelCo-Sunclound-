@@ -61,15 +61,17 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. Router là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#irouter-l%C3%A0-g%C3%AC)
+
+# [II. Cấu hình Router cơ bản](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#iic%E1%BA%A5u-h%C3%ACnh-router-c%C6%A1-b%E1%BA%A3n)
+
+## &ensp; [1. Tiến hành cấu hình hostname cho Router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#1-ti%E1%BA%BFn-h%C3%A0nh-c%E1%BA%A5u-h%C3%ACnh-hostname-cho-router)
+
+## &ensp; [2. Thiết lập mật khẩu Console và mật khẩu Enable](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#2-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%ADt-kh%E1%BA%A9u-console-v%C3%A0-m%E1%BA%ADt-kh%E1%BA%A9u-enable)
 
 ## &ensp; []()
 
-## &ensp; []()
 
-## &ensp; []()
-
-# []()
 ***
 # ***I.	Router là gì***
 * Router (thiết bị định tuyến hoặc bộ định tuyến) là thiết bị mạng dùng để chuyển các gói dữ liệu đến các thiết bị đầu cuối. Nói một cách dễ hiểu, Router là một thiết bị để chia sẻ Internet tới nhiều các thiết bị khác trong cùng lớp mạng.
@@ -153,7 +155,13 @@ R1# write memmory
 ```
 
 ![](https://user-images.githubusercontent.com/52046920/180779793-8e318ddf-10f2-405a-a53b-f51355c8aaf8.png)
+
+
 * Tắt router đi bật lại để kiểm tra cấu hình
+
+![](https://user-images.githubusercontent.com/52046920/180779810-416964b2-7dc1-4b0f-afb3-c2bca188e11f.png)
+
+
 ## ***2. Thiết lập mật khẩu Console và mật khẩu Enable***
 * Mật khẩu console dùng để kiểm soát cấu hình quả cổng console. Mật khẩu enable để kiểm soát cho phép những người có quyền hạn mới được phép cấu hình router
 * Thiết lập mật khẩu console, Đầu tiên truy cập chế độ Global Configuration Mode
@@ -163,7 +171,6 @@ R1# config terminal
 R1(config)#
 ```
 * Sau đó truy cập chế độ line bằng câu lệnh
-![](https://user-images.githubusercontent.com/52046920/180779810-416964b2-7dc1-4b0f-afb3-c2bca188e11f.png)
 ```cisco
 R1(config)# line console 0              ///console 0 do các cisco router thường chỉ có 1 cổng console và mặc định là 0
 R1(config-line)#
