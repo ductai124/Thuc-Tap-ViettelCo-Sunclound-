@@ -112,16 +112,20 @@ vi /etc/nginx/nginx.conf
 ## ***1. Mô hình bus***
 * Các thiết bị kết nối với nhau qua 1 trục dây gọi là trục bus
 * Một thiết bị muốn gửi dữ liệu thì nó sẽ gửi dữ liệu ra môi trường truyền và mọi thiết bị trong mô hình đều nhận được dữ liệu. Nên nó không có bảo mật nên hiện không còn được sử dụng phổ biến nữa
+![](https://bkhost.vn/wp-content/uploads/2022/06/image9-e1654485985949.jpg)
 ## ***2. Mô hình Ring***
 * Các thiết bị kết nối với nhau thành 1 vòng tròn khép kín.
 * Một thiết bị muốn gửi dữ liệu thì dữ liệu sẽ đi qua các thiết bị trung gian theo dạng vòng để đến thiết bị nhận
+![](https://bkhost.vn/wp-content/uploads/2022/06/image2-2-e1654486031333.jpg)
 * Ưu điểm của mạng dạng vòng: có thể nới rộng hệ thống mạng ra xa. Số lượng dây dẫn cần thiết để sử dụng cũng ít hơn so với hai mô hình Star và Bus. 
 * Nhược điểm: tồn tại 1 khuyết điểm lớn là đường dây khép kín. Một khi tín hiệu bị ngắt tại một điểm nào đó, toàn bộ hệ thống cũng sẽ ngừng hoạt động.
 * Do đó cấu trúc Dual ring được phát triển để hạn chế nhược điểm của Ring
+![](https://bkhost.vn/wp-content/uploads/2022/06/image1-4-e1654486144552.jpg)
 * Ở Dual Ring các dữ liệu chạy hai chiều song song ngược chiều với nhau bằng cách thêm một cấu trúc liên kết mạng tạo ra cấu trúc liên kết vòng kép. Vậy nên khi 1 vòng gặp sự cố thì sẽ có vòng còn lại dự phòng
 ## ***3. Mô hình Star***
 * Các thiết bị đều được kết nối với 1 thiết bị trung gian.
 * Khi 1 thiết bị muốn gửi dữ liệu thì nó sẽ gửi qua thiết bị trung gian rồi đến thiết bị đích.
+![](https://bkhost.vn/wp-content/uploads/2022/06/image3-1-e1654485949758.jpg)
 * Ưu điểm:
     * Có khả năng mở rộng dễ dàng mà không ảnh hưởng đến các thiết bị khác.
     * Khi 1 thiết bị không phải thiết bị trung tâm xảy ra vấn đề thì không ảnh hưởng đến các thiết bị còn lại trong mạng
@@ -131,7 +135,7 @@ vi /etc/nginx/nginx.conf
     * Tốn kém chi phí cho băng thông và hiệu suất mạng.
 * Để giải quyết được phần nào nhược điểm của mô hình này mô hình Extended Star được phát triển.
 * Extended Star là sự kết hợp giữa các mạng Star với nhau với nhiều thiết bị tập trung hơn. Ưu điểm của mạng hình này là có thể gia tăng khoảng cách hay độ lớn của mạng hình Star. Khi các thiết bị tập trung nhỏ xảy ra sự cố thì phần còn lại của mô hình không bị ảnh hưởng. Tuy nhiên thiết bị trung tâm lớn xảy ra sự cố thì mô hình vẫn sẽ không hoạt động
-
+![](https://slideplayer.com/slide/8014276/25/images/17/Extended+Star.jpg)
 
 ## ***4. Mô hình full Mesh***
 * Là 1 mô hình mà tất cả thiết bị trong mô hình mạng này đều sẽ được kết nối với nhau. 
@@ -139,7 +143,9 @@ vi /etc/nginx/nginx.conf
     * Do tất cả các thiết bị đều được kết nối với nhau nên tính dự phòng là vô cùng cao
 * Nhược điểm
     * Chi phi cực cao nếu mở rộng mô hình ra
+![](https://bkhost.vn/wp-content/uploads/2022/06/image10-e1654486282846.jpg)
 ## ***5. Mô hình partial Mesh***
 * Do chi phí để thực hiện mô hình Mesh quá cao nên mô hình Partial Mesh được đưa thêm
 * Sơ đồ này không có tất cả những đường kết nối tới những thiết bị còn lại tuy nhiên những thiết bị quan trọng sẽ được kết nối với tất cả các thiết bị còn lại.
 * Giảm thiểu được chi phí so với full Mesh, vẫn có tính dự phòng đối với những thiết bị quan trọng tuy nhiên tính dự phòng không cao bằng
+![](https://ofbit.in/wp-content/uploads/2022/05/Partial-Mesh-Topology-OFBIT-768x768.jpg)
