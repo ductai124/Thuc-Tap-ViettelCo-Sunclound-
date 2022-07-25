@@ -61,15 +61,34 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. Mạng máy tính là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#im%E1%BA%A1ng-m%C3%A1y-t%C3%ADnh-l%C3%A0-g%C3%AC)
+# [II. Các đặc điểm của hệ thống mạng](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#ii-c%C3%A1c-%C4%91%E1%BA%B7c-%C4%91i%E1%BB%83m-c%E1%BB%A7a-h%E1%BB%87-th%E1%BB%91ng-m%E1%BA%A1ng)
+## &ensp; [1. Tốc độ(Speed)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#1-t%E1%BB%91c-%C4%91%E1%BB%99speed)
 
-## &ensp; []()
+## &ensp; [2. chi phí(Cost)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#2-chi-ph%C3%ADcost)
 
-## &ensp; []()
+## &ensp; [3. tính bảo mật(Security)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#3-t%C3%ADnh-b%E1%BA%A3o-m%E1%BA%ADtsecurity)
 
-## &ensp; []()
+## &ensp; [4. Độ sẵn sàng(Availability)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#4-%C4%91%E1%BB%99-s%E1%BA%B5n-s%C3%A0ngavailability)
 
-# []()
+## &ensp; [5. Khả năng mở rộng(Scalability)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#5-kh%E1%BA%A3-n%C4%83ng-m%E1%BB%9F-r%E1%BB%99ngscalability)
+
+## &ensp; [6. Độ tin cậy(Reliability)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#6-%C4%91%E1%BB%99-tin-c%E1%BA%ADyreliability)
+
+## &ensp; [7. Mô hình(Topology)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#7-m%C3%B4-h%C3%ACnhtopology)
+
+# [III. Các loại sơ đồ mạng](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#iii-c%C3%A1c-lo%E1%BA%A1i-s%C6%A1-%C4%91%E1%BB%93-m%E1%BA%A1ng)
+
+
+## &ensp; [1. Mô hình bus](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#1-m%C3%B4-h%C3%ACnh-bus)
+
+## &ensp; [2. Mô hình Ring](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#2-m%C3%B4-h%C3%ACnh-ring)
+
+## &ensp; [3. Mô hình Star](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#3-m%C3%B4-h%C3%ACnh-star)
+
+## &ensp; [4. Mô hình full Mesh](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#4-m%C3%B4-h%C3%ACnh-full-mesh)
+
+## &ensp; [5. Mô hình partial Mesh](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Network%20Basic#5-m%C3%B4-h%C3%ACnh-partial-mesh)
 ***
 # ***I.	Mạng máy tính là gì***
 * Mạng máy tính là một hệ thống tập hợp bởi nhiều máy tính, laptop và các thiết bị được kết nối/liên kết với nhau bởi đường truyền vật lý theo một kiến trúc (Network Architecture) nào đó nhằm trao đổi dữ liệu và chia sẻ tài nguyên cho nhau.
