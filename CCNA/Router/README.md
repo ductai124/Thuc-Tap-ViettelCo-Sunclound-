@@ -120,9 +120,9 @@ Router>
 ```
 * Có thể sử dụng tính năng hỗ trợ gợi nhớ câu lệnh bằng cú cách gõ ?
 * ví dụ:
-![]()
-![]()
-![]()
+![](https://user-images.githubusercontent.com/52046920/180779798-73ad59c9-c0e5-4348-aeec-6d70a59ceb32.png)
+![](https://user-images.githubusercontent.com/52046920/180779801-e50f4f31-7fbc-4ecf-be2c-94b6ea90a465.png)
+![](https://user-images.githubusercontent.com/52046920/180779804-ae3ca013-f99c-4d25-8073-151f446ed048.png)
 
 ## ***1. Tiến hành cấu hình hostname cho Router***
 * Tiến hành truy cập vào chế độ Global Configuration Mode
@@ -146,10 +146,13 @@ R1(config)#
 R1(config)# exit
 R1# show running-config
 ```
+![](https://user-images.githubusercontent.com/52046920/180779788-2f78f670-f7f9-4181-b645-924f62be578c.png)
 * Sau đó tiến hành lưu cấu hình dữ liệu đề phòng trường hợp router bị tắt thì sẽ phải cấu hình lại từ đầu
 ```
 R1# write memmory
 ```
+
+![](https://user-images.githubusercontent.com/52046920/180779793-8e318ddf-10f2-405a-a53b-f51355c8aaf8.png)
 * Tắt router đi bật lại để kiểm tra cấu hình
 ## ***2. Thiết lập mật khẩu Console và mật khẩu Enable***
 * Mật khẩu console dùng để kiểm soát cấu hình quả cổng console. Mật khẩu enable để kiểm soát cho phép những người có quyền hạn mới được phép cấu hình router
@@ -160,11 +163,14 @@ R1# config terminal
 R1(config)#
 ```
 * Sau đó truy cập chế độ line bằng câu lệnh
+![](https://user-images.githubusercontent.com/52046920/180779810-416964b2-7dc1-4b0f-afb3-c2bca188e11f.png)
 ```cisco
 R1(config)# line console 0              ///console 0 do các cisco router thường chỉ có 1 cổng console và mặc định là 0
 R1(config-line)#
 ```
+
 * Sau đó cấu hình mật khẩu cho console như sau
+
 ```cisco
 R1(config-line)# password viettelcoTai              ///Đây là mật khẩu console
 R1(config-line)# login          ///Áp dụng mật khẩu
