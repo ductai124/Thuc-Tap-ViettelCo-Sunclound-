@@ -61,7 +61,7 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. Router là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#irouter-l%C3%A0-g%C3%AC)
+# [I. Router là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#i-router-l%C3%A0-g%C3%AC)
 
 # [II. Cấu hình Router cơ bản](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#iic%E1%BA%A5u-h%C3%ACnh-router-c%C6%A1-b%E1%BA%A3n)
 
