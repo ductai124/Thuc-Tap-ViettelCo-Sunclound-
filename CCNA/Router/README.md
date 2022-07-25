@@ -62,10 +62,10 @@ vi /etc/nginx/nginx.conf
 ***
 # Mục lục
 # [I. Router là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#irouter-l%C3%A0-g%C3%AC)
+# [II. Cấu hình Router cơ bản](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#iic%E1%BA%A5u-h%C3%ACnh-router-c%C6%A1-b%E1%BA%A3n)
+## &ensp; [1. Tiến hành cấu hình hostname cho Router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#1-ti%E1%BA%BFn-h%C3%A0nh-c%E1%BA%A5u-h%C3%ACnh-hostname-cho-router)
 
-## &ensp; []()
-
-## &ensp; []()
+## &ensp; [2. Thiết lập mật khẩu Console và mật khẩu Enable](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#2-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%ADt-kh%E1%BA%A9u-console-v%C3%A0-m%E1%BA%ADt-kh%E1%BA%A9u-enable)
 
 ## &ensp; []()
 
