@@ -188,6 +188,7 @@ R1(config-line)# login          ///Áp dụng mật khẩu
 R1# write memmory
 ```
 * Ta cũng có thể kiểm tra mật khẩu bằng câu lệnh show running-config
+
 ![](https://user-images.githubusercontent.com/52046920/180914547-7f48c711-f6fe-4782-a638-7306bac3b1a8.png)
 * Trong tình huông muốn gỡ mật khẩu thì vẫn truy cập vào truy cập chế độ line  sau đó thực hiện như sau
 ```cisco
@@ -209,6 +210,7 @@ R1(config)# enable password tai123
 R1# write memmory
 ```
 * Kiểm tra bằng câu lệnh show running-config
+
 ![](https://user-images.githubusercontent.com/52046920/180914545-e27a7c4f-cfcf-4282-b44c-0f6ad20b3994.png)
 * Trong tình huông muốn gỡ mật khẩu thì vẫn truy cập chế độ Global Configuration Mode sau đó thực hiện như sau
 ```cisco
@@ -250,6 +252,7 @@ no shutdown         ///để bật cổng giao tiếp lên
 ```
 
 * Các cổng giao tiếp khác
+
 ![](https://user-images.githubusercontent.com/52046920/180914539-4426010e-63a3-46f6-aa40-90812c1291bd.png)
 * Tiến hành kiểm tra bằng câu lệnh
 ```cisco
@@ -268,4 +271,117 @@ no shutdown
 ```
 * Protocol muốn ở trạng thái up thì phải được cắm cap và kết nối với thiết bị khác
 * Kiểm tra nối router với 2 switch 1 switch nối với cổng giao tiếp đã thiết lập ip và 1 switch kết nối với cổng giao tiếp chưa thiếp lập ip. Ta thấy được Switch kết nối với cổng giao tiếp đã thiết lập ip có thể kết nối và truyền dữ liệu với router còn switch còn lại thì không.
+
 ![](https://user-images.githubusercontent.com/52046920/180914535-3ee115e8-79cb-4fec-9536-794869dabfbe.png)
+* Nối thêm máy tính và kiểm tra kết nối đến với router
+* Kết nối 2 máy tính đến switch và đặt ip cho nó là 192.168.1.3
+
+![](https://user-images.githubusercontent.com/52046920/180914531-5a36269e-6995-4deb-8b7a-827eade85418.png)
+* Kiểm tra ping từ router đến máy tính và từ máy tính đến router
+* Ping từ router đến máy tính
+
+![](https://user-images.githubusercontent.com/52046920/180914548-eba68250-ebd8-4079-80c4-406928b1353a.png)
+    
+* ping từ máy tính đến router
+
+![](https://user-images.githubusercontent.com/52046920/180914548-eba68250-ebd8-4079-80c4-406928b1353a.png)
+* Đây là ping thành công
+
+## ***5. Tính năng chống trôi dòng lệnh Logging Synchronous***
+* Khi cấu hình thiết bị, các log ghi ra màn hình terminal từ các sự kiện sẽ bị dính vào các câu lệnh đang. Điều này sinh ra sự khó chịu và khó quan sát các thao tác dòng lệnh đang sử dụng, chính vì vậy câu lệnh logging synchronous sẽ hỗ trợ chúng ta nhảy dòng giữ nguyên dòng config đang gõ nếu có sự kiện log nào bắn ra màn hình terminal. Khảo sát 2 tình huống.    
+* Tắt chống trôi dòng lệnh thực hiện tắt bằng câu lệnh
+
+```cisco
+Router(config)# line console 0              
+Router(config-line)#no logging synchronous
+```
+* Giả sử ta thực hiện no shutdown với interface gigabitEthernet 0/0/0 để xuất hiện log. Sau khi xuất hiện log ta phải bấm thêm enter hoặc thực hiện lệnh tiếp theo ngay sau đoạn log. Điều này tốn thêm 1 bước và nếu như thực hiện luông thao tác dòng lệnh mà không enter xuống dòng thì ta có thể sẽ nhầm chế độ truy cập dẫn đến các bước cấu hình sai và mất thời gian 
+![]()
+* Bật chống trôi dòng lệnh
+```cisco
+Router(config)# line console 0              
+Router(config-line)#logging synchronous
+```
+* Thực hiện như trên nhưng đối với interface gigabitEthernet 0/0/1. Sau khi chạy lệnh no shutdown ta thấy dòng lệnh tự nhảy xuống dòng và hiện thị được chế độ cấu hình đang được sử dụng. nó giúp giảm thao tác, tránh nhầm lẫn, tránh gây khó chịu và đỡ mất thời gian khi cấu hình. 
+
+## ***6. Tính năng phân giải tên miền ip domain-lookup***
+* Tính năng này tự động phân dải một câu lệnh nhập vào không đúng sang một host name.
+* Trong quá trình cấu hình cisco router khi ta chạy dòng lệnh sai thì router sẽ cố gắng phân giải tên câu lệnh đó ra địa chỉ ip và việc này xáy ra rất lâu ta có thể dừng quá trình đó lại bằng cách bấm tổ hợp phím Ctrel + Shift + 6.
+vậy để thuận tiện trong việc cấu hình ta nên tắt chế độ này đi
+```cisco
+R1(config)#no ip domain-lookup
+```
+
+
+![](https://user-images.githubusercontent.com/52046920/181007953-59e01374-1193-431c-b501-89c8efd6afb9.png)
+* Khi đó router sẽ không cố phân giải những câu lệnh sai thành tên miên nữa. Trong quá trình cấu hình nên tắt đi để tăng tốc độ cấu hình
+
+* Bật tính năng này bằng câu lệnh
+```cisco
+R1(config)#ip domain-lookup
+```
+## ***7. Lưu cấu hình và khởi động lại thiết bị***
+* Như đã nói ở các phần cấu hình trên. Mục đích lưu cấu hình để khi router khơi động lại nếu như không lưu cấu hình trước đó toàn bộ cấu hình sẽ bị mất hết và câu lệnh lưu cấu hình là
+```
+R1# write memmory
+```
+* Ngoài ra còn có câu lệnh 
+```
+R1# copy running-config startup-config          /// lưu cấu hình từ ram(running config) vào nvram (Startup-config)
+```
+* Đồng ý lưu thì bấm enter
+* Sử dụng câu lệnh reload để khởi động lại router và kiểm tra kết quả.
+
+
+## ***8. Xóa cấu hình và khởi động lại thiết bị***
+* Mục đích: để cấu hình lại từ đầu router xóa sạch cấu hình đã được thiết lập.
+* Ví dụ: khi ta mua 1 con router cũ về và muốn cấu hình cho hệ thống của mình nhưng con router đã được thiết lập trước các cấu hình như hostname là R3 và ip là 192.168.10.1 khi đó ta thực hiện như sau
+
+* Thực hiện câu lệnh xóa toàn bộ cấu hình router như sau
+
+```cisco
+R3# erase startup-config
+```
+![](https://user-images.githubusercontent.com/52046920/181007949-4f0cab03-7810-4c2d-8fbe-930223c145df.png)
+
+* Kiểm tra bằng câu lệnh
+```cisco  
+R3# show startup-config
+```
+* Vậy cấu hình đã được xóa ta khởi động lại bằng lệnh reload và cấu hình router từ còn số 0 theo ý của mình
+
+## ***8. Tính năng mã hóa mật khẩu trong file cấu hình***
+* Mục đích: giảm nguy cơ rò rỉ thông tin về bảo mật
+* Mã hóa bằng thuật toán md7
+* khi thực hiện câu lệnh mã hóa thì mật khẩu mã hóa chỉ lưu vào running-config và startup-config chưa được mã hóa nên ngay sau khi ma hóa ta thực hiện lưu cấu hình thì mật khẩu tren startup-config cũng được mã hóa theo.
+* Do md7 là thuật toán mã hóa 1 chiều nên dù cho có huy dịch vụ mã hóa thì mật khẩu vẫn không được khổi phục ở trên running-config và startup-config. Ta chỉ có thể đặt lại mật khẩu để mật khẩu mới hiển thị được dưới dạng không mã hóa
+* Thực hiện mã hóa một router có mật khẩu console là 0837686717 và mật khẩu enable là tai123 như sau
+```cisco
+Router(config)# service password-encryption.
+Router(config)#exit
+Router# write memmory           ///Lưu để mật khẩu mã hóa được ghi vào startup-config
+```
+
+* Kiểm tra bằng lệnh
+
+```cisco
+Router# show running-config
+
+Router# show startup-config
+```
+
+![](https://user-images.githubusercontent.com/52046920/181007923-9742c95e-60b2-4523-a1a3-d90155d807d4.png)
+
+![](https://user-images.githubusercontent.com/52046920/181007915-c90a5b9d-d2a9-4250-890c-e98a42afa7cf.png)
+
+## ***9. Khai báo địa chỉ IP trên Cisco Switch***
+* Mục đích: trong tình huống muốn sử dụng telnet đến switch để cấu hình từ xa hoặc muốn lưu cấu hình dự phòng của switch trên server thì phải đặt ip cho switch
+* Switch không thể tự đặt ip trên các cổng giao tiếp của mình nên muốn đặt được ip cho switch thì phải sử dụng 1 interface đặc biệt đó là interface vlan 1
+* Cách cấu hình tương tự với router
+```cisco
+Switch>enable
+Switch#config terminal
+Switch(config)#interface vlan 1
+Switch(config-if)#ip address 192.168.1.10 255.255.255.0
+Switch(config-if)#no shutdown
+```
