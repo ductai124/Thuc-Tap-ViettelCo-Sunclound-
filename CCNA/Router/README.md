@@ -182,6 +182,12 @@ R1(config-line)#
 R1(config-line)# password viettelcoTai              ///Đây là mật khẩu console
 R1(config-line)# login          ///Áp dụng mật khẩu
 ```
+* Để kiểm tra ta exit 3 lần để thoát ra khỏi truy cập router thì nó đã bắt ta phải đăng nhập mật khẩu console sau đó nhớ lưu lại cấu hình nếu không muốn khi router khởi động lại cấu hình bị mất
+ ```
+R1# write memmory
+```
+* Ta cũng có thể kiểm tra mật khẩu bằng câu lệnh show running-config
+![]()
 * Trong tình huông muốn gỡ mật khẩu thì vẫn truy cập vào truy cập chế độ line  sau đó thực hiện như sau
 ```cisco
 R1(config-line)# no password            
@@ -195,10 +201,14 @@ R1(config)#
 ```
 * Sau đó cấu hình mật khẩu enable như sau
 ```cisco
-R1(config-line)# enable password tai123              
+R1(config)# enable password tai123              
+```
+* Muốn kiểm tra thì quay lại chế độ đầu tiên sau đó truy cập chế độ đPriviledged EXEC Mode router sẽ bắt ta đăng nhập mật khẩu enable. Nhớ lưu lại cấu hình nếu không muốn khi router khởi động lại cấu hình bị mất
+ ```
+R1# write memmory
 ```
 * Trong tình huông muốn gỡ mật khẩu thì vẫn truy cập chế độ Global Configuration Mode sau đó thực hiện như sau
 ```cisco
-R1(config-line)# no enable password            
+R1(config)# no enable password            
 
 ```
