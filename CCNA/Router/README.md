@@ -81,9 +81,9 @@ vi /etc/nginx/nginx.conf
 
 ## &ensp; [8. Xóa cấu hình và khởi động lại thiết bị](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#8-x%C3%B3a-c%E1%BA%A5u-h%C3%ACnh-v%C3%A0-kh%E1%BB%9Fi-%C4%91%E1%BB%99ng-l%E1%BA%A1i-thi%E1%BA%BFt-b%E1%BB%8B)
 
-## &ensp; [9. Tính năng mã hóa mật khẩu trong file cấu hình](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#8-t%C3%ADnh-n%C4%83ng-m%C3%A3-h%C3%B3a-m%E1%BA%ADt-kh%E1%BA%A9u-trong-file-c%E1%BA%A5u-h%C3%ACnh)
+## &ensp; [9. Tính năng mã hóa mật khẩu trong file cấu hình](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#9-t%C3%ADnh-n%C4%83ng-m%C3%A3-h%C3%B3a-m%E1%BA%ADt-kh%E1%BA%A9u-trong-file-c%E1%BA%A5u-h%C3%ACnh)
 
-## &ensp; [1. Khai báo địa chỉ IP trên Cisco Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#9-khai-b%C3%A1o-%C4%91%E1%BB%8Ba-ch%E1%BB%89-ip-tr%C3%AAn-cisco-switch)
+## &ensp; [10. Khai báo địa chỉ IP trên Cisco Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#10-khai-b%C3%A1o-%C4%91%E1%BB%8Ba-ch%E1%BB%89-ip-tr%C3%AAn-cisco-switch)
 
 ## &ensp; []()
 ***
