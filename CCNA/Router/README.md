@@ -122,6 +122,7 @@ Router>
 ```
 * Có thể sử dụng tính năng hỗ trợ gợi nhớ câu lệnh bằng cú cách gõ ?
 * ví dụ:
+
 ![](https://user-images.githubusercontent.com/52046920/180779798-73ad59c9-c0e5-4348-aeec-6d70a59ceb32.png)
 ![](https://user-images.githubusercontent.com/52046920/180779801-e50f4f31-7fbc-4ecf-be2c-94b6ea90a465.png)
 ![](https://user-images.githubusercontent.com/52046920/180779804-ae3ca013-f99c-4d25-8073-151f446ed048.png)
@@ -187,7 +188,7 @@ R1(config-line)# login          ///Áp dụng mật khẩu
 R1# write memmory
 ```
 * Ta cũng có thể kiểm tra mật khẩu bằng câu lệnh show running-config
-![]()
+![](https://user-images.githubusercontent.com/52046920/180914547-7f48c711-f6fe-4782-a638-7306bac3b1a8.png)
 * Trong tình huông muốn gỡ mật khẩu thì vẫn truy cập vào truy cập chế độ line  sau đó thực hiện như sau
 ```cisco
 R1(config-line)# no password            
@@ -207,8 +208,64 @@ R1(config)# enable password tai123
  ```
 R1# write memmory
 ```
+* Kiểm tra bằng câu lệnh show running-config
+![](https://user-images.githubusercontent.com/52046920/180914545-e27a7c4f-cfcf-4282-b44c-0f6ad20b3994.png)
 * Trong tình huông muốn gỡ mật khẩu thì vẫn truy cập chế độ Global Configuration Mode sau đó thực hiện như sau
 ```cisco
 R1(config)# no enable password            
 
 ```
+## ***3. Tính năng tự động đăng xuất Exec-Timeout trên kết nối Console***
+* Được sử dụng khi người quản trị tiến hành cấu hình router thông qua công console mà quên không đăng xuất tránh trường hợp điều đó bị lợi dụng để tấn công router
+* Ta truy cập vào chế độ line console 0 và thực hiện câu lệnh thiết lập thời gian tự động đăng xuất
+```cisco
+R1(config)# line console 0              
+R1(config-line)# exec-timeout 1 30          ///Tự động đăng xuất sau 1 phút 30 giây
+```
+* Sau 1 phút 30 giây sau thì người dùng sẽ tự động đăng xuất
+* Nếu muốn gỡ bỏ thời gian tự đăng xuất thì ta thay tham số như sau
+```cisco         
+R1(config-line)# exec-timeout 0 0          ///gỡ bỏ tự động đăng xuất
+```
+* Có thể kiểm tra bằng lệnh show running-config
+![]()
+* Nhớ lưu lại cấu hình 
+ ```
+R1# write memmory
+```
+## ***4. Khai báo địa chỉ IP trên các cổng giao tiếp của router***
+* Đầu tiên xác định router có bao nhiêu cổng giao tiếp ta đứng tại Priviledged EXEC Mode thực hiện câu lệnh sau
+```cisco
+R1# show ip interface brief   
+```
+![](https://user-images.githubusercontent.com/52046920/180914541-fca57f8b-b38c-4220-bec7-9beac58a0324.png)
+* Ở con router này thì có 3 cổng và đều chưa được thiết lập ip
+
+* Tiếp đến ta vào Global Configuration Mode thực hiện các câu lệnh sau
+
+```cisco
+R1(config)#interface GigabitEthernet 0/0/0
+R1(config-if)#ip address 192.168.1.1 255.255.255.0
+no shutdown         ///để bật cổng giao tiếp lên
+```
+
+* Các cổng giao tiếp khác
+![](https://user-images.githubusercontent.com/52046920/180914539-4426010e-63a3-46f6-aa40-90812c1291bd.png)
+* Tiến hành kiểm tra bằng câu lệnh
+```cisco
+R1# show ip interface brief   
+```
+![](https://user-images.githubusercontent.com/52046920/180914538-5174bdc7-f215-4317-85b6-0e733cb385e7.png)
+* Nhớ lưu lại cấu hình 
+ ```
+R1# write memmory
+```
+* Muốn gỡ bỏ ip thì ta thực hiện câu lệnh
+```cisco
+R1(config)#interface GigabitEthernet 0/0/0
+R1(config-if)#no ip address
+no shutdown
+```
+* Protocol muốn ở trạng thái up thì phải được cắm cap và kết nối với thiết bị khác
+* Kiểm tra nối router với 2 switch 1 switch nối với cổng giao tiếp đã thiết lập ip và 1 switch kết nối với cổng giao tiếp chưa thiếp lập ip. Ta thấy được Switch kết nối với cổng giao tiếp đã thiết lập ip có thể kết nối và truyền dữ liệu với router còn switch còn lại thì không.
+![](https://user-images.githubusercontent.com/52046920/180914535-3ee115e8-79cb-4fec-9536-794869dabfbe.png)
