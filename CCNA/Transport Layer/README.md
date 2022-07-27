@@ -61,14 +61,34 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. TRANSPORT LAYER là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#itransport-layer-l%C3%A0-g%C3%AC)
+# [II. Chức năng](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#iich%E1%BB%A9c-n%C4%83ng)
+## &ensp; [1. Ghép phiên kết nối(Session multiplexing)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#1gh%C3%A9p-phi%C3%AAn-k%E1%BA%BFt-n%E1%BB%91isession-multiplexing)
 
+## &ensp; [2. phân mảnh dữ liệu(Segmenttation)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#2ph%C3%A2n-m%E1%BA%A3nh-d%E1%BB%AF-li%E1%BB%87usegmenttation)
+
+## &ensp; [3. Phương thức truyền](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#3ph%C6%B0%C6%A1ng-th%E1%BB%A9c-truy%E1%BB%81n)
+
+## &ensp; [4. Truyền thông tin cậy(Reliability)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#4truy%E1%BB%81n-th%C3%B4ng-tin-c%E1%BA%ADyreliability)
+
+## &ensp; [5. Điều khiển luồng(Flow control)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#5%C4%91i%E1%BB%81u-khi%E1%BB%83n-lu%E1%BB%93ngflow-control)
+
+# [II. Giao thức](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#iigiao-th%E1%BB%A9c)
+## &ensp; [1. Giao thức TCP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#1giao-th%E1%BB%A9c-tcp)
+
+### &ensp;&ensp; [a. Cấu trúc gói tin TCP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#a-c%E1%BA%A5u-tr%C3%BAc-g%C3%B3i-tin-tcp)
+### &ensp;&ensp; [b. Cách thức hoạt động tổng quan](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#bc%C3%A1ch-th%E1%BB%A9c-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-t%E1%BB%95ng-quan)
+### &ensp;&ensp; [c. Cơ chế điều khiển luồng(Flow Control)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#cc%C6%A1-ch%E1%BA%BF-%C4%91i%E1%BB%81u-khi%E1%BB%83n-lu%E1%BB%93ngflow-control)
+
+## &ensp; [2. Giao thức UDP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#2giao-th%E1%BB%A9c-udp)
+
+### &ensp;&ensp; [a. Cấu trúc gói tin UDP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#a-c%E1%BA%A5u-tr%C3%BAc-g%C3%B3i-tin-udp)
+### &ensp;&ensp; [b. Cách thức hoạt động](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#bc%C3%A1ch-th%E1%BB%A9c-ho%E1%BA%A1t-%C4%91%E1%BB%99ng)
+## &ensp; []()
 ## &ensp; []()
 
-## &ensp; []()
-
-## &ensp; []()
-
+# [III. So sánh và ứng dụng của 2 giao thức](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#iiiso-s%C3%A1nh-v%C3%A0-%E1%BB%A9ng-d%E1%BB%A5ng-c%E1%BB%A7a-2-giao-th%E1%BB%A9c)
+# [IV. Tham số Port nguồn, Port đích](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Transport%20Layer/README.md#iv-tham-s%E1%BB%91-port-ngu%E1%BB%93n-port-%C4%91%C3%ADch)
 # []()
 ***
 # ***I.	TRANSPORT LAYER là gì***
