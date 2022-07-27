@@ -61,29 +61,29 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. Router là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#irouter-l%C3%A0-g%C3%AC)
+# [I. Router là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#irouter-l%C3%A0-g%C3%AC)
 
-# [II. Cấu hình Router cơ bản](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#iic%E1%BA%A5u-h%C3%ACnh-router-c%C6%A1-b%E1%BA%A3n)
+# [II. Cấu hình Router cơ bản](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#iic%E1%BA%A5u-h%C3%ACnh-router-c%C6%A1-b%E1%BA%A3n)
 
-## &ensp; [1. Tiến hành cấu hình hostname cho Router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#1-ti%E1%BA%BFn-h%C3%A0nh-c%E1%BA%A5u-h%C3%ACnh-hostname-cho-router)
+## &ensp; [1. Tiến hành cấu hình hostname cho Router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#1-ti%E1%BA%BFn-h%C3%A0nh-c%E1%BA%A5u-h%C3%ACnh-hostname-cho-router)
 
-## &ensp; [2. Thiết lập mật khẩu Console và mật khẩu Enable](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#2-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%ADt-kh%E1%BA%A9u-console-v%C3%A0-m%E1%BA%ADt-kh%E1%BA%A9u-enable)
+## &ensp; [2. Thiết lập mật khẩu Console và mật khẩu Enable](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#2-thi%E1%BA%BFt-l%E1%BA%ADp-m%E1%BA%ADt-kh%E1%BA%A9u-console-v%C3%A0-m%E1%BA%ADt-kh%E1%BA%A9u-enable)
 
-## &ensp; [3. Tính năng tự động đăng xuất Exec-Timeout trên kết nối Console](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#3-t%C3%ADnh-n%C4%83ng-t%E1%BB%B1-%C4%91%E1%BB%99ng-%C4%91%C4%83ng-xu%E1%BA%A5t-exec-timeout-tr%C3%AAn-k%E1%BA%BFt-n%E1%BB%91i-console)
+## &ensp; [3. Tính năng tự động đăng xuất Exec-Timeout trên kết nối Console](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#3-t%C3%ADnh-n%C4%83ng-t%E1%BB%B1-%C4%91%E1%BB%99ng-%C4%91%C4%83ng-xu%E1%BA%A5t-exec-timeout-tr%C3%AAn-k%E1%BA%BFt-n%E1%BB%91i-console)
 
-## &ensp; [4. Khai báo địa chỉ IP trên các cổng giao tiếp của router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#4-khai-b%C3%A1o-%C4%91%E1%BB%8Ba-ch%E1%BB%89-ip-tr%C3%AAn-c%C3%A1c-c%E1%BB%95ng-giao-ti%E1%BA%BFp-c%E1%BB%A7a-router)
+## &ensp; [4. Khai báo địa chỉ IP trên các cổng giao tiếp của router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#4-khai-b%C3%A1o-%C4%91%E1%BB%8Ba-ch%E1%BB%89-ip-tr%C3%AAn-c%C3%A1c-c%E1%BB%95ng-giao-ti%E1%BA%BFp-c%E1%BB%A7a-router)
 
-## &ensp; [5. Tính năng chống trôi dòng lệnh Logging Synchronous](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#5-t%C3%ADnh-n%C4%83ng-ch%E1%BB%91ng-tr%C3%B4i-d%C3%B2ng-l%E1%BB%87nh-logging-synchronous)
+## &ensp; [5. Tính năng chống trôi dòng lệnh Logging Synchronous](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#5-t%C3%ADnh-n%C4%83ng-ch%E1%BB%91ng-tr%C3%B4i-d%C3%B2ng-l%E1%BB%87nh-logging-synchronous)
 
-## &ensp; [6. Tính năng phân giải tên miền ip domain-lookup](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#6-t%C3%ADnh-n%C4%83ng-ph%C3%A2n-gi%E1%BA%A3i-t%C3%AAn-mi%E1%BB%81n-ip-domain-lookup)
+## &ensp; [6. Tính năng phân giải tên miền ip domain-lookup](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#6-t%C3%ADnh-n%C4%83ng-ph%C3%A2n-gi%E1%BA%A3i-t%C3%AAn-mi%E1%BB%81n-ip-domain-lookup)
 
-## &ensp; [7. Lưu cấu hình và khởi động lại thiết bị](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#7-l%C6%B0u-c%E1%BA%A5u-h%C3%ACnh-v%C3%A0-kh%E1%BB%9Fi-%C4%91%E1%BB%99ng-l%E1%BA%A1i-thi%E1%BA%BFt-b%E1%BB%8B)
+## &ensp; [7. Lưu cấu hình và khởi động lại thiết bị](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#7-l%C6%B0u-c%E1%BA%A5u-h%C3%ACnh-v%C3%A0-kh%E1%BB%9Fi-%C4%91%E1%BB%99ng-l%E1%BA%A1i-thi%E1%BA%BFt-b%E1%BB%8B)
 
-## &ensp; [8. Xóa cấu hình và khởi động lại thiết bị](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#8-x%C3%B3a-c%E1%BA%A5u-h%C3%ACnh-v%C3%A0-kh%E1%BB%9Fi-%C4%91%E1%BB%99ng-l%E1%BA%A1i-thi%E1%BA%BFt-b%E1%BB%8B)
+## &ensp; [8. Xóa cấu hình và khởi động lại thiết bị](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#8-x%C3%B3a-c%E1%BA%A5u-h%C3%ACnh-v%C3%A0-kh%E1%BB%9Fi-%C4%91%E1%BB%99ng-l%E1%BA%A1i-thi%E1%BA%BFt-b%E1%BB%8B)
 
-## &ensp; [9. Tính năng mã hóa mật khẩu trong file cấu hình](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#9-t%C3%ADnh-n%C4%83ng-m%C3%A3-h%C3%B3a-m%E1%BA%ADt-kh%E1%BA%A9u-trong-file-c%E1%BA%A5u-h%C3%ACnh)
+## &ensp; [9. Tính năng mã hóa mật khẩu trong file cấu hình](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#9-t%C3%ADnh-n%C4%83ng-m%C3%A3-h%C3%B3a-m%E1%BA%ADt-kh%E1%BA%A9u-trong-file-c%E1%BA%A5u-h%C3%ACnh)
 
-## &ensp; [10. Khai báo địa chỉ IP trên Cisco Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Router#10-khai-b%C3%A1o-%C4%91%E1%BB%8Ba-ch%E1%BB%89-ip-tr%C3%AAn-cisco-switch)
+## &ensp; [10. Khai báo địa chỉ IP trên Cisco Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/README.md#10-khai-b%C3%A1o-%C4%91%E1%BB%8Ba-ch%E1%BB%89-ip-tr%C3%AAn-cisco-switch)
 
 ## &ensp; []()
 ***
