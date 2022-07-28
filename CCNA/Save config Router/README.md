@@ -100,9 +100,12 @@ vi /etc/nginx/nginx.conf
 
 ## ***Bình thường ta có thể backup dữ liệu từ Ram qua NVram (copy từ running config quá startup config) tuy nhiên trong trường hợp cần nâng cấp, thay thế router mới do router cũ có vấn đề. Để thuận tiện cho việc cấu hình router mà không phải cấu hình lại từ đầu các bước ta sẽ thực hiện Backup cấu hình của router lên FTP server hoặc TFTP server. Khi thay thế router thành công ta có thẻ restore lại cấu hình router***
 # ***III.	Lưu cấu hình của thiết bị lên TFTP Server***
+
+![](https://user-images.githubusercontent.com/52046920/181462674-7b0ea3e4-fb33-45ab-bd47-cd70f3635110.png)
 * Kết nối tftp server với switch trong mô hình
 * Thiết lập IP cho tftp server
-* Các thông số tftp server
+
+![](https://user-images.githubusercontent.com/52046920/181462673-7b09cccc-a940-4639-807f-c1eca54484ab.png)
 * Sau đó kiểm tra server và router đã thông nhau chưa bằng ping
 * Khi router và server đã thông nhau rồi thì đứng tại router tiến hành backup dữ liệu bằng câu lệnh sau
 ```cisco
@@ -117,14 +120,19 @@ Router# copy tftp: running-config           ///Restore lại vào file running-c
 Router# copy tftp: startup-config           ///Restore lại vào file startup-config
 ```
 
+![](https://user-images.githubusercontent.com/52046920/181462667-d1214cf8-3916-46bd-a1d6-851fb88f19b2.png)
 * Nếu restore vào startup-config thì ta thấy router chưa được thiết lập cấu hình ngay và luôn mà phải reload lại router cấu hình mới được thiết lập.
 * Nếu restore lại running-config cấu hình sẽ được thiết lập luôn. Nhớ phải lưu ngay vào startup-config sau khi restore running config.
 * File backup của running-config và startup-config có thể restore chéo cho nhau ví dụ: backup startup-config có thể restore vào running-config và ngược lại
 
 # ***III.	Lưu cấu hình của thiết bị lên FTP Server***
+
+![](https://user-images.githubusercontent.com/52046920/181462644-afd87754-0cb5-4085-b52b-ddc01c2a6d81.png)
 * Do TFTP sử dụng UDP làm giao thức truyền file vậy nên trong lúc backup và restore có thể dẫn đến mất file hỏng cấu hình được backup, khiên file đó không còn giá trị sử dụng vậy nên FTP là giải pháp backup tốt hơn do sử dụng giao thức TCP.
 * Kêt nối FTP server đến switch trong mô hình
 * Thiết lập IP cho tftp server
+
+![](https://user-images.githubusercontent.com/52046920/181462654-939f7f06-88a8-42d9-aa87-2499ca4126f7.png)
 * Các thông số tftp server
 * username và passwork của ftp server mặc định là 
     * Username: cisco
@@ -146,8 +154,13 @@ Router(config)#ip ftp password cisco        ///Mật khẩu mặc định server
 R1# copy running-config ftp:           ///Backup file running-config
 R1# copy startup-config ftp:           ///Backup file startup-config
 ```
+
 * Ở bước này nếu chưa khai báo username và password fpt server thì sẽ hiện thông báo lỗi như sau và phải tiến hành khai báo 2 thông số trên nếu muốn tiến hành backup.
+
+![](https://user-images.githubusercontent.com/52046920/181462642-6bb653de-3f9c-4d5c-bbf6-af3a0e421b81.png)
 * Backup thành công
+
+![](https://user-images.githubusercontent.com/52046920/181462649-dc806c07-b960-43d9-8ef9-5deb4a2040a7.png)
 * Khi sử dụng 1 router mới thay thế ta cấu hình ip cho cổng kết nối với switch như router cũ là 192.168.1.1 với cổng gigabitEthernet 0/0/0.
 * Kiểm tra router mới và ftp đã thông nhau chưa bằng ping
 * Nếu router và tftp server đã thông nhau thì tiến hành restore lại các cấu hình còn lại của router cũ bằng câu lệnh
@@ -155,6 +168,9 @@ R1# copy startup-config ftp:           ///Backup file startup-config
 Router# copy ftp: running-config           ///Restore lại vào file running-config
 Router# copy ftp: startup-config           ///Restore lại vào file startup-config
 ```
+
+![](https://user-images.githubusercontent.com/52046920/181462647-bb2ef1f9-b12b-4cad-8502-bb46a3ebc752.png)
+
 
 # ***IV.	Cisco IOS***
 * Cisco IOS (Internetwork Operating System) là hệ điều hành đa nhiệm được sử dụng rộng rãi trên các sản phẩm Router và Switch của hãng Cisco (Switch cũ hơn sử dụng CatOS). IOS hỗ trợ các chức năng định tuyến, chuyển mạch, liên kết mạng và truyền thông.
@@ -168,15 +184,21 @@ Router# copy ftp: startup-config           ///Restore lại vào file startup-co
 
  # ***V.	Lưu hệ điều hành IOS của router lên tftp server***
  * Vẫn sử dụng mô hình trước ta kiểm tra flash của thiết bị để lấy tên file hệ điều hành.
+
+ ![](https://user-images.githubusercontent.com/52046920/181462595-533f8e5a-fdbb-4a1a-909a-ae029a487d42.png)
+ 
  * Thực hiện lưu hệ điều hành lên tftp server bằng câu lệnh
  ```cisco
  R1# copy flash: tftp:
  ```
+![](https://user-images.githubusercontent.com/52046920/181462599-e236ceb9-5069-4f85-8025-9e090f8bc3a3.png)
 
+![](https://user-images.githubusercontent.com/52046920/181462605-892dc9f9-ec5b-4b48-84cf-3cbb9a596837.png)
  * Thực hiện copy IOS về Flash bằng câu lệnh
  ```cisco
  R1#copy tftp: flash: 
  ```
+ ![](https://user-images.githubusercontent.com/52046920/181462609-ac4f636a-0d98-4a74-bcd5-82fee943ced4.png)
 
 
 
