@@ -76,12 +76,12 @@ vi /etc/nginx/nginx.conf
 
 # [III. Lưu cấu hình của thiết bị lên TFTP Server](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#iiil%C6%B0u-c%E1%BA%A5u-h%C3%ACnh-c%E1%BB%A7a-thi%E1%BA%BFt-b%E1%BB%8B-l%C3%AAn-tftp-server)
 
-# [IV. Lưu cấu hình của thiết bị lên FTP Server]()
+# [IV. Lưu cấu hình của thiết bị lên FTP Server](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#ivl%C6%B0u-c%E1%BA%A5u-h%C3%ACnh-c%E1%BB%A7a-thi%E1%BA%BFt-b%E1%BB%8B-l%C3%AAn-ftp-server)
 
-# []()
-# []()
-# []()
-## &ensp; []()
+# [V. Cisco IOS](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#vcisco-ios)
+
+# [VI. Lưu hệ điều hành IOS của router lên tftp server](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#vil%C6%B0u-h%E1%BB%87-%C4%91i%E1%BB%81u-h%C3%A0nh-ios-c%E1%BB%A7a-router-l%C3%AAn-tftp-server)
+# [V. Lưu hệ điều hành IOS của router lên ftp server](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#vl%C6%B0u-h%E1%BB%87-%C4%91i%E1%BB%81u-h%C3%A0nh-ios-c%E1%BB%A7a-router-l%C3%AAn-ftp-server)
 ## &ensp; []()
 ***
 # ***I.	FTP SERVER***
