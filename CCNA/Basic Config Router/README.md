@@ -84,7 +84,7 @@ vi /etc/nginx/nginx.conf
 ## &ensp; [9. Tính năng mã hóa mật khẩu trong file cấu hình](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Basic%20Config%20Router#9-t%C3%ADnh-n%C4%83ng-m%C3%A3-h%C3%B3a-m%E1%BA%ADt-kh%E1%BA%A9u-trong-file-c%E1%BA%A5u-h%C3%ACnh)
 
 
-## &ensp; [10. Khai báo địa chỉ IP trên Cisco Switch]()
+## &ensp; [10. Khai báo địa chỉ IP trên Cisco Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Basic%20Config%20Router#10-khai-b%C3%A1o-%C4%91%E1%BB%8Ba-ch%E1%BB%89-ip-tr%C3%AAn-cisco-switch)
 ***
 # ***I.	Router là gì***
 * Router (thiết bị định tuyến hoặc bộ định tuyến) là thiết bị mạng dùng để chuyển các gói dữ liệu đến các thiết bị đầu cuối. Nói một cách dễ hiểu, Router là một thiết bị để chia sẻ Internet tới nhiều các thiết bị khác trong cùng lớp mạng.
