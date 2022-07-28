@@ -61,15 +61,28 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
+# [I. FTP SERVER](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#iftp-server)
+
+## &ensp; [1. FTP SERVER là gì?](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#1ftp-server-l%C3%A0-g%C3%AC)
+
+## &ensp; [2. Chức năng](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#2ch%E1%BB%A9c-n%C4%83ng)
+
+
+# [II. TFTP SERVER](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#iitftp-server)
+
+## &ensp; [1. TFTP SERVER là gì?](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#1tftp-server-l%C3%A0-g%C3%AC)
+
+## &ensp; [2. Chức năng](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#2ch%E1%BB%A9c-n%C4%83ng-1)
+
+# [III. Lưu cấu hình của thiết bị lên TFTP Server](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/Save%20config%20Router#iiil%C6%B0u-c%E1%BA%A5u-h%C3%ACnh-c%E1%BB%A7a-thi%E1%BA%BFt-b%E1%BB%8B-l%C3%AAn-tftp-server)
+
+# [IV. Lưu cấu hình của thiết bị lên FTP Server]()
+
 # []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
 # []()
+# []()
+## &ensp; []()
+## &ensp; []()
 ***
 # ***I.	FTP SERVER***
 ## ***1.	FTP SERVER là gì?***
@@ -125,7 +138,7 @@ Router# copy tftp: startup-config           ///Restore lại vào file startup-c
 * Nếu restore lại running-config cấu hình sẽ được thiết lập luôn. Nhớ phải lưu ngay vào startup-config sau khi restore running config.
 * File backup của running-config và startup-config có thể restore chéo cho nhau ví dụ: backup startup-config có thể restore vào running-config và ngược lại
 
-# ***III.	Lưu cấu hình của thiết bị lên FTP Server***
+# ***IV.	Lưu cấu hình của thiết bị lên FTP Server***
 
 ![](https://user-images.githubusercontent.com/52046920/181462644-afd87754-0cb5-4085-b52b-ddc01c2a6d81.png)
 * Do TFTP sử dụng UDP làm giao thức truyền file vậy nên trong lúc backup và restore có thể dẫn đến mất file hỏng cấu hình được backup, khiên file đó không còn giá trị sử dụng vậy nên FTP là giải pháp backup tốt hơn do sử dụng giao thức TCP.
@@ -172,7 +185,7 @@ Router# copy ftp: startup-config           ///Restore lại vào file startup-co
 ![](https://user-images.githubusercontent.com/52046920/181462647-bb2ef1f9-b12b-4cad-8502-bb46a3ebc752.png)
 
 
-# ***IV.	Cisco IOS***
+# ***V.	Cisco IOS***
 * Cisco IOS (Internetwork Operating System) là hệ điều hành đa nhiệm được sử dụng rộng rãi trên các sản phẩm Router và Switch của hãng Cisco (Switch cũ hơn sử dụng CatOS). IOS hỗ trợ các chức năng định tuyến, chuyển mạch, liên kết mạng và truyền thông.
 * Hệ điều hành của Cisco router sẽ được lưu trực tiếp trên bộ nhớ flash của router.
 
@@ -182,7 +195,7 @@ Router# copy ftp: startup-config           ///Restore lại vào file startup-co
  * Trong trường hợp chúng ta có được một IOS tốt hơn IOS đang sử dụng và được phép nâng cấp, thao tác này sẽ giúp chúng ta thay thế IOS cũ trên thiết bị bằng một IOS mới tốt hơn và sử dụng 
  * Trong trường hợp thiết bị bị mất IOS hoặc bị lỗi IOS và cần phải cài lại IOS từ đầu
 
- # ***V.	Lưu hệ điều hành IOS của router lên tftp server***
+ # ***VI.	Lưu hệ điều hành IOS của router lên tftp server***
  * Vẫn sử dụng mô hình trước ta kiểm tra flash của thiết bị để lấy tên file hệ điều hành.
 
  ![](https://user-images.githubusercontent.com/52046920/181462595-533f8e5a-fdbb-4a1a-909a-ae029a487d42.png)
