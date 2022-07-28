@@ -387,7 +387,7 @@ Router# show startup-config
 
 ![](https://user-images.githubusercontent.com/52046920/181007915-c90a5b9d-d2a9-4250-890c-e98a42afa7cf.png)
 
-## ***9. Khai báo địa chỉ IP trên Cisco Switch***
+## ***10. Khai báo địa chỉ IP trên Cisco Switch***
 * Mục đích: trong tình huống muốn sử dụng telnet đến switch để cấu hình từ xa hoặc muốn lưu cấu hình dự phòng của switch trên server thì phải đặt ip cho switch
 * Switch không thể tự đặt ip trên các cổng giao tiếp của mình nên muốn đặt được ip cho switch thì phải sử dụng 1 interface đặc biệt đó là interface vlan 1
 * Cách cấu hình tương tự với router
