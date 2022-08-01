@@ -61,15 +61,9 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. Load Startup-config(Tiến trình khởi động)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/Crack%20passwork%20router/README.md#iload-startup-configti%E1%BA%BFn-tr%C3%ACnh-kh%E1%BB%9Fi-%C4%91%E1%BB%99ng)
 
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
+# [II. Crack Password trên cisco Router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Basic%20Config%20Router/Crack%20passwork%20router/README.md#ii-crack-password-tr%C3%AAn-cisco-router)
 ***
 # ***I.	Load Startup-config(Tiến trình khởi động)***
 * Tiến trình khởi động phải trải qua 4 giai đoạn gồm
