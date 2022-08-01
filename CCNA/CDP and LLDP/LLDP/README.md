@@ -59,18 +59,6 @@ vi /etc/nginx/nginx.conf
 ## SDT : 0837686717
 ## Mail : phamductai123456@gmail.com
 
-***
-# Mục lục
-# []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
-***
 # ***I.	LLDP là gì***
 * LLDP(Link Layer Discovery Protocol) là giao thức phát hiện thiết bị láng giềng trên các thiết bị mạng. Khác với CDP chỉ chạy trên các dòng sản phẩm của cisco và được mặc định bật thì LLDP lại có thể chạy trên được nhiều các loại thiết bị của các hãng sản xuất khác nhau và muốn sử dụng phải kích hoạt nó lên.
 
