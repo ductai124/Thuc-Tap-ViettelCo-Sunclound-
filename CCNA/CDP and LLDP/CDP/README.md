@@ -59,18 +59,6 @@ vi /etc/nginx/nginx.conf
 ## SDT : 0837686717
 ## Mail : phamductai123456@gmail.com
 
-***
-# Mục lục
-# []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
-***
 # ***I.	CDP là gì***
 * CDP(Cisco Discovery Protocol)là một giao thức phát hiện các thiết bị láng giềng có trên Cisco router.
 
