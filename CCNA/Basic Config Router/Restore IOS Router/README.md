@@ -59,18 +59,6 @@ vi /etc/nginx/nginx.conf
 ## SDT : 0837686717
 ## Mail : phamductai123456@gmail.com
 
-***
-# Mục lục
-# []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
-***
 # ***I.	Hướng dẫn khôi phục HDH IOS***
 * Cisco Internetwork Operating System(Cisco IOS) thông thường được lưu trong bộ nhớ Flash của router. trong quá trình khởi động router sẽ tải hệ điều hành đó lên và chạy trực tiếp trên Ram
 * Bên cạnh hệ điều hành chính ta còn 1 hệ điều hành phụ gọi là mini ISO được lưu trữ trong ROM. Khi hệ điều hành chính bị lỗi thì router sẽ sử dụng tạm mini IOS
