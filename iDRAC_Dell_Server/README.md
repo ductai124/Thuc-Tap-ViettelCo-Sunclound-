@@ -61,15 +61,33 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. Tổng quan iDRAC](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#it%E1%BB%95ng-quan-idrac)
 
+
+# [II. Cài đặt iDRAC](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#iic%C3%A0i-%C4%91%E1%BA%B7t-idrac)
+
+## &ensp; [1. Dashboard](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#1dashboard)
+
+## &ensp; [2. System](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#2system)
+
+## &ensp;&ensp; [a. Overview](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#aoverview)
+## &ensp;&ensp; [b. Details](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#bdetails)
+
+## &ensp;&ensp; [c. Inventory](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#cinventory)
+## &ensp;&ensp; [d. Performance](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#dperformance)
+
+## &ensp;&ensp; [e. HostOS](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#ehostos)
+## &ensp;&ensp; []()
+
+## &ensp;&ensp; []()
+## &ensp;&ensp; []()
+
+## &ensp; [3. Storage](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#3storage)
+
+## &ensp; [4. Configuration](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#4configuration)
+## &ensp; [5. Maintenance](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#5maintenance)
+## &ensp; [6. iDRAC Setting](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#6idrac-setting)
 ## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
 ***
 # ***I.	Tổng quan iDRAC***
 * Ngày nay, đối với một người kỹ sư hệ thống 24 tiếng một ngày dường như không đủ để tối ưu cho hệ thống của mình. Thực tế đã xảy ra rất nhiều trường hợp server vật lý để ở Datacenter gặp sự cố về phần cứng mà người quản trị không thể giám sát và có cảnh báo kịp thời dẫn tới có những sự cố downtime đáng tiếc, mang lại thiệt hại lớn cho cá nhân, tổ chức, doanh nghiệp. Có những công cụ nhỏ tích hợp sẵn trong dòng server Dell nhưng không hẳn kỹ sư hệ thống nào cũng biết đó là việc sử dụng chức năng iDRAC.
