@@ -77,10 +77,6 @@ vi /etc/nginx/nginx.conf
 ## &ensp;&ensp; [d. Performance](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#dperformance)
 
 ## &ensp;&ensp; [e. HostOS](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#ehostos)
-## &ensp;&ensp; []()
-
-## &ensp;&ensp; []()
-## &ensp;&ensp; []()
 
 ## &ensp; [3. Storage](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/iDRAC_Dell_Server/README.md#3storage)
 
