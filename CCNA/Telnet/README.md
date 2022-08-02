@@ -61,15 +61,18 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
+# [I. TELNET là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/README.md#itelnet-l%C3%A0-g%C3%AC)
+
+# [II. Cấu hình Telnet](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/README.md#iic%E1%BA%A5u-h%C3%ACnh-telnet)
 # []()
+## &ensp; [1. Cấu hình cơ bản](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/README.md#1c%E1%BA%A5u-h%C3%ACnh-c%C6%A1-b%E1%BA%A3n)
 
-## &ensp; []()
+## &ensp; [2. Thay đổi hoặc gỡ bỏ mật khẩu Telnet](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/README.md#2thay-%C4%91%E1%BB%95i-ho%E1%BA%B7c-g%E1%BB%A1-b%E1%BB%8F-m%E1%BA%ADt-kh%E1%BA%A9u-telnet)
 
-## &ensp; []()
+## &ensp; [3. Cấu hình xác thực bằng username và password](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/README.md#3c%E1%BA%A5u-h%C3%ACnh-x%C3%A1c-th%E1%BB%B1c-b%E1%BA%B1ng-username-v%C3%A0-password)
+## &ensp; [4. Cấu hình xác thực bằng username và password](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/README.md#4c%E1%BA%A5u-h%C3%ACnh-x%C3%A1c-th%E1%BB%B1c-b%E1%BA%B1ng-username-v%C3%A0-password)
+## &ensp; [5. Configuration Lock chỉ cho phép một người](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/README.md#5configuration-lock-ch%E1%BB%89-cho-ph%C3%A9p-m%E1%BB%99t-ng%C6%B0%E1%BB%9Di)
 
-## &ensp; []()
-
-# []()
 ***
 # ***I.	TELNET là gì***
 * Telnet viết tắt là Terminal network là 1 giao thức mạng được dùng trên các kết nối với Internet hoặc mạng LAN. 
