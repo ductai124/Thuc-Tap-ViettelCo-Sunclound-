@@ -174,7 +174,8 @@ R1(config-line)#no login
 ```cisco
 R1(config)#configuration mode exclusive auto
 ```
-
+<!--
 ## ***6.	Thay đổi Port dịch vụ telnet***
 * Do telnet chạy trên cổng mặc định là 23 nên có nguy cơ bị tận dụng để tấn công cổng vậy nên thay đổi cổng sẽ làm giảm, chậm khả năng bị tấn công đi hơn là để cổng mặc định.
 * 
+-->
