@@ -71,7 +71,7 @@ vi /etc/nginx/nginx.conf
 
 # []()
 ***
-# ***I.	Kỹ thuật AA hỗ trợ xác thực và phân quyền Telnet***
+# ***I.	Kỹ thuật AAA hỗ trợ xác thực và phân quyền Telnet***
 * AAA là Authentication(xác thực) Authorization(phân quyền) Accounting(kiểm toán). Nó hỗ trợ 3 cái dịch vụ như tên gọi của nó
     * Authentication(Xác thực): chỉ có ai biêt username và password mới được quyền truy cập telnet đến thiết bị.
     * Authorization(phân quyền): các người dùng sẽ được phân quyền và tùy vào quyền của người dùng thì sẽ bị giới hạn các câu lệnh cấu hình.
