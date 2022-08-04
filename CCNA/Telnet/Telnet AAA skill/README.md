@@ -61,15 +61,12 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
+# [I. Kỹ thuật AAA hỗ trợ xác thực và phân quyền Telnet](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/Telnet%20AAA%20skill/README.md#ik%E1%BB%B9-thu%E1%BA%ADt-aaa-h%E1%BB%97-tr%E1%BB%A3-x%C3%A1c-th%E1%BB%B1c-v%C3%A0-ph%C3%A2n-quy%E1%BB%81n-telnet)
+# [II. Xác thực Authentication](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/Telnet%20AAA%20skill/README.md#iix%C3%A1c-th%E1%BB%B1c-authentication)
+# [III. Phân quyền Authorization](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/Telnet%20AAA%20skill/README.md#iiiph%C3%A2n-quy%E1%BB%81n-authorization)
+# [IV. Nhật ký truy nhập mạng Accounting](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/Telnet%20AAA%20skill/README.md#ivnh%E1%BA%ADt-k%C3%BD-truy-nh%E1%BA%ADp-m%E1%BA%A1ng-accounting)
+# [V. Login Block-For giới hạn số lần](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/Telnet%20AAA%20skill/README.md#vlogin-block-for-gi%E1%BB%9Bi-h%E1%BA%A1n-s%E1%BB%91-l%E1%BA%A7n)
+# [VI. Xác thực Telnet bằng RADIUS Server](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/Telnet%20AAA%20skill/README.md#vix%C3%A1c-th%E1%BB%B1c-telnet-b%E1%BA%B1ng-radius-server)
 ***
 # ***I.	Kỹ thuật AAA hỗ trợ xác thực và phân quyền Telnet***
 * AAA là Authentication(xác thực) Authorization(phân quyền) Accounting(kiểm toán). Nó hỗ trợ 3 cái dịch vụ như tên gọi của nó
