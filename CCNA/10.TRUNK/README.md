@@ -61,22 +61,25 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
+# [I. Tổng quan về đường Trunk](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/10.TRUNK/README.md#it%E1%BB%95ng-quan-v%E1%BB%81-%C4%91%C6%B0%E1%BB%9Dng-trunk)
+# [II. Cấu hình kết nối Trunk trên Cisco Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/10.TRUNK/README.md#iic%E1%BA%A5u-h%C3%ACnh-k%E1%BA%BFt-n%E1%BB%91i-trunk-tr%C3%AAn-cisco-switch)
+# [III. Giải pháp mở rộng VLAN nếu thiếu Port trên Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/10.TRUNK/README.md#iiigi%E1%BA%A3i-ph%C3%A1p-m%E1%BB%9F-r%E1%BB%99ng-vlan-n%E1%BA%BFu-thi%E1%BA%BFu-port-tr%C3%AAn-switch)
+# [IV. Giao thức VTP đồng bộ hóa thông tin VLAN giữa các Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/10.TRUNK/README.md#ivgiao-th%E1%BB%A9c-vtp-%C4%91%E1%BB%93ng-b%E1%BB%99-h%C3%B3a-th%C3%B4ng-tin-vlan-gi%E1%BB%AFa-c%C3%A1c-switch)
 # []()
-
 ## &ensp; []()
 
 ## &ensp; []()
 
 ## &ensp; []()
 
-# []()
+# [II. Cấu hình kết nối Trunk trên Cisco Switch]()
 ***
 # ***I.	Tổng quan về đường Trunk***
 * Kết nối trunk (đường trunk) là một kỹ thuật dùng chỉ một kết nối cho phép dữ liệu của các VLAN có thể cùng lưu thông qua đường này, gần như là gộp 2 còn switch vào làm 1. Người ta gọi kết nối này là đường trunk.
 * Được sử dụng để tránh lãng phí tài nguyên về dây nối và các cổng.
 * Ví dụ 
 
-![]()
+![](https://www.totolink.vn/public/uploads/img_article/vtplagivlantrunkingprotocollagiketnoitrunk.png)
 * vlan 2 bên switch số 2 muốn kết nối với vlan 2 bên switch số 1 ta cần phải nối switch 1 với switch 2 và cho 2 cổng đó cùng thuộc vlan 2. Nếu muốn 2 máy thuộc vlan 3 ở 2 bên kết nối cũng tương tự lại cần thêm 1 đường dây nữa và 2 cổng thuộc vlan 3. Nếu như cần chia nhiều Vlan điều này cực kỳ gây lãng phí tài nguyên vậy nên Trunk sẽ được sử dụng trong trường hợp này
 
 # ***II.	Cấu hình kết nối Trunk trên Cisco Switch***
