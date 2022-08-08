@@ -72,7 +72,7 @@ vi /etc/nginx/nginx.conf
 ## &ensp; [3. Cấu hình xác thực bằng username và password](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/README.md#3c%E1%BA%A5u-h%C3%ACnh-x%C3%A1c-th%E1%BB%B1c-b%E1%BA%B1ng-username-v%C3%A0-password)
 ## &ensp; [4. Cấu hình xác thực bằng username và password](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/README.md#4c%E1%BA%A5u-h%C3%ACnh-x%C3%A1c-th%E1%BB%B1c-b%E1%BA%B1ng-username-v%C3%A0-password)
 ## &ensp; [5. Configuration Lock chỉ cho phép một người](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/Telnet/README.md#5configuration-lock-ch%E1%BB%89-cho-ph%C3%A9p-m%E1%BB%99t-ng%C6%B0%E1%BB%9Di)
-
+## &ensp; [6.	Thay đổi Port dịch vụ telnet]
 ***
 # ***I.	TELNET là gì***
 * Telnet viết tắt là Terminal network là 1 giao thức mạng được dùng trên các kết nối với Internet hoặc mạng LAN. 
@@ -177,8 +177,21 @@ R1(config-line)#no login
 ```cisco
 R1(config)#configuration mode exclusive auto
 ```
-<!--
+
 ## ***6.	Thay đổi Port dịch vụ telnet***
 * Do telnet chạy trên cổng mặc định là 23 nên có nguy cơ bị tận dụng để tấn công cổng vậy nên thay đổi cổng sẽ làm giảm, chậm khả năng bị tấn công đi hơn là để cổng mặc định.
-* 
--->
+* Ta sử dụng câu lệnh
+```cisco
+R1(config)#line vty 0 4
+
+R1(config)#rotary 1             
+///chuyển thành port 3001 cho dịch vụ telnet tuy nhiên port 23 vẫn sử dụng vậy nên sử dụng cách sau
+R1(config)#access-list 101 permit tcp any any eq 3001   
+\\\ any đầu tiên là các thiết bị được quyền telnet đến R1, any 2 là cổng giao tiếp cả R1 và 3001 là cổng được cho phép telnet đến và chỉ duy nhất
+
+
+R1(config)#line vty 0 4
+R1(config-line)#access-class 101 in
+
+```
+
