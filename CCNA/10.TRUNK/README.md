@@ -79,7 +79,7 @@ vi /etc/nginx/nginx.conf
 * Được sử dụng để tránh lãng phí tài nguyên về dây nối và các cổng.
 * Ví dụ 
 
-![](https://www.totolink.vn/public/uploads/img_article/vtplagivlantrunkingprotocollagiketnoitrunk.png)
+![](https://user-images.githubusercontent.com/52046920/183376892-556475fa-9d37-4441-a4b1-7264d0f84ea1.png)
 * vlan 2 bên switch số 2 muốn kết nối với vlan 2 bên switch số 1 ta cần phải nối switch 1 với switch 2 và cho 2 cổng đó cùng thuộc vlan 2. Nếu muốn 2 máy thuộc vlan 3 ở 2 bên kết nối cũng tương tự lại cần thêm 1 đường dây nữa và 2 cổng thuộc vlan 3. Nếu như cần chia nhiều Vlan điều này cực kỳ gây lãng phí tài nguyên vậy nên Trunk sẽ được sử dụng trong trường hợp này
 
 # ***II.	Cấu hình kết nối Trunk trên Cisco Switch***
