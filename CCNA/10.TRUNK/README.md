@@ -206,10 +206,51 @@ SW1#show vtp status
 ```
 
 ![](https://user-images.githubusercontent.com/52046920/183423335-808a3ea4-40c2-4245-aced-2f85b4179932.png)
-<!--
-# ***IV.	Hiệu chỉnh Native VLAN trên đường Trunk sử dụng kiểu đóng gói dot1q***
-* Native VLAN là một VLAN được sử dụng để cấu hình Trunking do một số thiết bị không tương thích với nhau. Khi một cổng của switch được cấu hình trunk, trong phần tag của frame đi qua cổng đó sẽ được thêm một số hiệu VLAN thích hợp.
 
 # ***V.	Giao thức DTP tự động thiết lập kết nối Trunk giữa các Switch***
+* Là giao thức tự động thiết lập kết nối trunk giữa các switch tùy vào các mode của interface.
+* 1 interface có 3 mod:
+    * Auto: Thường là mod mặc định trên switch layer 2, phản hồi các DTP nếu nhận được DTP từ Switch chứ không tự gửi
+    * Trunk on: Kết nối các switch khác nhau và mang theo lưu lượng của Vlan
+    * Desirable: tự động gửi DTP định kỳ
+    * Access: dùng để gán cho 1 Vlan duy nhất 
+* Kiểm tra mode bằng câu lệnh
+```cisco
+SW1#show interface trunk
+```
+
+![](https://user-images.githubusercontent.com/52046920/183552315-742800b3-7432-4161-99a7-30eede5f797c.png)
+
+![](https://user-images.githubusercontent.com/52046920/183552326-fbe7b325-e754-4166-9a1e-00e3490b7baa.png)
+
+* Có thể thay đổi mode của cổng bằng câu lệnh
+```cisco
+SW2(config)#int fa0/1
+SW2(config-if)#switchport mode dynamic desirable
+```
+
+* Mode có thể thay đổi
+
+![](https://user-images.githubusercontent.com/52046920/183552336-d5496b61-1f64-486e-8810-2dc0fde92ab7.png)
+
+![](https://user-images.githubusercontent.com/52046920/183552333-5e8e2390-67a3-4a57-a38f-0be69f1ff2ec.png)
+
+* Các tình huống khi 2 cổng switch thuộc các mode khác nhau
+
+![](https://user-images.githubusercontent.com/52046920/183552323-f7556826-5a80-44a5-bb57-20df9d6c1f51.png)
+
+* Tắt giao thức DTP trên cổng sử dụng câu lệnh
+```cisco
+SW2(config)#int fa0/3
+SW2(config-if)#switchport nonegotiate
+```
+![](https://user-images.githubusercontent.com/52046920/183552337-1f0ffead-7b43-4b5b-a80c-2e7d3dd4ed30.png)
+* Nên tắt giao thức trên các cổng sử dụng mode access vì nó không cần thiết và tốn tài nguyên
+<!--
+# ***IV.	Hiệu chỉnh Native VLAN trên đường Trunk sử dụng kiểu đóng gói dot1q***
+* Native VLAN là một VLAN được sử dụng để cấu hình Trunking do một số thiết bị không tương thích với nhau. Khi một cổng của switch được cấu hình trunk, trong phần tag của frame đi qua cổng đó sẽ được thêm một số hiệu VLAN thích hợp. và nếu 1 bản tin không được dán nhãn Vlan nó sẽ mặc định gửi cho native vlan
+* Native Vlan mặc định là Vlan 1
+
+
 
 --->
