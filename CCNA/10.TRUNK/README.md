@@ -65,7 +65,7 @@ vi /etc/nginx/nginx.conf
 # [II. Cấu hình kết nối Trunk trên Cisco Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/10.TRUNK/README.md#iic%E1%BA%A5u-h%C3%ACnh-k%E1%BA%BFt-n%E1%BB%91i-trunk-tr%C3%AAn-cisco-switch)
 # [III. Giải pháp mở rộng VLAN nếu thiếu Port trên Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/10.TRUNK/README.md#iiigi%E1%BA%A3i-ph%C3%A1p-m%E1%BB%9F-r%E1%BB%99ng-vlan-n%E1%BA%BFu-thi%E1%BA%BFu-port-tr%C3%AAn-switch)
 # [IV. Giao thức VTP đồng bộ hóa thông tin VLAN giữa các Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/10.TRUNK/README.md#ivgiao-th%E1%BB%A9c-vtp-%C4%91%E1%BB%93ng-b%E1%BB%99-h%C3%B3a-th%C3%B4ng-tin-vlan-gi%E1%BB%AFa-c%C3%A1c-switch)
-
+# [V. Giao thức DTP tự động thiết lập kết nối Trunk giữa các Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/10.TRUNK/README.md#vgiao-th%E1%BB%A9c-dtp-t%E1%BB%B1-%C4%91%E1%BB%99ng-thi%E1%BA%BFt-l%E1%BA%ADp-k%E1%BA%BFt-n%E1%BB%91i-trunk-gi%E1%BB%AFa-c%C3%A1c-switch)
 ***
 # ***I.	Tổng quan về đường Trunk***
 * Kết nối trunk (đường trunk) là một kỹ thuật dùng chỉ một kết nối cho phép dữ liệu của các VLAN có thể cùng lưu thông qua đường này, gần như là gộp 2 còn switch vào làm 1. Người ta gọi kết nối này là đường trunk.
