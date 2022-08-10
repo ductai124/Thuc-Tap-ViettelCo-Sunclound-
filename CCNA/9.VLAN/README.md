@@ -66,7 +66,7 @@ vi /etc/nginx/nginx.conf
 # [II. Cấu hình VLAN trên switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/9.VLAN/README.md#iic%E1%BA%A5u-h%C3%ACnh-vlan-tr%C3%AAn-switch)
 ***
 # ***I.	Tổng quan về VLAN***
-* VLAN viết tắt của Virtual LAN hay cụ thể hơn là Virtual Local Area Network và còn được gọi là mạng LAN ảo. VLAN là 1 kỹ thuật cho phép tạo lập các mạng LAN ảo đọc lập 1 cách logic trên switch, VLAN tương đương như mạng con. 
+* VLAN viết tắt của Virtual LAN hay cụ thể hơn là Virtual Local Area Network và còn được gọi là mạng LAN ảo. VLAN là 1 kỹ thuật cho phép tạo lập các mạng LAN ảo độc lập 1 cách logic trên switch, VLAN tương đương như mạng con. 
 * VLAN dựa trên logic thay vì các kết nối vật lý. 
 * Mỗi 1 VLAN sẽ là 1 broadcast domain và sử dụng lớp mạng khác nhau
 * VLAN được sử dụng khi mạng máy tính quá lớn và có lưu lượng truy cập quá nhiều thường là các công ty lớn.
