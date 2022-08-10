@@ -94,7 +94,7 @@ Switch(config-if)#switchport trunk encapsulation isl
 
 
 
-\\\dot1q là chuẩn đóng gói chuẩn quốc tế, ISL là chuẩn đóng gói độc quyền của cisco và nên sử dụng dot1q
+\\\dot1q là chuẩn đóng gói chuẩn quốc tế, ISL là chuẩn đóng gói độc quyền của cisco và nên sử dụng dot1q. mặc định các thiết bị của bài lab trên cisco sẽ  chỉ hỗ trợ dot1q nên không cần thiết lập câu lệnh switchport trunk encapsulation dot1q hay câu lệnh switchport trunk encapsulation isl
 
 ```
 * Một số switch sẽ mặc định chuẩn đóng gói là dot1q vậy nên không cần câu lệnh Switch(config-if)#switchport trunk encapsulation dot1q
@@ -113,8 +113,13 @@ Switch# show interface trunk
 * Ngoài ra ta có thể kiểm soát được những VLAN được quyền sử dụng đường trunk bằng câu lệnh
 ```cisco
 Switch(config)#interface fa0/1
+
+///Do mặc định các thiết bị của bài lab trên cisco sẽ  chỉ hỗ trợ dot1q nên không cần thiết lập, không thì ta sẽ phải thêm câu lệnh
+SW1(config-if)#switchport trunk encapsulation dot1q
+
+///Các thiết bị trên cisco thì chỉ cần 2 câu lệnh sau
+
 Switch(config-if)#switchport mod trunk
-Switch(config-if)#switchport trunk encapsulation dot1q
 Switch(config-if)#switchport trunk allow vlan 1-2
 
 \\\ nếu muốn mở cho toàn bộ vlan
@@ -185,6 +190,12 @@ SW1(config)#vlan 3
 SW1(config-vlan)#name KinhDoanh
 
 SW1(config)#int fa0/1
+
+///Do mặc định các thiết bị của bài lab trên cisco sẽ  chỉ hỗ trợ dot1q nên không cần thiết lập, không thì ta sẽ phải thêm câu lệnh
+SW1(config-if)#switchport trunk encapsulation dot1q
+
+///Các thiết bị trên cisco thì chỉ cần câu lệnh sau
+
 SW1(config-if)#switchport mode trunk 
 ```
 
@@ -246,11 +257,31 @@ SW2(config-if)#switchport nonegotiate
 ```
 ![](https://user-images.githubusercontent.com/52046920/183552337-1f0ffead-7b43-4b5b-a80c-2e7d3dd4ed30.png)
 * Nên tắt giao thức trên các cổng sử dụng mode access vì nó không cần thiết và tốn tài nguyên
-<!--
-# ***IV.	Hiệu chỉnh Native VLAN trên đường Trunk sử dụng kiểu đóng gói dot1q***
+
+# ***VI.	Hiệu chỉnh Native VLAN trên đường Trunk sử dụng kiểu đóng gói dot1q***
 * Native VLAN là một VLAN được sử dụng để cấu hình Trunking do một số thiết bị không tương thích với nhau. Khi một cổng của switch được cấu hình trunk, trong phần tag của frame đi qua cổng đó sẽ được thêm một số hiệu VLAN thích hợp. và nếu 1 bản tin không được dán nhãn Vlan nó sẽ mặc định gửi cho native vlan
+* Mục đích của vlan native giúp cho các thiết bị không hiểu tag vlan id sẽ vẫn nhận frame
 * Native Vlan mặc định là Vlan 1
+* Cho mô hình
 
+![](https://user-images.githubusercontent.com/52046920/183796307-840e2c4e-2c57-4657-84a4-89a79307e6ab.png)
 
+* Cấu hình native vlan cho vlan 10 ở PC 2
+* Tại switch ta thực hiện câu lệnh
+```cisco
+SW1(config)#int f0/3
 
---->
+///Do mặc định các thiết bị của bài lab trên cisco sẽ  chỉ hỗ trợ dot1q nên không cần thiết lập, không thì ta sẽ phải thêm câu lệnh
+SW1(config-if)#switchport trunk encapsulation dot1q
+///Các thiết bị trên cisco thì chỉ cần 2 câu lệnh sau
+
+SW1(config-if)#switchport mode trunk
+SW1(config-if)#switchport trunk native vlan 10
+```
+
+![](https://user-images.githubusercontent.com/52046920/183796302-724ec265-a394-4c47-a1c4-c8c8448d40b3.png)
+
+* Kiểm tra 2 PC2 và PC3 ở Vlan 10 đã thông với nhau
+
+![](https://user-images.githubusercontent.com/52046920/183796563-cb30aad3-7c1f-43ce-b1d8-73ae87f0be07.png)   
+* Sau này nếu mở rộng Vlan 10 ở PC 2 thêm thì ta không cần switch có hỗ trợ Vlan chỉ cần nối switch vào cổng f0/3 rồi chia ra các PC mới là được.
