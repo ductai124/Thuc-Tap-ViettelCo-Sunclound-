@@ -69,11 +69,9 @@ vi /etc/nginx/nginx.conf
 ## &ensp; [2. Sử dụng Router cấp DHCP và định tuyến cho cho các Vlan](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/12.DHCP/README.md#2s%E1%BB%AD-d%E1%BB%A5ng-router-c%E1%BA%A5p-dhcp-v%C3%A0-%C4%91%E1%BB%8Bnh-tuy%E1%BA%BFn-cho-cho-c%C3%A1c-vlan)
 # [IV. Cấp IP cố định cho thiết bị bằng DHCP Server](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/12.DHCP/README.md#ivc%E1%BA%A5p-ip-c%E1%BB%91-%C4%91%E1%BB%8Bnh-cho-thi%E1%BA%BFt-b%E1%BB%8B-b%E1%BA%B1ng-dhcp-server)
 # [V. Cấu hình chức năng DHCP Relay chuyển tiếp lưu lượng xin IP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/12.DHCP/README.md#vc%E1%BA%A5u-h%C3%ACnh-ch%E1%BB%A9c-n%C4%83ng-dhcp-relay-chuy%E1%BB%83n-ti%E1%BA%BFp-l%C6%B0u-l%C6%B0%E1%BB%A3ng-xin-ip)
-# []()
-# []()
-## &ensp; [VI. Cấu hình chức năng DHCP Client trên Cisco Router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/12.DHCP/README.md#vic%E1%BA%A5u-h%C3%ACnh-ch%E1%BB%A9c-n%C4%83ng-dhcp-client-tr%C3%AAn-cisco-router)
+# [VI. Cấu hình chức năng DHCP Client trên Cisco Router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/12.DHCP/README.md#vic%E1%BA%A5u-h%C3%ACnh-ch%E1%BB%A9c-n%C4%83ng-dhcp-client-tr%C3%AAn-cisco-router)
 
-## &ensp; [VII. Khắc phục sự cố Conflict IP trên DHCP Server](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/12.DHCP/README.md#viikh%E1%BA%AFc-ph%E1%BB%A5c-s%E1%BB%B1-c%E1%BB%91-conflict-ip-tr%C3%AAn-dhcp-server)
+# [VII. Khắc phục sự cố Conflict IP trên DHCP Server](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/12.DHCP/README.md#viikh%E1%BA%AFc-ph%E1%BB%A5c-s%E1%BB%B1-c%E1%BB%91-conflict-ip-tr%C3%AAn-dhcp-server)
 
 ***
 # ***I.	DHCP là gì ?***
