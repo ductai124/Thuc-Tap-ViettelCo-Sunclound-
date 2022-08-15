@@ -126,17 +126,22 @@ vi /etc/nginx/nginx.conf
 * Kỹ thuật NAT (Network Address Translation) được sử dụng để chuyển đổi giữa IP private và IP public.
 
 * Ý nghĩa của địa chỉ private: được sử dụng để bảo tồn địa chỉ IP public đang dần cạn kiệt.
-
-* Địa chỉ Unicast: Khi muốn gửi một gói tin đến một máy tính cụ thể, nó sẽ gửi dưới dạng Unicast(Point to point).
-* Địa chỉ Multicast: đây là trường hợp muốn gửi gói tin đến nhiều máy tính, lúc này ta sẽ không gửi lần lượt tới tất cả các máy mà sẽ gửi đến một địa chỉ đại diện cho nhóm thiết bị đó gọi là địa chỉ Multicast. Đây là dải địa chỉ Lớp D
-* Các địa chỉ đặc biệt:
-    *  Địa chỉ IP loopback: là loại địa chỉ IP được gửi và nhận dữ liệu của chính nó với Dải địa chỉ IP: 127.x.x.x . Phổ biến nhất là 127.0.0.1 là địa chỉ localhost
-    * Địa chỉ NetID: là loại địa chỉ IP có HostID gồm toàn bit 0
-    * Địa chỉ broadcast: là loại địa chỉ IP có HostID gồm toàn bit 1. Nó sẽ đại diện cho tất cả các thiết bị kết nối cùng mạng. Khi một gói tin được gửi đến địa chỉ Broadcast, toàn bộ các thiết bị trong mạng đều nhận được. Broadcast gồm 2 loại: 
+*  Địa chỉ IP loopback: là loại địa chỉ IP được gửi và nhận dữ liệu của chính nó với Dải địa chỉ IP: 127.x.x.x . Phổ biến nhất là 127.0.0.1 là địa chỉ localhost
+* Địa chỉ NetID: là loại địa chỉ IP có HostID gồm toàn bit 0
+    
+* Đi vào chi tiết 1 số địa chỉ đặc biệt
+![](https://wikimaytinh.com/wp-content/uploads/dia-chi-broadcast-la-gi-unicast-multicast-la-gi-compare.jpg)
+### ***a. Unicast***
+* Chỉ sự trao đổi giữa 1 điểm với 1 điểm chỉ định, 1 người gửi 1 người nhận.
+* Khi muốn gửi một gói tin đến một máy tính cụ thể, nó sẽ gửi dưới dạng Unicast(Point to point).
+### ***b. Multicast***
+* Đây là trường hợp muốn gửi gói tin đến nhiều máy tính(Không có nghĩa là tất cả chỉ là 1 số máy được chỉ định), lúc này ta sẽ không gửi lần lượt tới tất cả các máy mà sẽ gửi đến một địa chỉ đại diện cho nhóm thiết bị đó gọi là địa chỉ Multicast. Đây là dải địa chỉ Lớp D. Có thể được chuyển tiếp đi bởi router
+### ***C. Broadcast***
+* Địa chỉ broadcast: là loại địa chỉ IP có HostID gồm toàn bit 1. Nó sẽ đại diện cho tất cả các thiết bị kết nối cùng mạng. Khi một gói tin được gửi đến địa chỉ Broadcast, toàn bộ các thiết bị trong mạng đều nhận được. Broadcast gồm 2 loại: 
         * Direct broadcast: ví dụ 192.168.1.255 . Dùng trong trường hợp một thiết bị trong mạng muốn chuyển gói tin đến tất cả các thiết bị trong mạng khác
         * Local broadcast: 255.255.255.255 .Dùng trong trường hợp muốn chuyển gói tin đến toàn bộ các thiết bị trong local
-
-
+* Một gói broadcast chuyển đến tất cả những thiết bị tham gia trong một mạng cục bộ, mà không cần phải được quy định rõ ràng như một máy nhận. Do đó broadcast nên được giới hạn trong những phần riêng của mạng, và không được router chuyển tiếp.
+* Broadcast được hỗ trợ trong hầu hết các mạng LAN (ví dụ Ethernet), được sử dụng để gửi cùng 1 thông điệp cho tất cả các máy tính trong mạng LAN (ví dụ như bản tin ARP: giao thức phân giải địa chỉ, truy vấn địa chỉ của tất cả các máy tính trong cùng 1 mạng LAN).
 ## ***2. Chia địa chỉ IP***
 * Kỹ thuật chia một mạng thành nhiều mạng còn được gọi là subnet
 * Đặt vấn đề tại sao phải chia mạng: 
@@ -246,7 +251,17 @@ Giải
             192.168.|000000|11.0
 
 * Ta thấy octet thứ ba còn có thêm 6 bit giống nhau. Vậy ta có mạng tóm tắt là 192.168.0.0/22. Chú ý: subnet mask bây giờ là 255.255.252.0 với prefix là 22.
-### ***c. Bài toán số 3 Cho sơ đồ mạng, xác định số bit mượn phù hợp để chia subnet***
+### ***b. Bài toán số 3***
+* Bài toán cho số host xác định xem nó thuộc mạng nào:
+    * Ví dụ 1: Cho địa chỉ host 192.168.1.158/28. Hãy cho biết, host này thuộc về subnet nào?     
+    * /28 => có 28 bit mạng. Octet bị chia cắt là octet thứ 4 => số bit mượn của octet này là 4 => bước nhảy là 16. Lấy octet thứ 4 của địa chỉ host là 158 chia cho 16 được 9 và còn dư. Ta lấy 16 nhân với 9 được 144. Host này thuộc mạng 192.168.1.144/28
+
+    * Ví dụ 2:  Cho địa chỉ host 172.16.159.2/18. cho biết địa chỉ này thuộc subnet nào?
+
+    * /18 => có 18 bit mạng. Octet bị chia cắt là octet thứ 3 => số bit mượn của octet này là 2 => bước nhảy là 64. Lấy octet thứ 3 là 159 chia cho 64 được 2 và còn dư. Ta lấy 64 nhân với 2 được 128. Host này thuộc mạng 172.16.128.0/18.
+
+
+### ***c. Bài toán số 4 Cho sơ đồ mạng, xác định số bit mượn phù hợp để chia subnet***
 * Ví dụ: Cho một mạng 192.168.1.0/24. Hãy cung cấp đủ các địa chỉ IP cho 5 mạng như sau:
 ![](https://vnpro.vn/upload/images/Th%C6%B0%20vi%E1%BB%87n/Ch%C6%B0%C6%A1ng%201/chuong-1-dia-chi-ip-chia-subnet-vlsm-summary-10.jpg)
 * Nhận thấy có tất cả 5 mạng (tính ra 2 router nối nhau là 1 mạng), mạng nhiều host nhất là mạng có 26 host (cộng thêm một địa chỉ cổng router). Gọi số bit mượn là n số bit host là m. Ta có: 
