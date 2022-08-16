@@ -6,14 +6,7 @@
 
 ***
 # Mục lục
-# [1.CCNA]()
-
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
+# [1.CCNA](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA#readme)
 # [iDRAC Dell Server]()
 # [OSI và TCP/IP]()
 # [RAID]()
