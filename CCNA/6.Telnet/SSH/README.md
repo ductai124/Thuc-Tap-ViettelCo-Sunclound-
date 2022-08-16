@@ -122,3 +122,16 @@ Router(config-line)#exit
 * Tiền hành SSH đến router
 
 ![](https://user-images.githubusercontent.com/52046920/184822869-47aa3fb5-18ad-4136-954c-9be1350b7c46.png)
+
+* Kiểm tra lại phiên ssh
+```cisco
+R1#show ssh
+R#show users
+```
+
+![](https://user-images.githubusercontent.com/52046920/184825408-4df08d21-cdc1-40aa-92e4-7f25e5b898c7.png)
+
+* Có thể hủy phiên tương tự telnet bằng câu lệnh
+```cisco
+R1#clear line 2
+```
