@@ -138,13 +138,16 @@ vi /etc/nginx/nginx.conf
     * Cổng Fa0/1 chỉ đi 1 lần là đến SW1 nên RPC =19
     * Cổng Fa0/2 phải đi ra 3 lần để đến được SW 1 vậy nên RPC tổng cost của 3 lần đó là RPC=19+19+19=57
     * 57<19 vậy nên chọn Fa0/1 làm Root Port của SW3
+
+![](https://user-images.githubusercontent.com/52046920/184888556-7bf84249-b998-4553-b12a-8a108bb69e99.png)
 * Khi RPC của các cổng bằng nhau thì ta sẽ sử dụng các tiêu chí khác:
     * Dựa vào Bridge-ID của thiết bị láng giếng. Đứng tại Switch đang xét Root-Port nếu RPC của các cổng bằng nhau thì ta xét Priority của Switch láng giếng. Priority của Switch nào thấp hơn thì cổng kết nối với Switch đấy sẽ được chọn. Ví dụ: Tại Switch 4 có 2 đường đến SW1 và RPC của cả 2 đều bằng 19+19=38 vậy nên xét ta phải xét đến Priority của SW3 và SW2 và nhận thấy SW3 có Priority nhỏ hơn của SW2 vậy nên Fa0/1 sẽ là Root-Port
 
-    ![]()
-    ![]()
+    ![](https://user-images.githubusercontent.com/52046920/184888569-06e49462-b71a-44f4-acc3-812f135127e9.png)
+    ![](https://user-images.githubusercontent.com/52046920/184888571-c3ee3762-876d-418e-b6af-cfe5766f5770.png)
     * Khi Bridge-ID của Switch láng giềng là bằng nhau thì ta xét tiếp tục đến Port-ID của các Switch láng giềng. Port nào mà kết nối vời Port của Switch láng giềng có Port ID thấp hơn thì sẽ được chọn làm Root-Port
 
+![](https://user-images.githubusercontent.com/52046920/184888575-48099995-555b-4ed2-8cf8-d5d02b3e6221.png)
 * Khi các luật trên không giải quyết được thì nó sẽ xét đến Port ID trên chính nó
 
 * Thông thường các cổng nối với switch được chọn Root-Bridge sẽ là Root-Port
