@@ -61,15 +61,64 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
+# [I. SSH là gì]()
+# [II. Cơ chế hoạt động]()
+# [III. Cấu hình SSH]()
 ***
 # ***I.	SSH là gì***
-* 
+* SSH  hay Secure Shell, là một giao thức hỗ trợ các nhà quản trị mạng truy cập vào máy chủ từ xa thông qua mạng internet không bảo mật.
+* SSH tạo ra cơ chế xác thực qua mật khẩu mạnh, hình thành mối liên kết giao tiếp dữ liệu mã hóa ra giũa 2 máy qua mạng. 
+# ***II.	Cơ chế hoạt động***
+* SSH hoạt động theo mô hình CLient-Server để xác thực hai bên và mã hóa dữ liệu giữa chúng. CLient sẽ là thành phần tạo phiên kết nối SSH đến thành phần khác. Server sẽ cho phép Client mở pheien SSH kết nối vào mình
+* Có 3 bước chính:
+    * Bước 1: Khởi tọa kết nối SSH, chính là tạo ra kênh giao tiếp bảo mật giữa Server và Client.
+    * Bước 2: CLient xác thực Server. Sau khi CLient xác định được định danh của Server, 1 kết nối bảo mật đối xứng được hình thành giữa 2 bên
+    * Bước 3: Server xác thực CLient dựa trên kết nối được thiết lập ở trên
+
+![](https://vnpro.vn/upload/images/ssh-la-gi-cach-hoat-dong-cua-ssh.jpg)
+
+# ***III.	Cấu hình SSH***
+* Tiến hành cấu hình cho máy tính có thể SSH được đến router
+
+![](https://user-images.githubusercontent.com/52046920/184822863-83ddefd6-f398-476d-89f5-bff69e0c8025.png)
+
+|Thiết bị|IP|
+|--|--|
+|Router e0/0|192.168.1.1/24|
+|PC|192.168.1.2/24 và default gateway là 192.169.1.1/24|
+
+```cisco
+///Cấu hình cơ bản cho router
+Router(config)#hostname R1
+R1(config)#int e0/0
+R1(config-if)#ip address 192.168.1.1 255.255.255.0
+R1(config-if)#no shut
+Router(config-if)#exit
+Router(config)#enable password 123
+
+
+///Đặt Domain-name cho router và router sẽ dùng domain name này để tạo SSH key mã hóa
+R1(config)#ip domain-name test.org
+
+///Tạo key mã hóa rsa
+R1(config)#crypto key generate rsa
+///Sau đó nhập số có giá trị trên 768 do hiện nay chủ yếu chỉ hỗ trợ SSH 2
+
+///Kiểm tra key được tạo ra bằng câu lệnh sau
+R1#show crypto key mypubkey rsa
+
+///Cấu hình mật khẩu và chuyển phương thức truy cập vty thành SSH do mặc định của nó là telnet
+Router(config)#username admin password 123
+Router(config)#line vty 0 4
+Router(config-line)#transport input ssh
+Router(config-line)#login local
+Router(config-line)#exit
+
+
+```
+* Key được tạo ra
+
+![](https://user-images.githubusercontent.com/52046920/184822866-1265a02e-e32b-4d04-b9bc-3b4f89a1816c.png)
+* Tiền hành SSH đến router
+
+![](https://user-images.githubusercontent.com/52046920/184822869-47aa3fb5-18ad-4136-954c-9be1350b7c46.png)
