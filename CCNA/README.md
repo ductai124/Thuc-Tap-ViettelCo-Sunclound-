@@ -18,7 +18,7 @@
 ## &ensp; [LLDP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/1bbe933da75019359453823a745ed35643d5ee26/CCNA/5.CDP%20and%20LLDP/LLDP/README.md)
 # [6.Telnet](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/1bbe933da75019359453823a745ed35643d5ee26/CCNA/6.Telnet/README.md)
 ## &ensp; [Telnet AAA skill](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/1bbe933da75019359453823a745ed35643d5ee26/CCNA/6.Telnet/Telnet%20AAA%20skill/README.md)
-## &ensp; [SSH](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/169125346fbe8bad4e2c66a7da7565bb1b7a57d9/CCNA/6.Telnet/SSH/README.md)
+## &ensp; [SSH](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/66d145f2ba9a4345d520aa78ce6134ca36652dca/CCNA/6.Telnet/SSH/README.md)
 # [7.Static Router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/1bbe933da75019359453823a745ed35643d5ee26/CCNA/7.Static%20router/README.md)
 # [8.ICMP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/1bbe933da75019359453823a745ed35643d5ee26/CCNA/8.ICMP/README.md)
 # [9.VLAN](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/1bbe933da75019359453823a745ed35643d5ee26/CCNA/9.VLAN/README.md)
