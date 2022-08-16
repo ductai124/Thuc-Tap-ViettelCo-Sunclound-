@@ -73,7 +73,7 @@ vi /etc/nginx/nginx.conf
 ***
 # ***I.	STP là gì***
 * STP viết tắt của Spanning Tree Protocol là một giao thức dùng để ngăn chặn sự lặp vòng của hệ thống. Là giao thức khoogn thể thiếu trong tầng Datalink(Layer 2).
-##	Lý do xảy ra lặp trong hệ thống***
+##	***Lý do xảy ra lặp trong hệ thống***
 * Trong 1 hệ thống mạng doanh nghiệp để tăng tính dữ phòng của mạng người ta thường đấu nối nhiều Switch lại với nhau, và 2 switch đấu nối với nhau cũng sẽ bằng 2 đường để nhằm mục đích tạo đường dự phòng cho đường dây chính. Chính việc này đã sinh ra vòng lặp
 * Các switch khi đấu nối theo dạng Ring cũng sẽ là 1 nguyên nhân gây ra vòng lặp và còn nhiều nguyên nhân khác nữa có thể xảy ra vòng lặp nhưng chủ yếu là do tính toán dự phòng của doanh nghiệp.
 * Các hình thức Loop
