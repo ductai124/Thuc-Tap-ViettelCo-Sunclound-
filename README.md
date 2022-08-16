@@ -1,6 +1,6 @@
 # Thuc-Tap-ViettelCo-Sunclound-
 
-## Người viết : Phạm Đức Tài
+## Người tìm hiểu và viết tài liệu : Phạm Đức Tài
 ## SDT : 0837686717
 ## Mail : phamductai123456@gmail.com
 
@@ -14,4 +14,6 @@
 
 ## &ensp; []()
 
-# []()
+# [iDRAC Dell Server]()
+# [OSI và TCP/IP]()
+# [RAID]()
