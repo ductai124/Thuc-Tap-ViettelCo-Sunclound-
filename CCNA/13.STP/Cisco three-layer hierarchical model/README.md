@@ -61,15 +61,17 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. Tổng quan](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/Cisco%20three-layer%20hierarchical%20model/README.md#it%E1%BB%95ng-quan)
 
-## &ensp; []()
+# [II. Core Layer](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/Cisco%20three-layer%20hierarchical%20model/README.md#iicore-layer)
+# [III. Distribution Layer](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/Cisco%20three-layer%20hierarchical%20model/README.md#iiidistribution-layer)
+# [IV. Access Layer](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/Cisco%20three-layer%20hierarchical%20model/README.md#ivaccess-layer)
+# [IV. Các lựa chọn thiết kế](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/Cisco%20three-layer%20hierarchical%20model/README.md#ivc%C3%A1c-l%E1%BB%B1a-ch%E1%BB%8Dn-thi%E1%BA%BFt-k%E1%BA%BF)
+## &ensp; [1. Point to Point](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/Cisco%20three-layer%20hierarchical%20model/README.md#1point-to-point)
+## &ensp; [2. Hub and Spoke](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/Cisco%20three-layer%20hierarchical%20model/README.md#2hub-and-spoke)
+## &ensp; [3. Mô hình full Mesh](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/Cisco%20three-layer%20hierarchical%20model/README.md#3-m%C3%B4-h%C3%ACnh-full-mesh)
+## &ensp; [4. Mô hình partial Mesh](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/Cisco%20three-layer%20hierarchical%20model/README.md#4-m%C3%B4-h%C3%ACnh-partial-mesh)
 
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
 ***
 # ***I.	Tổng quan***
 * Một hệ thống mạng được thiết kế bài bản sẽ dẫn đến việc quản lý, mở rộng, vận hành sẽ dễ dàng và trơn tru hơn. Và để đạt được điều đó Cisco đã đưa là các thiết kế mạng theo dạng phân cấp để nhằm mục đích đó.
