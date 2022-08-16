@@ -61,14 +61,17 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
+# [I. STP là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#istp-l%C3%A0-g%C3%AC)
+## &ensp; [1. Broadcast Storm](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#1broadcast-storm)
+## &ensp; [2. Trùng lập Frame](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#2tr%C3%B9ng-l%E1%BA%ADp-frame)
+# [II. Cơ chế chống Loop của công nghệ STP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#iic%C6%A1-ch%E1%BA%BF-ch%E1%BB%91ng-loop-c%E1%BB%A7a-c%C3%B4ng-ngh%E1%BB%87-stp)
+## &ensp; [1. Chọn Root-Bridge của Giao thức Spanning Tree](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#1-ch%E1%BB%8Dn-root-bridge-c%E1%BB%A7a-giao-th%E1%BB%A9c-spanning-tree)
+## &ensp; [2. Bầu chọn Root-port của Giao thức Spanning Tree](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#2-b%E1%BA%A7u-ch%E1%BB%8Dn-root-port-c%E1%BB%A7a-giao-th%E1%BB%A9c-spanning-tree)
+## &ensp; [3. Bầu Chọn Designated port](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#3-b%E1%BA%A7u-ch%E1%BB%8Dn-designated-port)
+## &ensp; [4. Alternate port(Block Port)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#4-alternate-portblock-port)
 # []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
+# []()
+# []()
 # []()
 ***
 # ***I.	STP là gì***
