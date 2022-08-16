@@ -1,6 +1,6 @@
-# Thuc-Tap-ViettelCo-Sunclound-
+# Thuc-Tap-ViettelCo-Sunclound-CCNA
 
-## Người viết : Phạm Đức Tài
+## Người tìm hiểu và viết tài liệu : Phạm Đức Tài
 ## SDT : 0837686717
 ## Mail : phamductai123456@gmail.com
 
