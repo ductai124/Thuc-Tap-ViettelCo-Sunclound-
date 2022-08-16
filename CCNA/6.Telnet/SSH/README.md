@@ -61,9 +61,9 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. SSH là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/169125346fbe8bad4e2c66a7da7565bb1b7a57d9/CCNA/6.Telnet/SSH/README.md#issh-l%C3%A0-g%C3%AC)
-# [II. Cơ chế hoạt động](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/169125346fbe8bad4e2c66a7da7565bb1b7a57d9/CCNA/6.Telnet/SSH/README.md#iic%C6%A1-ch%E1%BA%BF-ho%E1%BA%A1t-%C4%91%E1%BB%99ng)
-# [III. Cấu hình SSH](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/169125346fbe8bad4e2c66a7da7565bb1b7a57d9/CCNA/6.Telnet/SSH/README.md#iiic%E1%BA%A5u-h%C3%ACnh-ssh)
+# [I. SSH là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/169125346fbe8bad4e2c66a7da7565bb1b7a57d9/CCNA/6.Telnet/SSH#issh-l%C3%A0-g%C3%AC)
+# [II. Cơ chế hoạt động](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/169125346fbe8bad4e2c66a7da7565bb1b7a57d9/CCNA/6.Telnet/SSH#iic%C6%A1-ch%E1%BA%BF-ho%E1%BA%A1t-%C4%91%E1%BB%99ng)
+# [III. Cấu hình SSH](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/169125346fbe8bad4e2c66a7da7565bb1b7a57d9/CCNA/6.Telnet/SSH#iiic%E1%BA%A5u-h%C3%ACnh-ssh)
 ***
 # ***I.	SSH là gì***
 * SSH  hay Secure Shell, là một giao thức hỗ trợ các nhà quản trị mạng truy cập vào máy chủ từ xa thông qua mạng internet không bảo mật.
