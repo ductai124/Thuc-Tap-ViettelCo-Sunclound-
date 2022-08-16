@@ -1,7 +1,0 @@
-mô hình mạng 3 lớp
-https://ciscosaigon.com/tai-lieu-cisco/Tim-hieu-ve-he-thong-mang-core-switch-cua-Cisco.html
-https://vnpro.vn/thu-vien/cau-truc-mo-hinh-mang-phan-cap-2014.html
-STP
-https://fit.hcmute.edu.vn/Resources/Docs/SubDomain/fit/trungnh/63097205-Tom-t%E1%BA%AFt-Spanning-Tree-Protocols.pdf
-https://itforvn.com/tu-hoc-ccnax-bai-7-spanning-tree.html/
-https://networkpro.vn/spanning-tree-la-gi/
