@@ -79,7 +79,7 @@ vi /etc/nginx/nginx.conf
 ##	***Lý do xảy ra lặp trong hệ thống***
 * Trong 1 hệ thống mạng doanh nghiệp để tăng tính dữ phòng của mạng người ta thường đấu nối nhiều Switch lại với nhau, và 2 switch đấu nối với nhau cũng sẽ bằng 2 đường để nhằm mục đích tạo đường dự phòng cho đường dây chính. Chính việc này đã sinh ra vòng lặp
 * Các switch khi đấu nối theo dạng Ring cũng sẽ là 1 nguyên nhân gây ra vòng lặp và còn nhiều nguyên nhân khác nữa có thể xảy ra vòng lặp nhưng chủ yếu là do tính toán dự phòng của doanh nghiệp.
-* Các hình thức Loop
+* Các hình thức Loop khi không có giao thức STP
 ## ***1.	Broadcast Storm***
 * Giả sử
 
@@ -101,7 +101,9 @@ vi /etc/nginx/nginx.conf
 
 
 # ***II.	Cơ chế chống Loop của công nghệ STP***
-* Tiến trình bầu chọn và hoạt động của Giao thức Spanning Tree:
+* STP sử dụng khái niệm Block Port(Port dự phòng) để can thiệp vào quá trình bị lặp trong hệ thống mạng. Các Switch sẽ giao tiếp với nhau và quyết định Block Port để ngăn chặn quá trình lặp trong mạng.
+* Port bị Block chỉ bị Block logic trên thực tế nó vẫn hoạt động tuy nhiên không nhận và truyền dữ liệu. Nó chỉ có thể sửu dụng khi có phân đoạn mạng liên kề với nó bị hỏng nó sẽ khởi động với vai trò đường dự phòng. Khi phân đoạn mạng được sửa chữa thì nó lại quay lại trạng thái ban đầu
+* Tiến trình bầu chọn của Giao thức Spanning Tree sẽ gồm 4 bước:
     * Thực hiện bầu chọn Root-Bridge()
     * Bầu chọn Root-Port
     * Lựa chọn các Designated-Port
@@ -119,8 +121,11 @@ vi /etc/nginx/nginx.conf
     * Sau khi được làm Root-Bridge thì Switch làm root gửi BPDU ra khỏi cổng để duy trì tiền trình STP(2s/lần). Các Switch còn lại chỉ nhận bổ sung BPDU và chuyển tiếp nó 
 
 ![](https://user-images.githubusercontent.com/52046920/184835208-5b94cfaa-14fd-48d9-afca-2ed89ff928c3.png)
+
+* Root-Bridge sẽ đóng vai trò là điểm hội tụ toàn bộ lưu lượng của hệ thống mạng trước khi đi ra ngoại mạng
 # ***2. Bầu chọn Root-port của Giao thức Spanning Tree***
-* Root-Port là port có đường về Root-bridge có tổng cost tích lũy nhỏ nhất. Switch được chọn làm Root-bridge không tham gia vào quá trình này
+* Root-Port là port có đường đến Root-bridge có tổng cost tích lũy nhỏ nhất(Gửi dữ liệu nhanh nhất đến Root-Bridge). Switch được chọn làm Root-bridge không tham gia vào quá trình này.
+* là Port được chọn để gửi dữ liệu đến Root-Bridge do nó là port gửi dữ liệu nhanh nhất đến với Root-Bridge
 
 * Bảng cost của 1 số loại interface Ethernet LAN
 
@@ -153,12 +158,13 @@ vi /etc/nginx/nginx.conf
 ![](https://user-images.githubusercontent.com/52046920/184888575-48099995-555b-4ed2-8cf8-d5d02b3e6221.png)
 * Khi các luật trên không giải quyết được thì nó sẽ xét đến Port ID trên chính nó
 
-* Thông thường các cổng nối với switch được chọn Root-Bridge sẽ là Root-Port
+* Thông thường các cổng nối trực tiếp đến với switch được chọn Root-Bridge sẽ là Root-Port
 
 
 
 # ***3. Bầu Chọn Designated port***
-* Là port cung cấp đường về root-bridge có tổng cost nhỏ nhất trên phân đoạn mạng đang xét. Chỉ có một Designated port ứng với một link kết nối.
+* Là port cung cấp đường đến root-bridge có tổng cost nhỏ nhất trên phân đoạn mạng đang xét. Chỉ có một Designated port ứng với một link kết nối.
+* Port này là Port được quyền gửi chuyển tiếp bản tin BPDU đi qua nó.
 * Các Switch nối với nhau tạo ra bao nhiêu phân đoạn mạng thì sẽ có bấy nhiêu Designated port
 * Port kết nối trực tiếp với Designated port ở Switch láng giềng sẽ là Alternated Port(BLoack Port)
 * Cách xác định
@@ -167,7 +173,23 @@ vi /etc/nginx/nginx.conf
     * Nếu RPC của Root-Port bằng nhau ta lại dựa vào Bridge-ID, Bridge-IDcủa Switch nào có Priority nhỏ hơn thì trên phân đoạn mạng đó Port của Switch đó sẽ là Designated port
 
 # ***4. Alternate port(Block Port)***
-* Port đối diện với Designated port mà không phải Root-port sẽ là Alternate port bị Block và sử dụng như 1 đường dự phòng.
-* Khi 1 trong các phân đoạn khác bị đứt thì phân đoạn port block sẽ được mở ra để chạy.
+* Port đối diện với Designated port mà không phải Root-port sẽ là Alternate port bị Block không có khả năng truyền nhận dữ liệu và sử dụng như 1 đường dự phòng.
+* Khi 1 trong các phân đoạn khác liền kề với phân đoạn mạng chứa port block bị đứt thì phân đoạn mạng chứa port block sẽ được mở ra để chạy và khi sự cố được giải quyết thì nó sẽ trở về trạng thái khóa.
 * Khi phân đoạn trên có lại thì phân đoạn block sẽ tiếp tục bị block lại
 * Tuy port block không nhận được dữ liệu nhưng nó vẫn nhận gói tin BPDU từ Root-switch để duy trì cây spanning-tree.
+*  Helo timer: định kỳ sau thời gian 2s sẽ gửi BPDU
+* Forward timer: 15(s)
+* Max-age times: 20(s)
+
+* Nếu Root-Sw chết hay port block không nhận được BPDU thì mất 20s nó mới hoạt động (tự mở lên hoặc bầu chọn lại Root-sw) và nó sẽ mở ra cho dữ liệu đi qua
+
+# ***III.	Khảo sát chức năng PortFast và các trạng thái Port State trong STP***
+* Các trạng thái khi switch khởi động:
+    * Disable: down
+    * Blocking: nhận BDPU> không gửi BPDU > không học MAC > không forward frame.
+    * Leaning: nhận BDPU > gửi BPDU > học MAC > không forward frame.
+    * Listening: nhận BDPU > gửi BPDU > không học MAC > không forward frame
+    * Forwarding: nhận BDPU > gửi BPDU > học MAC > forward frame
+* Từ trạng thái Blocking sang Listening mất 20s.
+* Từ Listening sang Leaning mất 15s.
+* Từ Learning sang Forwarding mất 15s.
