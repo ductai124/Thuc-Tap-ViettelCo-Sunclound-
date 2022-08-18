@@ -177,19 +177,94 @@ vi /etc/nginx/nginx.conf
 * Khi 1 trong các phân đoạn khác liền kề với phân đoạn mạng chứa port block bị đứt thì phân đoạn mạng chứa port block sẽ được mở ra để chạy và khi sự cố được giải quyết thì nó sẽ trở về trạng thái khóa.
 * Khi phân đoạn trên có lại thì phân đoạn block sẽ tiếp tục bị block lại
 * Tuy port block không nhận được dữ liệu nhưng nó vẫn nhận gói tin BPDU từ Root-switch để duy trì cây spanning-tree.
-*  Helo timer: định kỳ sau thời gian 2s sẽ gửi BPDU
-* Forward timer: 15(s)
-* Max-age times: 20(s)
-
 * Nếu Root-Sw chết hay port block không nhận được BPDU thì mất 20s nó mới hoạt động (tự mở lên hoặc bầu chọn lại Root-sw) và nó sẽ mở ra cho dữ liệu đi qua
 
-# ***III.	Khảo sát chức năng PortFast và các trạng thái Port State trong STP***
-* Các trạng thái khi switch khởi động:
+# ***III.	Chức năng PortFast và các trạng thái Port State trong STP***
+* Các trạng thái khi switch khởi động diễn ra theo trình tự như sau:
     * Disable: down
     * Blocking: nhận BDPU> không gửi BPDU > không học MAC > không forward frame.
     * Leaning: nhận BDPU > gửi BPDU > học MAC > không forward frame.
     * Listening: nhận BDPU > gửi BPDU > không học MAC > không forward frame
     * Forwarding: nhận BDPU > gửi BPDU > học MAC > forward frame
-* Từ trạng thái Blocking sang Listening mất 20s.
-* Từ Listening sang Leaning mất 15s.
-* Từ Learning sang Forwarding mất 15s.
+* Tốc độ chuyển đổi trạng thái mặc định
+    * Từ trạng thái Blocking sang Listening mất 20s.
+    * Từ Listening sang Leaning mất 15s.
+    * Từ Learning sang Forwarding mất 15s.
+
+* Các timer của STP
+    *  Helo timer: định kỳ sau thời gian 2s sẽ gửi BPDU
+    * Forward timer: 15(s) là khoảng thời gian duy trì ở trạng thái learning trước khi chuyển qua trạng thái Listening hoặc learning trước khi chuyển qua trạng thái Forwarding
+    * Max-age times: 20(s) Khoảng thời gian duy trì ở Blocking cho đến khi chuyển thành Listening khi không nhận được bản tin BDPU
+* Các tham số trên đều có thể tinh chỉnh và nó sẽ ảnh hưởng đến các trạng thái. Nếu hiệu chỉnh tại Root-Bridge thì toàn bộ hệ thống sẽ sử dụng các timer được hiệu chỉnh tại đây
+* Chức năng Port fast được sử dụng trên các port nối đến các PC và các thiết bi khác như máy in, camera,... . Chức năng này có khả năng bỏ qua các trạng thái ở trên 
+
+# ***IV.	Giải pháp cân bằng tải lưu lượng của PVST+ trên các Cisco Switch***
+* Giao thức PVST (PerVlan STP Plus) là một biến thể của giao thức STP là một giao thức tích hợp mặc định trên các sw của cisco.
+* Đối với STP nó sẽ không thiết lập cho từng VLAN mã là toàn bộ hệ thống mạng vì vậy dẫn đến trường hợp như sau.
+
+![](https://user-images.githubusercontent.com/52046920/185333245-e9115ad4-4864-4af9-9deb-2a48b86ba153.png)
+
+* khi PC ở VLAN 10 và VLAN 20 muốn đi ra ngoài internet ví dụ ở đây cổng nối từ SW3 đến SW 2 sẽ là cổng BLock Port được chọn ra dựa vào STP và khi đó mọi dữ liệu từ cả 2 VLAN đi ra ngoài sẽ phải đi qua  SW1. Điều này dẫn đến tắc nghẽn đường đi từ SW3 đến SW1 do toàn bộ dữ liệu muốn đi ra ngoài sẽ phải đi qua đường này và lãng phí đường đi từ SW3 đến SW2. Và để giải quyết vấn đề này ta có PVST 
+
+![](https://user-images.githubusercontent.com/52046920/185333241-eff600df-6848-4aa7-8c3a-4e86b5b3a343.png)
+* Kỹ thuật này cơ bản là mỗi VLAN trên các SW này sẻ chạy một tiến trình STP độc lập với nhau. Có thể giúp người quản trị cân bằng tải và sử dụng đường truyền một cách tối ưu nhất. Nói đơn giản là nó sẽ tạo STP cho từng Vlan một và mỗi Vlan sẽ có đường đi riêng tránh gây lãng phí tài nguyên
+
+![](https://user-images.githubusercontent.com/52046920/185333248-baa7303c-7574-44cd-87fe-f070f62b5ab0.png)
+
+# ***V.	Hiệu chỉnh các giá trị của STP và PVST***
+
+* Các câu lệnh sẽ được sử dụng
+```cisco
+
+///Kiểm tra các giá trị của STP trên SW
+SW1# show spanning-tree
+
+\\\Thiết lập priority cho vlan(mặc định các VLAN trên các SW là VLAN 1)
+SW1(config)#spanning-tree vlan 1 priority 100       
+
+
+\\\Show port ip và port priority, cost của post
+SW1(config)#show spanning-tree interface f0/1
+
+
+\\\chỉnh sửa lại cost của cổng đối với tùy vlan
+SW1(config)interface f0/1
+SW1(config-if)spanning-tree vlan 1 cost 8
+```
+
+* CHo mô hình sau
+
+![](https://user-images.githubusercontent.com/52046920/185366402-2a5c5021-7e3c-4ece-9814-2272e21624e7.png)
+* Thực hiện tùy chỉnh đường đi của các VLAN như trong hình
+
+* Ta thiết lập
+* Đầu tiên là tạo Vlan 10 và 20 ở tất cả các switch, tại SW4 và SW7 thì tạo trunk qua 2 SW6 và SW5, Tại SW6 và SW5 thiết lập Vlan cho từng cổng giống như hình vẽ và thiết lập ip cho các máy tính. Sau đó sẽ là bước thiết lập đường đi
+* Tại SW4 sẽ là đường đi của VLAN 10 vậy nên thiết lập chỉ số Priority của vlan 10 thấp hơn priority của vlan 20
+```cisco
+SW4(config)#spanning-tree vlan 10 priority 4096
+SW4(config)#spanning-tree vlan 20 priority 8192
+```
+* Các giá trị sau đây được gán cho priority
+
+![](https://user-images.githubusercontent.com/52046920/185365824-361d10cb-6a65-4d32-a263-bba9efe8dad7.png)
+* Tại SW7 sẽ là đường đi của VLAN 20 vậy nên thiết lập chỉ số Priority của vlan 20 thấp hơn priority của vlan 10
+```cisco
+SW4(config)#spanning-tree vlan 20 priority 4096
+SW4(config)#spanning-tree vlan 10 priority 8192
+```
+
+* Ping từ PC5 đến PC4
+
+![](https://user-images.githubusercontent.com/52046920/185365820-3ce423ed-f29e-45be-86fe-3cbf9a6028cf.png)
+![](https://user-images.githubusercontent.com/52046920/185365817-b4f015af-f02a-49cb-b3d8-38cba96cd232.png)
+![](https://user-images.githubusercontent.com/52046920/185365815-954b8ab2-6072-449a-bc9c-ad3e38f408de.png)
+![](https://user-images.githubusercontent.com/52046920/185365811-9cb4c18f-4d03-47ce-9bc9-ea55a1779a56.png)
+* Đã đi đúng đường thiết lập
+
+* Ping từ PC6 đến PC7
+
+![](https://user-images.githubusercontent.com/52046920/185365807-689b5843-1bd7-467b-935a-ecb933f1e305.png)
+![](https://user-images.githubusercontent.com/52046920/185365804-2503b70b-075e-4878-a9ea-eb34c524e0b0.png)
+![](https://user-images.githubusercontent.com/52046920/185365798-c96039c8-385d-40b1-b82f-b3a41f50dff9.png)
+![](https://user-images.githubusercontent.com/52046920/185365793-c8953182-2bc1-4f82-b0ca-e08a339ef1da.png)
+* Đã đi đúng đường thiết lập
