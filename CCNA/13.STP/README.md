@@ -69,9 +69,9 @@ vi /etc/nginx/nginx.conf
 ## &ensp; [2. Bầu chọn Root-port của Giao thức Spanning Tree](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#2-b%E1%BA%A7u-ch%E1%BB%8Dn-root-port-c%E1%BB%A7a-giao-th%E1%BB%A9c-spanning-tree)
 ## &ensp; [3. Bầu Chọn Designated port](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#3-b%E1%BA%A7u-ch%E1%BB%8Dn-designated-port)
 ## &ensp; [4. Alternate port(Block Port)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#4-alternate-portblock-port)
-# []()
-# []()
-# []()
+# [III. Chức năng PortFast và các trạng thái Port State trong STP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#iiich%E1%BB%A9c-n%C4%83ng-portfast-v%C3%A0-c%C3%A1c-tr%E1%BA%A1ng-th%C3%A1i-port-state-trong-stp)
+# [IV. Giải pháp cân bằng tải lưu lượng của PVST+ trên các Cisco Switch](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#ivgi%E1%BA%A3i-ph%C3%A1p-c%C3%A2n-b%E1%BA%B1ng-t%E1%BA%A3i-l%C6%B0u-l%C6%B0%E1%BB%A3ng-c%E1%BB%A7a-pvst-tr%C3%AAn-c%C3%A1c-cisco-switch)
+# [V. Hiệu chỉnh các giá trị của STP và PVST](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/13.STP/README.md#vhi%E1%BB%87u-ch%E1%BB%89nh-c%C3%A1c-gi%C3%A1-tr%E1%BB%8B-c%E1%BB%A7a-stp-v%C3%A0-pvst)
 # []()
 ***
 # ***I.	STP là gì***
