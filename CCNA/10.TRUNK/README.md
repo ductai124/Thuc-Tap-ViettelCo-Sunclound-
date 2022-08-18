@@ -175,7 +175,8 @@ Switch # show vtp status
 ```
 
 * Ví dụ: Cho sơ đồ mạng
-![](https://user-images.githubusercontent.com/52046920/183424021-e7c62b7c-38fc-48bb-b806-0ada257ab7b7.png)
+
+![](https://user-images.githubusercontent.com/52046920/185294643-6e3757c1-8313-467c-b376-7d842be0fab5.png)
 
 * Tại SW1
 ```cisco
