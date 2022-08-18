@@ -61,9 +61,9 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I.	Tạo bot trên telegram]()
+# [I.	Tạo bot trên telegram](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/LINUX/README.md#it%E1%BA%A1o-bot-tr%C3%AAn-telegram-1)
 
-# [II.	Gửi tin nhắn từ Centos đến telegram]()
+# [II.	Gửi tin nhắn từ Centos đến telegram](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/LINUX/README.md#iig%E1%BB%ADi-tin-nh%E1%BA%AFn-t%E1%BB%AB-centos-%C4%91%E1%BA%BFn-telegram-1)
 ***
 # ***I.	Tạo bot trên telegram***
 * Đầu tiên hãy đăng nhập telegram sau đó chọn setting và thiết lập username của mình.
