@@ -68,7 +68,7 @@ vi /etc/nginx/nginx.conf
 
 ## &ensp; [2. Cấu hình bằng giao thức PAgP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/14.EtherChannel/README.md#2-c%E1%BA%A5u-h%C3%ACnh-b%E1%BA%B1ng-giao-th%E1%BB%A9c-pagp)
 
-# [IV. Cấu hình EtherChannel hoạt động ở chế độ Layer 3](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/14.EtherChannel/README.md#iv-c%E1%BA%A5u-h%C3%ACnh-etherchannel-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-%E1%BB%9F-ch%E1%BA%BF-%C4%91%E1%BB%99-layer-3)
+# [IV. Cấu hình EtherChannel hoạt động ở chế độ Layer 3](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/14.EtherChannel/README.md#iv-c%E1%BA%A5u-h%C3%ACnh-etherchannel-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-%E1%BB%9F-ch%E1%BA%BF-%C4%91%E1%BB%99-layer-3-1)
 ***
 # ***I.	EtherChannel là gì***
 * Là công nghệ cho phép chúng ta nhóm nhiều đường kết nối vật lý thành 1 đường truyền ảo và mang sức mạnh của toàn bộ các đường vật lý mà nó gộp vào
