@@ -61,15 +61,15 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
+# [I. HSRP là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/15.HSRP/README.md#ihsrp-l%C3%A0-g%C3%AC)
+# [II. Nguyên tắc bầu chọn Active và Standby Router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/15.HSRP/README.md#ii-nguy%C3%AAn-t%E1%BA%AFc-b%E1%BA%A7u-ch%E1%BB%8Dn-active-v%C3%A0-standby-router)
+# [III. Giải pháp cân bằng tải trong HSRP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/15.HSRP/README.md#iii-gi%E1%BA%A3i-ph%C3%A1p-c%C3%A2n-b%E1%BA%B1ng-t%E1%BA%A3i-trong-hsrp)
 # []()
+## &ensp; [1.Cách 1: Thiết lập nhiều default gateway cho interface](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/15.HSRP/README.md#1c%C3%A1ch-1-thi%E1%BA%BFt-l%E1%BA%ADp-nhi%E1%BB%81u-default-gateway-cho-interface)
 
-## &ensp; []()
+## &ensp; [2.Cách 2: Sử dụng Sub interface, thiết lập default gateway ảo cho từng cổng sub interface](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/15.HSRP/README.md#2c%C3%A1ch-2-s%E1%BB%AD-d%E1%BB%A5ng-sub-interface-thi%E1%BA%BFt-l%E1%BA%ADp-default-gateway-%E1%BA%A3o-cho-t%E1%BB%ABng-c%E1%BB%95ng-sub-interface)
 
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
+# [IV. Cơ chế Track giám sát trạng thái Port trong HSRP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/15.HSRP/README.md#iv-c%C6%A1-ch%E1%BA%BF-track-gi%C3%A1m-s%C3%A1t-tr%E1%BA%A1ng-th%C3%A1i-port-trong-hsrp)
 ***
 # ***I.	HSRP là gì***
 * HSRP - Hot Standby Router Protocol là một giao thức chuẩn của Cisco cung cấp tính sẵn sàng cho hệ thống mạng. Là một giao thức độc quyền cho cisco
