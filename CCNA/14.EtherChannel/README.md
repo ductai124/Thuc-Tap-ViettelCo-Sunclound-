@@ -216,3 +216,11 @@ SW2(config-if-range)#channel-group 1 mode auto
 ![](https://user-images.githubusercontent.com/52046920/185838773-1ab0dcaa-2bdc-42ad-bbbb-0535812fa27d.png)
 
 # ***IV. Cấu hình EtherChannel hoạt động ở chế độ Layer 3***
+* Cấu hình cũng tương tự như trên Switch layer 2.
+* Trên Switch layer 3 nếu muốn cấu hình nó trên layer 3 thì phải chuyển Switch layer 3 về chế độ layer 3.
+```cisco
+SWL3#int f0/1
+SWL3(config-if)#no switchport
+```
+* Sau khi thực hiện xong bước trên mới tiến hành cầu hình EtherChannel trên layer 3
+* Có thể cấu hình EtherChannel cho 1 bên là layer 2 và 1 bên là layer 3
