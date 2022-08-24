@@ -61,15 +61,19 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. Định tuyến là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/7.Static%20router#i%C4%91%E1%BB%8Bnh-tuy%E1%BA%BFn-l%C3%A0-g%C3%AC)
 
-## &ensp; []()
+## &ensp; [1. Định tuyến tĩnh](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/7.Static%20router#1%C4%91%E1%BB%8Bnh-tuy%E1%BA%BFn-t%C4%A9nh)
 
-## &ensp; []()
+## &ensp; [2. Định tuyến động](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/7.Static%20router#2%C4%91%E1%BB%8Bnh-tuy%E1%BA%BFn-%C4%91%E1%BB%99ng)
 
-## &ensp; []()
+# [II. Tổng quan về kỹ thuật định tuyến tĩnh](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/7.Static%20router#iit%E1%BB%95ng-quan-v%E1%BB%81-k%E1%BB%B9-thu%E1%BA%ADt-%C4%91%E1%BB%8Bnh-tuy%E1%BA%BFn-t%C4%A9nh)
 
-# []()
+# [III. Cấu hình định tuyến trên cisco router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/7.Static%20router#iiic%E1%BA%A5u-h%C3%ACnh-%C4%91%E1%BB%8Bnh-tuy%E1%BA%BFn-tr%C3%AAn-cisco-router)
+
+# [IV. Cấu hình Default Route trên Cisco Router](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/7.Static%20router#ivc%E1%BA%A5u-h%C3%ACnh-default-route-tr%C3%AAn-cisco-router)
+
+# [V. Điều hướng lưu lượng bằng cách hiệu chỉnh AD của Static Route](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/tree/main/CCNA/7.Static%20router#v%C4%91i%E1%BB%81u-h%C6%B0%E1%BB%9Bng-l%C6%B0u-l%C6%B0%E1%BB%A3ng-b%E1%BA%B1ng-c%C3%A1ch-hi%E1%BB%87u-ch%E1%BB%89nh-ad-c%E1%BB%A7a-static-route)
 ***
 # ***I.	Định tuyến là gì***
 
