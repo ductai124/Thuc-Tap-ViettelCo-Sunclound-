@@ -28,6 +28,7 @@
 ## [13.STP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/4f0e72527db7c525ef68ddbd4890260ad0944f9f/CCNA/13.STP/README.md)
 ## [14.EtherChannel](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/c55ed5b1ebfe88ea676cad395363aa786b96b4c7/CCNA/14.EtherChannel/README.md)
 ## [15.HSRP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/65a14420ceab5ca90e70e479198b8d4054eeef11/CCNA/15.HSRP/README.md)
+## [16.PortSecurity](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/fc493fe0bdeeb2652b9cb85640871102effd677b/CCNA/16.PortSecurity/README.md)
 ### &ensp; []()
 ### &ensp; []()
 ## &ensp; []()
