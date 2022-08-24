@@ -61,15 +61,9 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
+# [I. Tổng quan PortSecurity](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/16.PortSecurity/README.md#it%E1%BB%95ng-quan-portsecurity)
+# [II. Phương thức xử lý Port vi phạm](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/16.PortSecurity/README.md#iiph%C6%B0%C6%A1ng-th%E1%BB%A9c-x%E1%BB%AD-l%C3%BD-port-vi-ph%E1%BA%A1m)
+# [III. Phương thức tự động cập nhật MAC hợp lệ](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/16.PortSecurity/README.md#iiiph%C6%B0%C6%A1ng-th%E1%BB%A9c-t%E1%BB%B1-%C4%91%E1%BB%99ng-c%E1%BA%ADp-nh%E1%BA%ADt-mac-h%E1%BB%A3p-l%E1%BB%87)
 ***
 # ***I.	Tổng quan PortSecurity***
 * Là một tính năng an ninh thường được triển khai trên Switch layer 2 để ngăn chặn người lạ xâm nhập vào hệ thống mạng nội bộ, giúp chống lại cuộc tấn công giả mạo Default MAC ở trong hệ thống. 
