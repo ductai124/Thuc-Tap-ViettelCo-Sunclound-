@@ -61,15 +61,13 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. Syslog là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/17.Syslog/README.md#isyslog-l%C3%A0-g%C3%AC)
+# [II. Định dạng tin nhắn Syslog](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/17.Syslog/README.md#ii%C4%91%E1%BB%8Bnh-d%E1%BA%A1ng-tin-nh%E1%BA%AFn-syslog)
+# [III. Syslog gửi tin nhắn hoạt động như thê nào](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/17.Syslog/README.md#iiisyslog-g%E1%BB%ADi-tin-nh%E1%BA%AFn-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-nh%C6%B0-th%C3%AA-n%C3%A0o)
+# [IV. Ưu nhược điểm](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/17.Syslog/README.md#iv-%C6%B0u-nh%C6%B0%E1%BB%A3c-%C4%91i%E1%BB%83m)
+# [V. Cấu hình Router và Switch gửi thông báo lỗi về cho Syslog Server](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/17.Syslog/README.md#vc%E1%BA%A5u-h%C3%ACnh-router-v%C3%A0-switch-g%E1%BB%ADi-th%C3%B4ng-b%C3%A1o-l%E1%BB%97i-v%E1%BB%81-cho-syslog-server)
+# [VI. Giao thức NTPlà gì? Cấu hình giao thức NTP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/17.Syslog/README.md#vigiao-th%E1%BB%A9c-ntpl%C3%A0-g%C3%AC-c%E1%BA%A5u-h%C3%ACnh-giao-th%E1%BB%A9c-ntp)
 
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
 ***
 # ***I.	Syslog là gì***
 * Syslog hay System Logging Protocol(giao thức ghi Log hệ thống) là một giao thức tiêu chuẩn  được sử dụng để gửi nhật ký hệ thống hoặc thông báo 1 sự kiện phát sinh lỗi đến Syslog Server
