@@ -108,6 +108,7 @@ telnet 192.168.1.1
 ![](https://user-images.githubusercontent.com/52046920/182275174-b6c2cce2-2782-40fd-a0fb-882593d0640e.png)
 
 * Sau khi đã thiết lập mật khẩu enable thì ta có thể đứng từ xa telnet vào router và có thể truy cập vào các chế độ khác nhau để cấu hình nếu có mật khẩu enable
+
 ![](https://user-images.githubusercontent.com/52046920/182275952-b0c50afc-532c-422e-9da1-383ab8ba9429.png)
 * Khi vượt quá số người truy cập đã thiết lập các thiết bị khác sẽ không thể telnet được đến với router nữa
 
