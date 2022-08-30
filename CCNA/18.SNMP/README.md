@@ -61,15 +61,14 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. SNMP là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/18.SNMP/README.md#isnmp-l%C3%A0-g%C3%AC)
+# [II. Thành phần của SNMP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/18.SNMP/README.md#iith%C3%A0nh-ph%E1%BA%A7n-c%E1%BB%A7a-snmp)
+## &ensp; [1. SNMP Manager](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/18.SNMP/README.md#1snmp-manager)
 
-## &ensp; []()
+## &ensp; [2. SNMP Agent](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/18.SNMP/README.md#2snmp-agent)
 
-## &ensp; []()
+# [III. Cách thức hoạt động của SNMP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/18.SNMP/README.md#iiic%C3%A1ch-th%E1%BB%A9c-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-c%E1%BB%A7a-snmp)
 
-## &ensp; []()
-
-# []()
 ***
 # ***I.	SNMP là gì***
 * SNMP hay Simple Network Monitoring Protocol(Giao thức giám sát mạng đơn giản). Là 1 giao thức truyền thông để quản lý trong mạng, đặc biết là sử dụng trong mạng LAN, tùy thuộc vào phiên bản đã chọn.
