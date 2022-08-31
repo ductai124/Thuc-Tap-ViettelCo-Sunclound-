@@ -236,7 +236,7 @@ R1(config)#ip nat inside source list 1 interface g0/0 overload
 
 * Sử dụng mô hình sau
 
-![]()
+![](https://user-images.githubusercontent.com/52046920/187650371-6d4e2435-c4dd-48f5-9b76-632ff9265c09.png)
 * Cấu hình cho PAT NAT cho Server1 và Server2 ra ngoài với ip public thuộc khoảng 100.0.0.1-100.0.0.20.
 * Các cấu hình khác tương tự phần static NAT. Ta sẽ đi vào cấu hình PAT NAT trên router R1
 ```cisco
