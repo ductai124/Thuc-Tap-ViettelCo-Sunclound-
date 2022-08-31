@@ -61,13 +61,22 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
+# [I. NAT là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#inat-l%C3%A0-g%C3%AC)
+
+## &ensp; [1. Hoạt động của NAT](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#1ho%E1%BA%A1t-%C4%91%E1%BB%99ng-c%E1%BB%A7a-nat)
+
+## &ensp; [2. Các thuật ngữ được sử dụng trong NAT](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#2c%C3%A1c-thu%E1%BA%ADt-ng%E1%BB%AF-%C4%91%C6%B0%E1%BB%A3c-s%E1%BB%AD-d%E1%BB%A5ng-trong-nat)
+
+## &ensp; [3. Ưu nhược điểm](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#3%C6%B0u-nh%C6%B0%E1%BB%A3c-%C4%91i%E1%BB%83m)
+# [II. Phân loại và cấu hình NAT](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#iiph%C3%A2n-lo%E1%BA%A1i-v%C3%A0-c%E1%BA%A5u-h%C3%ACnh-nat)
+## &ensp; [1. Static NAT](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#1static-nat)
+## &ensp; [2. Dynamic NAT](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#2dynamic-nat)
+## &ensp; [3. NAT Overload](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#3nat-overload)
+## &ensp; [4. Cấu hình Static NAT IP và Port](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#4c%E1%BA%A5u-h%C3%ACnh-static-nat-ip-v%C3%A0-port)
 # []()
-
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
+# []()
+# []()
+# []()
 
 # []()
 ***
