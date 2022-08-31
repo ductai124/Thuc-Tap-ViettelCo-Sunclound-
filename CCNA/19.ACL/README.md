@@ -353,3 +353,30 @@ R2(config-time-range)# periodic daily 8:00 to 17:00
 ///Truyền time-range vào ACL
 R2(config)#access-list 100 permit ip any host 10.0.0.2 time-range AccessServer 
 ```
+
+* Các mốc thời gian có thể cấu hình
+
+![](https://user-images.githubusercontent.com/52046920/187572564-36ac5172-7d40-4a07-ad97-a3b8f9d5c87a.png)
+
+# ***V.	Phát hiện lưu lượng vi phạm bằng tính năng Log ACL***
+* Cho mô hình sau
+
+![](https://user-images.githubusercontent.com/52046920/187579933-ee24140d-31a0-4272-866c-939b9c8a6105.png)
+* Cấu hình chỉ cho PC1 telnet đến R1 và nếu PC1 telnet đến R1 hoặc PC2 telnet đến R2 thì hiện log lên thông báo
+* Cấu hình như sau
+```cisco
+R1(config)#access-list 1 permit ip host 192.168.10.2 log 
+R1(config)#access-list 1 deny any log 
+R1(config)#enable password Tai123!
+R1(config)#line vty 0 4
+R1(config-line)#access-class 1 in
+R1(config-line)#password Tai123!
+R1(config-line)#login
+```
+* Khi sự kiện xảy ra đáp ứng đúng điều kiện mà ta cấu hình để hiển thị log thì log sẽ được hiển thị ra ngoài màn hình cmd của thiết bị và có thể gửi log đó về Syslog Server
+
+* Khi PC1 telnet đến R1, PC2 telnet đến R1 và bị deny
+
+![](https://user-images.githubusercontent.com/52046920/187579946-4e45cd05-0283-4c47-9971-236656503911.png)
+
+![](https://user-images.githubusercontent.com/52046920/187579942-19f8f38f-b270-4227-ab82-90493d332728.png)
