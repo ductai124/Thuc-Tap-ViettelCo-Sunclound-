@@ -73,12 +73,6 @@ vi /etc/nginx/nginx.conf
 ## &ensp; [2. Dynamic NAT](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#2dynamic-nat)
 ## &ensp; [3. NAT Overload](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#3nat-overload)
 ## &ensp; [4. Cấu hình Static NAT IP và Port](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/20.NAT/README.md#4c%E1%BA%A5u-h%C3%ACnh-static-nat-ip-v%C3%A0-port)
-# []()
-# []()
-# []()
-# []()
-
-# []()
 ***
 # ***I.	NAT là gì***
 * NAT hay Network Address Translation là một kỹ thuật biên dịch địa chỉ IP này thành địa chỉ IP khác cụ thể hơn là biên dịch từ IP Private thành IP Public giúp cho hệ thống có thể truy cập mạng.
