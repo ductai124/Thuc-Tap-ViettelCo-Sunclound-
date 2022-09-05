@@ -61,9 +61,9 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. Dynamic Routing là gì]()
+# [I. Dynamic Routing là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/21.Dynamic%20Routing%20Protocol/README.md#idynamic-routing-l%C3%A0-g%C3%AC)
 
-# [II. Phân loại Dynamic Routing Protocol]()
+# [II. Phân loại Dynamic Routing Protocol](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/21.Dynamic%20Routing%20Protocol/README.md#iiph%C3%A2n-lo%E1%BA%A1i-dynamic-routing-protocol)
 ***
 # ***I.	Dynamic Routing là gì***
 * Dynamic Routing là định tuyến động.
