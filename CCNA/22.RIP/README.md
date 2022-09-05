@@ -61,13 +61,16 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. RIP là gì]()
+# [II. Đặc điểm RIP]()
+# [III. Nguyên lý hoạt động]()
+# [IV. Các bộ quy tắc chống loop]()
+# [V. RIPv1 và RIPv2]()
+## &ensp; [1. RIPv1]()
 
-## &ensp; []()
+## &ensp; [2. RIPv2]()
 
-## &ensp; []()
-
-## &ensp; []()
+## &ensp; [3. So sánh RIPv1 và RIPv2]()
 
 # []()
 ***
@@ -147,7 +150,7 @@ vi /etc/nginx/nginx.conf
 
 ![](https://1.bp.blogspot.com/-8qCmSur-hDY/X1EKvkIW4HI/AAAAAAAAC1k/AoTuo_LoQqoorjMA_a-oOUSjVdlAg66FwCLcBGAsYHQ/w640-h249/RIP%2BTimers.webp)
 
-# ***IV.	RIPv1 và RIPv2***
+# ***V.	RIPv1 và RIPv2***
 ## ***1. RIPv1***
 * Là giao thức định tuyến Interior Gateway Protocols(IGP) và thuộc loại classfull
 * Giao thức RIPv1 không gửi kèm subnetmask trong bản tin routing
