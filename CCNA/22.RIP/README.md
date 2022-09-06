@@ -61,20 +61,19 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. RIP là gì]()
-# [II. Đặc điểm RIP]()
-# [III. Nguyên lý hoạt động]()
-# [IV. Các bộ quy tắc chống loop]()
-# [V. RIPv1 và RIPv2]()
-## &ensp; [1. RIPv1]()
+# [I. RIP là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/22.RIP/README.md#irip-l%C3%A0-g%C3%AC)
+# [II. Đặc điểm RIP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/22.RIP/README.md#ii%C4%91%E1%BA%B7c-%C4%91i%E1%BB%83m-rip)
+# [III. Nguyên lý hoạt động](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/22.RIP/README.md#iiinguy%C3%AAn-l%C3%BD-ho%E1%BA%A1t-%C4%91%E1%BB%99ng)
+# [IV. Các bộ quy tắc chống loop](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/22.RIP/README.md#ivc%C3%A1c-b%E1%BB%99-quy-t%E1%BA%AFc-ch%E1%BB%91ng-loop)
+# [V. RIPv1 và RIPv2](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/22.RIP/README.md#vripv1-v%C3%A0-ripv2)
+## &ensp; [1. RIPv1](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/22.RIP/README.md#1-ripv1)
 
-## &ensp; [2. RIPv2]()
+## &ensp; [2. RIPv2](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/22.RIP/README.md#2-ripv2)
 
-## &ensp; [3. So sánh RIPv1 và RIPv2]()
+## &ensp; [3. So sánh RIPv1 và RIPv2](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/22.RIP/README.md#3-so-s%C3%A1nh-ripv1-v%C3%A0-ripv2)
 
-# [VI. Major Network]()
-# [VII. Cấu hình RIP]()
-# []()
+# [VI. Major Network](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/22.RIP/README.md#vimajor-network)
+# [VII. Cấu hình RIP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/22.RIP/README.md#viic%E1%BA%A5u-h%C3%ACnh-rip)
 ***
 # ***I.	RIP là gì***
 * Routing Information Protocol(RIP) là một giao thức định tuyến động và được phân loại là  một giao thức IGP (Interior Gateway Protocols-Giao thức định tuyến trong) và thuộc loại giao thức Distance Vector(Định tuyến vector). RIP sử dụng  giá trị đo lường là Hop count(Số bước nhảy) từ nguồn đến đích.
