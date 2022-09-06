@@ -72,6 +72,8 @@ vi /etc/nginx/nginx.conf
 
 ## &ensp; [3. So sánh RIPv1 và RIPv2]()
 
+# [VI. Major Network]()
+# [VII. Cấu hình RIP]()
 # []()
 ***
 # ***I.	RIP là gì***
@@ -201,3 +203,111 @@ vi /etc/nginx/nginx.conf
 ## ***3. So sánh RIPv1 và RIPv2***
 
 ![](https://user-images.githubusercontent.com/52046920/188423861-897ba3cf-71e7-4350-adbd-5f44d329b478.png)
+
+# ***VI.	Major Network***
+* Là một mạng lớn chưa bị chia nhỏ. Cụ thể nó là 1 địa chỉ IP thuộc 1 lớp nào đó với frefix mặc định ví dụ lớp A có frefix là 8, lớp B có frefix là 16 và lớp C có frefix là 24.
+* Ví dụ: Phân biết giữa Major Network và subnet
+
+|Major Network|Subnet|
+|---|---|
+|10.0.0.0/8|10.0.0.0/24|
+|172.16.0.0/16|172.16.0.0/24|
+|192.168.1/24|192.168.1.0/27|
+
+# ***VII.	Cấu hình RIP***
+* Câu lệnh cấu hình như sau
+```cisco
+R1(config)#router rip
+
+\\\Muốn sử dụng version 2 thì sử dụng câu lệnh
+R1(config-router)#version 2
+
+\\\Major Network của các cổng giao tiếp mà Router đang sử dụng
+R1(config-router)#network 192.168.1.0
+
+\\\Tắt giao thức này nhằm trường hợp muốn các Router láng giềng có thể học được các subnet của cùng 1 Major Network
+R1(config-router)#no auto-summary
+```
+* Trường hợp tắt auto-summary như sau: Ví dụ nếu R1 có 2 mạng 172.16.10.0/24 và 172.16.20.0/24 cùng có Major Network là 172.16.0.0/16. Nếu không tắt auto-summary thì các Router láng giềng sẽ chỉ học được mạng Major Network do R1 gửi mà thôi, còn nếu tắt tính năng này đi thì các Router láng giềng có thể học được cả 2 subnet trên
+
+
+* ví dụ cho mô hình:
+
+![](https://user-images.githubusercontent.com/52046920/188530561-f1ec9ae1-f93a-491d-b9e6-332669e3d2ed.png)
+* Cấu hình định tuyến RIP cho cả 3 Router như sau
+* Tại R1
+```cisco
+R1(config)#router rip
+R1(config-router)#version 2
+R1(config-router)#network 192.168.1.0
+R1(config-router)#network 192.168.2.0
+R1(config-router)#no auto-summary
+```
+* Tại R2
+```cisco
+R2(config)#router rip
+R2(config-router)#version 2
+R2(config-router)#network 192.168.2.0
+R2(config-router)#network 192.168.3.0
+R2(config-router)#network 192.168.5.0
+R2(config-router)#no auto-summary
+```
+
+* Tại R3
+```cisco
+R3(config)#router rip
+R3(config-router)#version 2
+R3(config-router)#network 192.168.3.0
+R3(config-router)#network 192.168.4.0
+R3(config-router)#no auto-summary
+```
+
+* Kiểm tra các Major Network sử dụng học được từ RIP
+```cisco
+R1#show ip route rip
+```
+* Tại R1
+
+![](https://user-images.githubusercontent.com/52046920/188530541-c3b85ae2-9026-4a55-835a-9942b249987a.png)
+* Tại R2
+
+![](https://user-images.githubusercontent.com/52046920/188530548-0b9734a3-2b70-434b-b260-76ad6bff0e02.png)
+* Tại R3
+
+![](https://user-images.githubusercontent.com/52046920/188530550-53d68eda-5be3-4ebb-a45e-d04adcf9f4fa.png)
+* Kiểm tra trong bảng định tuyến
+```cisco
+R1#show ip route
+```
+* Tại R1
+
+![](https://user-images.githubusercontent.com/52046920/188530553-dac4ac86-8e5e-457e-a80f-b04fe96c17cf.png)
+* Tại R2
+
+![](https://user-images.githubusercontent.com/52046920/188530554-e2d0a067-3643-43de-9c3f-d256ed6b3c59.png)
+* Tại R3
+
+![](https://user-images.githubusercontent.com/52046920/188530558-45583957-fcd7-4ce2-9825-ac2860560356.png)
+
+## Quảng bá default route trong giao thức RIP
+* Được sử dụng khi muốn gửi dữ liệu trong mạng nội bộ ra ngoài Internet. RIP sẽ giải quyết được hạn chế của định tuyến tĩnh như nếu có thay đổi gì ở interface đi ra ngoài mạng thì sẽ phải cấu hình lại default route còn RIP sẽ tự động sửa đổi lại.
+* Ví dụ:
+
+![](https://user-images.githubusercontent.com/52046920/188533772-5b3bd3b4-a050-4ba5-9b58-cf8f49d3a5e5.png)
+* R3 là Router kết nối ra ngoài mạng và nếu các router khác muốn kết nối ra ngoài mạng thì phải cấu hình cho R3 default route. Các router muốn ra ngoài mạng sẽ gửi dữ liệu cho R3 và được R3 chuyển tiếp ra ngoài internet
+* Câu lệnh cấu hình như sau
+```cisco
+R1(config)#router rip
+R1(config-router)#version 2
+R1(config-router)#network 192.168.1.0
+
+\\\Cấu hình Default Route
+R1(config-router)#default-information originate
+R1(config-router)#no auto-summary
+```
+
+* Kiểm tra RIP học được
+
+![](https://user-images.githubusercontent.com/52046920/188533774-397d2a39-78f3-4f6c-99c9-67cbc017802e.png)
+
+
