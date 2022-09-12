@@ -61,12 +61,12 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. EIGRP là gì]()
-# [II. Đặc điểm EIGRP]()
-# [III. Nguyên lý hoạt động của EIGRP]()
-# [IV. Cấu hình EIGRP]()
-# [V. Hiệu chỉnh metric bằng Delay và Bandwidth]()
-# [VI. Hiệu chỉnh Variance cân bằng tải theo tỉ lệ]()
+# [I. EIGRP là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/23.EIGRP/README.md#ieigrp-l%C3%A0-g%C3%AC)
+# [II. Đặc điểm EIGRP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/23.EIGRP/README.md#ii%C4%91%E1%BA%B7c-%C4%91i%E1%BB%83m-eigrp)
+# [III. Nguyên lý hoạt động của EIGRP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/23.EIGRP/README.md#iiinguy%C3%AAn-l%C3%BD-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-c%E1%BB%A7a-eigrp)
+# [IV. Cấu hình EIGRP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/23.EIGRP/README.md#ivc%E1%BA%A5u-h%C3%ACnh-eigrp)
+# [V. Hiệu chỉnh metric bằng Delay và Bandwidth](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/23.EIGRP/README.md#vhi%E1%BB%87u-ch%E1%BB%89nh-metric-b%E1%BA%B1ng-delay-v%C3%A0-bandwidth)
+# [VI. Hiệu chỉnh Variance cân bằng tải theo tỉ lệ](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/23.EIGRP/README.md#vhi%E1%BB%87u-ch%E1%BB%89nh-variance-c%C3%A2n-b%E1%BA%B1ng-t%E1%BA%A3i-theo-t%E1%BB%89-l%E1%BB%87)
 ***
 # ***I.	EIGRP là gì***
 * EIGRP là Enhance Interio Gateway Routing Protocol. Là một giao thức định tuyến do CIsco phát triển, độc quyền trên các thiết bị Cisco.
