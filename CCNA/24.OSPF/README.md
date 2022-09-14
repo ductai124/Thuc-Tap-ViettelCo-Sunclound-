@@ -61,15 +61,26 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. OSPF là gì]()
+# [II. Cách thức hoạt động]()
+# [III. Định dạng gói tin của OSPF, Các trạng thái của OSPF]()
+## &ensp; [1. Định dạng gói tin OSPF]()
 
-## &ensp; []()
+## &ensp; [2. Trạng thái của OSPF]()
+# [IV. Ưu nhược điểm của OSPF]()
+# [V. Cấu hình OSPF]()
+## &ensp; [1. Cấu hình cơ bản]()
 
-## &ensp; []()
+## &ensp; [2. Cấu hình chia các Area]()
 
-## &ensp; []()
+## &ensp; [3. Default route]()
+## &ensp; [4. Hiệu chỉnh metric]()
 
-# []()
+## &ensp; [5. Tùy chỉnh Router-ID]()
+
+## &ensp; [6. Hiệu chỉnh Hello Timer và Dead timer(Hold Timer)]()
+## &ensp; [7. Tiến trình bầu chọn DR,BDR và DROther]()
+
 ***
 # ***I.	OSPF là gì***
 * OSPF là viết tắt của Open Shortest Path First. Là 1 giao thức định tuyến nội vùng và là 1 giao thức link-state. Đây là 1 giao thức được sử dụng rộng rãi trong các mậng doanh nghiệp lớn.
@@ -260,6 +271,7 @@ R1(config)#router ospf 1
 R1(config-router)router-id 0.0.0.2
 ```
 * lưu ý không được cấu hình 2 Router có Router ID giống nhau vì điều này dẫn đến việc 2 Router sẽ không học được route của nhau
+* Nếu không cấu hình Router ID thì Router ID sẽ chọn trên các interface của Router giá trị IP cao nhất làm Router ID
 * Kiểm tra Router ID
 ```cisco
 R1#show ip ospf
@@ -282,3 +294,148 @@ R1(config-if)#ip ospf dead-interval 40
 ///Mặc định hello-timer là 10s và dead-timer là 40s
 ```
 ### ***Chú ý***: Các Timer này đều phải được đồng bộ trên toàn bộ các Router trong mạng vì đây là điều kiện tiên quyết nằm trong 5 điều kiện thiết lập neighbors 
+
+## ***7. Tiến trình bầu chọn DR,BDR và DROther***
+* DR là Designated Router, BDR là Backup Designated Router và DROther là Designated Router Other.
+* DR là 1 Router được chọn để đứng ra đóng vai trò làm nơi các Router khác trao đổi thông tin với nhau. 
+* BDR là Backup Designated Router, đúng như tên gọi nó là 1 Router để Backup cho DR khi DR gặp sự cố
+* Trong môi trường Point-To-Point thì các Router kết nối trực tiếp với nhau nên không cần 1 Router đứng ra làm DR, vậy nên cũng không có BDR
+
+![](https://user-images.githubusercontent.com/52046920/190057615-8872fc65-52dc-4156-81d8-f048a31e8948.png)
+* Trong môi trường Broadcast Multiaccess cần 1 Router đứng ra đóng vai trò làm DR làm nơi trung chuyển thông tin cho các Router trong mạng. Điều này giúp hạn chế được được tài nguyên của mạng. Khi DR gặp sự cố BDR sẽ đứng lên thay thế cho DR và các DROther se trở thành BDR. 
+
+![](https://user-images.githubusercontent.com/52046920/190051893-fa794554-7d71-416f-9da2-28f1f9b9db7f.png)
+* Việc bầu chọn DR dựa vào các chỉ số sau:
+    * Priority(Mặc định là 1 nếu không hiệu chỉnh)
+    * Nếu các priority bằng nhau thì nó sẽ căn cứ vào Router ID để xác định DR
+* Router có chỉ số priority, hoặc Router ID cao nhất thì được chọn là DR. tiếp theo là BDR và cuối cùng là DROther
+
+![](https://user-images.githubusercontent.com/52046920/190051887-da46c7ec-49c6-4a50-9da5-d6edcf11a486.png)
+
+![](https://user-images.githubusercontent.com/52046920/190051890-30c95106-10ed-48e2-94be-8ae3a9b5b9ff.png)
+* Khi DR gặp sự cố BDR sẽ đứng lên thay thế cho DR và các DROther se trở thành BDR. Tuy nhiên nếu DR cũ được khôi phục thì nso chỉ còn có thể đóng vai trò là DROther do trong giao thức này các thiết bị được kết nối vào mạng sau dù có đủ điều kiện thì cũng chỉ có chức năng DROther.
+
+![](https://user-images.githubusercontent.com/52046920/190052998-b2e0a5fd-2df3-4df5-9658-35e60aa8187e.png)
+* Muốn Router khôi phục lại chức năng ban đầu thì ta phải reset lại các tiến trình của giao thức OSPF bằng câu lệnh
+```cisco
+R#clear ip ospf process
+```
+* Hiệu chỉnh giá trị priority bằng câu lệnh 
+```cisco
+R1(config)#int g0/0
+R1(config-if)ip ospf priority 30
+```
+* Kiểm tra trạng thái và nhiệm vụ của Router bằng câu lệnh
+```cisco
+R2#show ip ospf neighbor 
+```
+
+* Ví dụ
+
+![](https://user-images.githubusercontent.com/52046920/190060951-f2c5e837-4ca7-4d54-8484-7129cc25d800.png)
+
+||g0/0|g0/1|
+|-|-|-|
+|R1|null|192.168.3.1|
+|R3|192.168.3.2|192.168.10.1|
+|R4|192.168.3.3|192.168.30.1|
+* Cấu hình cho Router1 làm DR Router4 làm BDR và Router3 là DROther
+* Tại R1
+```cisco
+R1(config)#router ospf 1
+R1(config-router)#network 192.168.3.0 0.0.0.255 area 0
+
+///Hiệu chỉnh priority của cổng kết nối với Router3 và Router4
+R1(config-router)#exit
+R1(config)#int g0/1
+R1(config-if)#ip ospf priority 30
+```
+* Tại R3
+```cisco
+R3(config)#router ospf 1
+R3(config-router)#network 192.168.3.0 0.0.0.255 area 0
+R3(config-router)#network 192.168.10.0 0.0.0.255 area 0
+
+///Hiệu chỉnh priority của cổng kết nối với Router1 và Router4
+R3(config-router)#exit
+R3(config)#int g0/1
+R3(config-if)#ip ospf priority 1
+```
+* Tại R4
+```cisco
+R4(config)#router ospf 1
+R4(config-router)#network 192.168.3.0 0.0.0.255 area 0
+R4(config-router)#network 192.168.30.0 0.0.0.255 area 0
+
+///Hiệu chỉnh priority của cổng kết nối với Router1 và Router3
+R4(config-router)#exit
+R4(config)#int g0/1
+R4(config-if)#ip ospf priority 20
+```
+* Do không cấu hình Router ID nên là Router ID sẽ được tự động lựa chọn là IP cao nhất nên ta có
+
+|Router|RouterID|
+|---|---|
+|R1|192.168.3.1|
+|R3|192.168.10.1|
+|R4|192.168.30.1|
+* Kiểm tra
+    * Tại R1 nhận thấy R3 là DROTHER R4 là BDR
+
+    ![](https://user-images.githubusercontent.com/52046920/190059638-b5a5ec1b-082a-4bcb-a6e2-8212fe8d27fb.png)
+    * Tại R2 nhận thấy R3 là DROTHER R1 là DR
+ 
+    ![](https://user-images.githubusercontent.com/52046920/190059643-5863fda8-6d80-43b4-931d-1549f99d6645.png)
+    * Tại R3 nhận thấy R1 là DR R4 là BDR
+
+    ![](https://user-images.githubusercontent.com/52046920/190059647-581ebc46-d99a-4fa6-8e3c-e5b8859d628a.png)
+* Để tự kiểm tra vai trò của mình sử dụng câu lệnh
+
+```cisco
+R1# show ip ospf interface g0/1
+```
+* Tại R1
+
+![](https://user-images.githubusercontent.com/52046920/190062641-db65cc0e-847d-4eba-8542-170511cd673a.png)
+* Tại R3
+
+![](https://user-images.githubusercontent.com/52046920/190062634-c24bf132-57df-4860-973d-e3036cedd0dd.png)
+* Tại R4
+
+![](https://user-images.githubusercontent.com/52046920/190062639-eee5f7f2-0cbe-4ec2-9258-02c7d6d1c08f.png)
+
+
+
+*  Thiết lập 2 Router kết nối với nhau với môi trường Point-To-Point bằng câu lệnh
+```cisco
+R1(config)#int g0/0
+R1(config-if)#ip ospf network-type point-to-point
+```
+* Ví dụ: 
+
+![](https://user-images.githubusercontent.com/52046920/190058543-e308ff2b-2c70-4b2f-a97c-c7e44463cb12.png)
+* Cấu hình 2 Router sau kết nối với nhau với môi trường Point-To-Point
+* Tại R1
+```cisco
+R1(config)#router ospf 1
+R1(config-router)#network 192.168.1.0 0.0.0.255 area 0
+R1(config-router)#network 123.0.0.0 0.255.255.255 area 0
+
+R1(config)#int g0/0
+R1(config-if)#ip ospf network-type point-to-point
+```
+* Tại R2
+```cisco
+R2(config)#router ospf 1
+R2(config-router)#network 10.0.0.0 0.255.255.255 area 0
+R2(config-router)#network 123.0.0.0 0.255.255.255 area 0
+
+R2(config)#int g0/0
+R2(config-if)#ip ospf network-type point-to-point
+```
+* Kiểm tra 
+```cisco
+R2#show ip ospf neighbor 
+```
+
+![](https://user-images.githubusercontent.com/52046920/190057615-8872fc65-52dc-4156-81d8-f048a31e8948.png)
