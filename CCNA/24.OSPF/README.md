@@ -61,25 +61,25 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. OSPF là gì]()
-# [II. Cách thức hoạt động]()
-# [III. Định dạng gói tin của OSPF, Các trạng thái của OSPF]()
-## &ensp; [1. Định dạng gói tin OSPF]()
+# [I. OSPF là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#iospf-l%C3%A0-g%C3%AC)
+# [II. Cách thức hoạt động](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#iic%C3%A1ch-th%E1%BB%A9c-ho%E1%BA%A1t-%C4%91%E1%BB%99ng)
+# [III. Định dạng gói tin của OSPF, Các trạng thái của OSPF](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#iii%C4%91%E1%BB%8Bnh-d%E1%BA%A1ng-g%C3%B3i-tin-c%E1%BB%A7a-ospf-c%C3%A1c-tr%E1%BA%A1ng-th%C3%A1i-c%E1%BB%A7a-ospf)
+## &ensp; [1. Định dạng gói tin OSPF](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#1-%C4%91%E1%BB%8Bnh-d%E1%BA%A1ng-g%C3%B3i-tin-ospf)
 
-## &ensp; [2. Trạng thái của OSPF]()
-# [IV. Ưu nhược điểm của OSPF]()
-# [V. Cấu hình OSPF]()
-## &ensp; [1. Cấu hình cơ bản]()
+## &ensp; [2. Trạng thái của OSPF](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#2-tr%E1%BA%A1ng-th%C3%A1i-c%E1%BB%A7a-ospf)
+# [IV. Ưu nhược điểm của OSPF](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#iv%C6%B0u-nh%C6%B0%E1%BB%A3c-%C4%91i%E1%BB%83m-c%E1%BB%A7a-ospf)
+# [V. Cấu hình OSPF](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#vc%E1%BA%A5u-h%C3%ACnh-ospf)
+## &ensp; [1. Cấu hình cơ bản](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#1-c%E1%BA%A5u-h%C3%ACnh-c%C6%A1-b%E1%BA%A3n)
 
-## &ensp; [2. Cấu hình chia các Area]()
+## &ensp; [2. Cấu hình chia các Area](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#2-c%E1%BA%A5u-h%C3%ACnh-chia-c%C3%A1c-area)
 
-## &ensp; [3. Default route]()
-## &ensp; [4. Hiệu chỉnh metric]()
+## &ensp; [3. Default route](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#3-default-route)
+## &ensp; [4. Hiệu chỉnh metric](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#4-hi%E1%BB%87u-ch%E1%BB%89nh-metric)
 
-## &ensp; [5. Tùy chỉnh Router-ID]()
+## &ensp; [5. Tùy chỉnh Router-ID](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#5-t%C3%B9y-ch%E1%BB%89nh-router-id)
 
-## &ensp; [6. Hiệu chỉnh Hello Timer và Dead timer(Hold Timer)]()
-## &ensp; [7. Tiến trình bầu chọn DR,BDR và DROther]()
+## &ensp; [6. Hiệu chỉnh Hello Timer và Dead timer(Hold Timer)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#6-hi%E1%BB%87u-ch%E1%BB%89nh-hello-timer-v%C3%A0-dead-timerhold-timer)
+## &ensp; [7. Tiến trình bầu chọn DR,BDR và DROther](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/24.OSPF/README.md#7-ti%E1%BA%BFn-tr%C3%ACnh-b%E1%BA%A7u-ch%E1%BB%8Dn-drbdr-v%C3%A0-drother)
 
 ***
 # ***I.	OSPF là gì***
