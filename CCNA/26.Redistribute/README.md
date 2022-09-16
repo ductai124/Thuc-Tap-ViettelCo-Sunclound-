@@ -62,10 +62,10 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. Redistribute là gì]()
+# [I. Redistribute là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/26.Redistribute/README.md#iredistribute-l%C3%A0-g%C3%AC)
 
-# [II. Quảng bá các route vào EIGRP]()
-# [III. Quảng bá các route vào OSPF]()
+# [II. Quảng bá các route vào EIGRP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/26.Redistribute/README.md#iiqu%E1%BA%A3ng-b%C3%A1-c%C3%A1c-route-v%C3%A0o-eigrp)
+# [III. Quảng bá các route vào OSPF](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/26.Redistribute/README.md#iiiqu%E1%BA%A3ng-b%C3%A1-c%C3%A1c-route-v%C3%A0o-ospf)
 ***
 # ***I.	Redistribute là gì***
 * Là 1 kỹ thuật quảng bá các route thuộc miền định tuyến của giao thức này sang miền định tuyến của giao thức khác cùng AS và khác AS đều sử dụng được kỹ thuật này(các Process khác nhau cũng phải sử dụng kỹ thuật này).
