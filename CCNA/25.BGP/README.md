@@ -61,16 +61,16 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. BGP là gì]()
-# [II. Chức năng và cách thức hoạt động của BGP]()
-## &ensp; [1. Chức năng]()
-## &ensp; [2. Phương thức hoạt động]()
-# [III. Cấu hình]()
-## &ensp; [1. Cấu hình thiết lập neighbors]()
-## &ensp; [2. Hiệu chỉnh Hello timer và dead timer]()
-## &ensp; [3. Hiệu chỉnh TTL để thiết lập neighbors khi không kết nối trực tiếp]()
-## &ensp; [4. Quảng bá các route]()
-## &ensp; [5. eBGP và iBGP]()
+# [I. BGP là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/25.BGP/README.md#ibgp-l%C3%A0-g%C3%AC)
+# [II. Chức năng và cách thức hoạt động của BGP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/25.BGP/README.md#iich%E1%BB%A9c-n%C4%83ng-v%C3%A0-c%C3%A1ch-th%E1%BB%A9c-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-c%E1%BB%A7a-bgp)
+## &ensp; [1. Chức năng](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/25.BGP/README.md#1-ch%E1%BB%A9c-n%C4%83ng)
+## &ensp; [2. Phương thức hoạt động](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/25.BGP/README.md#2-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-ho%E1%BA%A1t-%C4%91%E1%BB%99ng)
+# [III. Cấu hình](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/25.BGP/README.md#iiic%E1%BA%A5u-h%C3%ACnh)
+## &ensp; [1. Cấu hình thiết lập neighbors](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/25.BGP/README.md#1-c%E1%BA%A5u-h%C3%ACnh-thi%E1%BA%BFt-l%E1%BA%ADp-neighbors)
+## &ensp; [2. Hiệu chỉnh Hello timer và dead timer](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/25.BGP/README.md#2-hi%E1%BB%87u-ch%E1%BB%89nh-hello-timer-v%C3%A0-dead-timer)
+## &ensp; [3. Hiệu chỉnh TTL để thiết lập neighbors khi không kết nối trực tiếp](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/25.BGP/README.md#3-hi%E1%BB%87u-ch%E1%BB%89nh-ttl-%C4%91%E1%BB%83-thi%E1%BA%BFt-l%E1%BA%ADp-neighbors-khi-kh%C3%B4ng-k%E1%BA%BFt-n%E1%BB%91i-tr%E1%BB%B1c-ti%E1%BA%BFp)
+## &ensp; [4. Quảng bá các route](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/25.BGP/README.md#4-qu%E1%BA%A3ng-b%C3%A1-c%C3%A1c-route)
+## &ensp; [5. eBGP và iBGP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/25.BGP/README.md#5-ebgp-v%C3%A0-ibgp)
 
 ***
 # ***I.	BGP là gì***
