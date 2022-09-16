@@ -37,6 +37,8 @@
 ## [22.RIP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/d8e65f4f0fff1b52c75225bcdeae0c57a5e4ac9d/CCNA/22.RIP/README.md)
 ## [23.EIGRP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/6fcae846ea42f6221338813d3343daff7798c96c/CCNA/23.EIGRP/README.md)
 ## [24.OSPF](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/6fcae846ea42f6221338813d3343daff7798c96c/CCNA/24.OSPF/README.md)
+## [25.BGP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/fa116b879a20a5e3d5cc2d8787d115a31098e8e8/CCNA/25.BGP/README.md)
+## [26.REDISTRIBUTE](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/fa116b879a20a5e3d5cc2d8787d115a31098e8e8/CCNA/26.Redistribute/README.md)
 ### &ensp; []()
 ### &ensp; []()
 ## &ensp; []()
