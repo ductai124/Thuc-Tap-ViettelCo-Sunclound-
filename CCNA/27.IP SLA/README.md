@@ -61,9 +61,9 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. Kỹ thuật IP SLA là gì]()
+# [I. Kỹ thuật IP SLA là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/27.IP%20SLA/README.md#ik%E1%BB%B9-thu%E1%BA%ADt-ip-sla-l%C3%A0-g%C3%AC)
 
-# [II. Cấu hình IP SLA]()
+# [II. Cấu hình IP SLA](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/27.IP%20SLA/README.md#iic%E1%BA%A5u-h%C3%ACnh-ip-sla)
 ***
 # ***I.	Kỹ thuật IP SLA là gì***
 * IP SLA là IP Service level Agreements 
