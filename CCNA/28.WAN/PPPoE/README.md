@@ -61,9 +61,9 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. PPPoE là gì]()
-# [II. Cách thức hoạt động của PPPoE]()
-# [III. Cáu hình PPPoE]()
+# [I. PPPoE là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/PPPoE/README.md#ipppoe-l%C3%A0-g%C3%AC)
+# [II. Cách thức hoạt động của PPPoE](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/PPPoE/README.md#iic%C3%A1ch-th%E1%BB%A9c-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-c%E1%BB%A7a-pppoe)
+# [III. Cấu hình PPPoE](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/PPPoE/README.md#iiic%C3%A1u-h%C3%ACnh-pppoe)
 
 ***
 # ***I.	PPPoE là gì***
@@ -92,7 +92,7 @@ vi /etc/nginx/nginx.conf
     * Request – Khi nhận được gói PADO, máy khách phản hồi bằng cách gửi một gói PPPoE Active Discovery Request (PADR) đến máy chủ.
     * Confirmation – Sau khi nhận được gói PADR, máy chủ phản hồi bằng cách tạo một ID duy nhất cho phiên PPP và gửi nó trong gói xác nhận Phiên khám phá hoạt động PPPoE (PADS) tới máy khách.
     * Khi một phiên PPPoE được bắt đầu, địa chỉ IP đích chỉ được sử dụng khi phiên hoạt động. Địa chỉ IP được giải phóng sau khi phiên đóng cửa, cho phép sử dụng lại địa chỉ IP một cách hiệu quả.
-# ***III.	Cáu hình PPPoE***
+# ***III.	Cấu hình PPPoE***
 
 ![](https://user-images.githubusercontent.com/52046920/190989246-f9878de1-d3c3-4383-9f7b-de9831e10ba9.png)
 * Câu lệnh cấu hình PPPoE như sau
