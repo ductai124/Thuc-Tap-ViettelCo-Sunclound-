@@ -63,7 +63,7 @@ vi /etc/nginx/nginx.conf
 # Mục lục
 # [I. PPPoE là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/PPPoE/README.md#ipppoe-l%C3%A0-g%C3%AC)
 # [II. Cách thức hoạt động của PPPoE](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/PPPoE/README.md#iic%C3%A1ch-th%E1%BB%A9c-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-c%E1%BB%A7a-pppoe)
-# [III. Cấu hình PPPoE](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/PPPoE/README.md#iiic%C3%A1u-h%C3%ACnh-pppoe)
+# [III. Cấu hình PPPoE](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/PPPoE/README.md#iiic%E1%BA%A5u-h%C3%ACnh-pppoe)
 
 ***
 # ***I.	PPPoE là gì***
