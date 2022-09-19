@@ -61,25 +61,25 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. WAN là gì]()
-# [II. Hoạt động giao tiếp của WAN]()
-# [III. Các loại hình kết nối của WAN]()
-## &ensp; [1.Dedicated Connection(Kết nối dành riêng)]()
+# [I. WAN là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#iwan-l%C3%A0-g%C3%AC)
+# [II. Hoạt động giao tiếp của WAN](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#iiho%E1%BA%A1t-%C4%91%E1%BB%99ng-giao-ti%E1%BA%BFp-c%E1%BB%A7a-wan)
+# [III. Các loại hình kết nối của WAN](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#iiic%C3%A1c-lo%E1%BA%A1i-h%C3%ACnh-k%E1%BA%BFt-n%E1%BB%91i-c%E1%BB%A7a-wan)
+## &ensp; [1.Dedicated Connection(Kết nối dành riêng)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#1dedicated-connectionk%E1%BA%BFt-n%E1%BB%91i-d%C3%A0nh-ri%C3%AAng)
 
-## &ensp; [2. Circuilt Switched Network(Mạng chuyển mạch)]()
+## &ensp; [2. Circuilt Switched Network(Mạng chuyển mạch)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#2-circuilt-switched-networkm%E1%BA%A1ng-chuy%E1%BB%83n-m%E1%BA%A1ch)
 
-## &ensp; [3. Packet switched(Mạng chuyển mạch gói)]()
+## &ensp; [3. Packet switched(Mạng chuyển mạch gói)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#3-packet-switchedm%E1%BA%A1ng-chuy%E1%BB%83n-m%E1%BA%A1ch-g%C3%B3i)
 
-# [IV. Các dịch vụ của WAN]()
-## &ensp; [1. PSTN]()
+# [IV. Các dịch vụ của WAN](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#ivc%C3%A1c-d%E1%BB%8Bch-v%E1%BB%A5-c%E1%BB%A7a-wan)
+## &ensp; [1. PSTN](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#1-pstn)
 
-## &ensp; [2. Leased Line]()
+## &ensp; [2. Leased Line](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#2-leased-line)
 
-## &ensp; [3. X25]()
-## &ensp; [4. Frame Replay]()
+## &ensp; [3. X25](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#3-x25)
+## &ensp; [4. Frame Replay](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#4-frame-replay)
 
-## &ensp; [5. ISDN]()
-## &ensp; [6. ATM]()
+## &ensp; [5. ISDN](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#5-isdn)
+## &ensp; [6. ATM](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/README.md#6-atm)
 
 ***
 # ***I.	WAN là gì***
