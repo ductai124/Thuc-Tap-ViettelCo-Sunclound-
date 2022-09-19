@@ -61,9 +61,9 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. Giao thức PPP là gì]()
-# [II. Các bước thiết lập phiên kết nối PPP]()
-# [III. Cấu hình PPP]()
+# [I. Giao thức PPP là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/PPP/README.md#igiao-th%E1%BB%A9c-ppp-l%C3%A0-g%C3%AC)
+# [II. Các bước thiết lập phiên kết nối PPP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/PPP/README.md#ii-c%C3%A1c-b%C6%B0%E1%BB%9Bc-thi%E1%BA%BFt-l%E1%BA%ADp-phi%C3%AAn-k%E1%BA%BFt-n%E1%BB%91i-ppp-1)
+# [III. Cấu hình PPP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/28.WAN/PPP/README.md#iii-c%E1%BA%A5u-h%C3%ACnh-ppp-1)
 
 ***
 # ***I.	Giao thức PPP là gì***
