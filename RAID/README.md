@@ -151,12 +151,14 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
     ```bash
     fdisk -l | grep sd
     ```
+    
     ![Kiểm tra ổ cứng](https://user-images.githubusercontent.com/52046920/178436811-645d00cc-a326-4960-aeda-cc92f1c6bd4e.png)
 
     * Ta thấy có 2 đĩa cứng mới. Thực hiện kiểm tra xem các ổ cứng có sử dụng RAID nào chưa bằng lệnh sau.
         ```bash
         mdadm -E /dev/sd[b-c]
         ```
+        
         ![Kiểm tra đã có Raid sẵn hay chưa](https://user-images.githubusercontent.com/52046920/178436816-23726b2e-a702-4442-b8fc-61accd42c543.png)
 
 * Bước 3: Tạo phân vùng đĩa cứng. Tạo phân vùng đĩa sdb và sdc cho RAID
@@ -187,7 +189,9 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
     mdadm -E /dev/sd[b-c]
     mdadm -E /dev/sd[b-c]1
     ```
+    
     ![](https://user-images.githubusercontent.com/52046920/178436827-c7fdd1b6-9290-4851-9c69-27ff7eea4b2b.png)
+    
     ![](https://user-images.githubusercontent.com/52046920/178436830-d995cd56-9b07-4b35-8616-9443806905ed.png)
 
 * Bước 4: Tạo RAID1. 
@@ -196,11 +200,13 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
         mdadm --create /dev/md0 --level=mirror --raid-devices=2 /dev/sd[b-c]1
         ```
     * Trong quá trình tạo hệ thống yêu cầu chúng ta xác nhận tạo RADI thì bấm phím y để xác nhận.
+    
     ![Tạo thiết bị Raid](https://user-images.githubusercontent.com/52046920/178436835-695683c3-8646-4d27-aae4-147848ce80ac.png)
     * Qua kết quả trên thấy RAID1 đã được tạo với hai phân vùng sdb1 và sdc1. Kiểm tra bằng lệnh:
     ```bash
     mdadm --detail /dev/md0
     ```
+    
     ![Kiểm tra Raid](https://user-images.githubusercontent.com/52046920/178436838-868b7182-a456-47fa-99a0-9d430b9226e2.png)
 
 * Bước 5: Tạo file system (ext4) cho thiết bị RAID /dev/md0
@@ -211,12 +217,14 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
             mkdir raid1
             mount /dev/md0 raid1/
         ```
+        
     ![Mount](https://user-images.githubusercontent.com/52046920/178436844-95b8c057-8c8d-4315-9909-76ecf938e1ae.png)
     
     * Kiểm tra bằng lệnh
             ```bash
                 df -h
             ```
+            
     ![Kiểm tra mount](https://user-images.githubusercontent.com/52046920/178436848-1ce8c8a0-60d0-4d91-a227-64d53c31244c.png)
         
     * Để tự động gắn kết /dev/md0 khi khởi động lại hệ thống chúng ta cần tạo một mục trong tệp /etc/fstab. Bạn có thể sử dụng trình soạn thảo vi để nhập dòng bên dưới vào:
@@ -232,6 +240,7 @@ chia làm 2 cặp 1 ổ ghi và 1 ổ sao lưu. Dữ liệu sẽ được ghi nh
             mount a
             mount -av
         ```
+        
     ![Kiểm tra](https://user-images.githubusercontent.com/52046920/178436851-c62c6af1-f6fb-45e8-adaf-d18ee1be3b39.png)
 
 ## ***2. Thiết lập RAID 5 trên Windows server 2016***
