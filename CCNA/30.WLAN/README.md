@@ -61,15 +61,21 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. WLAN là gì?]()
+## &ensp; [1. AC là gì]()
+## &ensp; [2. Wireless LAN]()
+## &ensp; [3. SSID]()
+## &ensp; [4. Bridge Mode AC]()
+## &ensp; [5. Client Mode AC]()
+## &ensp; [6. Repeater Mode Access AC]()
+## &ensp; [7. WLC]()
 
-## &ensp; []()
 
-## &ensp; []()
-
-## &ensp; []()
-
-# []()
+# [II. Đặc điểm của WLAN]()
+## &ensp; [1. Ưu điểm]()
+## &ensp; [2. Nhược điểm]()
+# [III. Cấu hình AC]()
+# [IV. Tính năng Roaming trên AC]()
 ***
 # ***I.	WLAN là gì?***
 * WLAN(wireless local area network) mạng LAN không dây, là một mạng cho phép các thiết bị kết nối và giao tiếp không dây. Các thiết bị trên mạng WLAN giao tiếp qua WiFi.
@@ -105,8 +111,9 @@ vi /etc/nginx/nginx.conf
 ![](https://user-images.githubusercontent.com/52046920/191163400-6c2571aa-c7a3-4f3d-bd29-8d8912ac5526.png)
 
 * Repeater AC sẽ giúp  mở rộng vùng phủ sóng hiện tại qua vùng phủ sóng rộng hơn giúp lấp đầy Wireless LAN cho 1 phòng lớn hoặc 1 công ty
+
 ![](https://user-images.githubusercontent.com/52046920/191164427-518163ec-7e45-4d04-9d9a-0d85b49cfa5a.png)
-## **7. WLC***
+## ***7. WLC***
 * WLC - Wireless LAN Controller là giải pháp giúp mở rộng Wireless LAN với mô hình quá nhiều thiết bị 
 * Ví dụ một công ty muốn triển khai 75 thiết bị AC trên 1 hạ tầng mạng. thay vì cấu hình tận 75 AC thì ta chỉ cần cấu hình 1 AC đóng vai trò là WLC. Sau đó thiết bị WLC sẽ đổ cấu hình cho các AC còn lại tự động. Các AC còn lại sẽ chuyển qua chế độ Lightweight AC.
 * Còn nếu hệ thống mạng chỉ có vài AC thì chỉ cần cấu hình chế độ stanalone cho từng AC và cấu hình từng AC 1
@@ -121,7 +128,7 @@ vi /etc/nginx/nginx.conf
 * Dễ bị ảnh hưởng bởi các tín hiệu khác hoặc rào cản vật lý gây nhiễu sóng hoặc bị chặn sóng dẫn đến kết nối kém và không ổn định
 * Tốc độ không cao như mạng có dây, độ ổn định cũng vậy
 
-# ***IV.	Cấu hình AC***
+# ***III.	Cấu hình AC***
 * Các tham số phải cấu hình trên AC:
     * Tham số cơ bản:
         * DHCP
@@ -147,7 +154,7 @@ vi /etc/nginx/nginx.conf
 
 ![](https://user-images.githubusercontent.com/52046920/191170561-2425720e-0196-4be2-8137-daed9c4186d2.png)
 
-# ***V.	Tính năng Roaming trên AC***
+# ***IV.	Tính năng Roaming trên AC***
 * Roaming là tính năng cho phép các thiết bị kết nối với vùng phủ sóng này khi di chuyển qua vùng phủ sóng khác sẽ kết nối vào mà không bị ngắt kết nối. ví dụ trong công ty ta có thể đi từ từ tầng 1 đến bất cứ tầng nào trong công ty mà không bị văng mạng do có chế roaming này khi ta di chuyển qua tầng khác ta sẽ roaming vào AC của tầng đó 
 * Để sử dụng chức năng này thông thường sẽ sử dụng các thiết bị AC cùng dòng sản phẩm
 * Ta cần thiết lập các giá trị như sau :
