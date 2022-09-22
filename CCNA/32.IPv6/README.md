@@ -61,18 +61,18 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. IPv6 là gì]()
-# [II. Địa chỉ IPv6]()
-# [III. Phân loại địa chỉ IPv6]()
+# [I. IPv6 là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/32.IPv6/README.md#iipv6-l%C3%A0-g%C3%AC)
+# [II. Địa chỉ IPv6](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/32.IPv6/README.md#ii%C4%91%E1%BB%8Ba-ch%E1%BB%89-ipv6)
+# [III. Phân loại địa chỉ IPv6](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/32.IPv6/README.md#iiiph%C3%A2n-lo%E1%BA%A1i-%C4%91%E1%BB%8Ba-ch%E1%BB%89-ipv6)
 
-## &ensp; [1. Address type loopback]()
+## &ensp; [1. Address type loopback](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/32.IPv6/README.md#1address-type-loopback)
 
-## &ensp; [2. Address type Global Unicast Address]()
+## &ensp; [2. Address type Global Unicast Address](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/32.IPv6/README.md#2address-type-global-unicast-address)
 
-## &ensp; [3. Link-local]()
-# [IV. Cơ chế tự EUI-64 tự động phát trinh 64 bit Interface ID(HOST ID) IPv6]()
-# [V. Cơ chế cấp IPv6 tự động SLAAC và DHCP]()
-# [VI. Giải pháp IPv6 tunnel]()
+## &ensp; [3. Link-local](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/32.IPv6/README.md#3link-local)
+# [IV. Cơ chế tự EUI-64 tự động phát trinh 64 bit Interface ID(HOST ID) IPv6](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/32.IPv6/README.md#ivc%C6%A1-ch%E1%BA%BF-t%E1%BB%B1-eui-64-t%E1%BB%B1-%C4%91%E1%BB%99ng-ph%C3%A1t-trinh-64-bit-interface-idhost-id-ipv6)
+# [V. Cơ chế cấp IPv6 tự động SLAAC và DHCP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/32.IPv6/README.md#vc%C6%A1-ch%E1%BA%BF-c%E1%BA%A5p-ipv6-t%E1%BB%B1-%C4%91%E1%BB%99ng-slaac-v%C3%A0-dhcp)
+# [VI. Giải pháp IPv6 tunnel](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/32.IPv6/README.md#v%C4%91%E1%BB%8Bnh-tuy%E1%BA%BFn-ipv6)
 ***
 # ***I.	IPv6 là gì***
 * IPv6 - Internet Protocol version 6 . Địa chỉ IPv6 ra đời nhằm giải quyết cho sự khan hiếm IPv4 do đó địa chỉ IPv6 ra đời với không gian địa chỉ IP lớn hơn nhằm đáp ứng nhu cầu kết nối vào Internet. Tuy vậy hiện nay vẫn sử dụng đan xen giữa 2 công nghệ trên
