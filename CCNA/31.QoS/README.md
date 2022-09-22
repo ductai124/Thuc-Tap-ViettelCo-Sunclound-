@@ -61,9 +61,9 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. QoS là gì]()
-# [II. Traffic Shaping và Traffic Policing]()
-# [III. Cấu hình Traffic Shaping và Traffic Policing]()
+# [I. QoS là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/31.QoS/README.md#iqos-l%C3%A0-g%C3%AC)
+# [II. Traffic Shaping và Traffic Policing](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/31.QoS/README.md#iitraffic-shaping-v%C3%A0-traffic-policing)
+# [III. Cấu hình Traffic Shaping và Traffic Policing](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/CCNA/31.QoS/README.md#iiic%E1%BA%A5u-h%C3%ACnh-traffic-shaping-v%C3%A0-traffic-policing)
 ***
 # ***I.	QoS là gì***
 * QoS là viết tắt của Quality of Service. Đây là 1 phương thức điều khiển mức độ ưu tiên traffic của hệ thống mạng. Đơn giản là nó tryền tín hiệu đi với thời gian trễ tối thiểu và cung cấp lưu lượng băng thông cho những ứng dụng truyền thông đa phương tiện
