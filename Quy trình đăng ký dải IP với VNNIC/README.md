@@ -61,14 +61,14 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. VNNIC là ai?]()
-# [II. Quy trình đăng ký cấp, phân bổ IP]()
-## &ensp; [1. Nguyên tắc thực hiện]()
+# [I. VNNIC là ai?](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Quy%20tr%C3%ACnh%20%C4%91%C4%83ng%20k%C3%BD%20d%E1%BA%A3i%20IP%20v%E1%BB%9Bi%20VNNIC/README.md#ivnnic-l%C3%A0-ai)
+# [II. Quy trình đăng ký cấp, phân bổ IP](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Quy%20tr%C3%ACnh%20%C4%91%C4%83ng%20k%C3%BD%20d%E1%BA%A3i%20IP%20v%E1%BB%9Bi%20VNNIC/README.md#iiquy-tr%C3%ACnh-%C4%91%C4%83ng-k%C3%BD-c%E1%BA%A5p-ph%C3%A2n-b%E1%BB%95-ip)
+## &ensp; [1. Nguyên tắc thực hiện](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Quy%20tr%C3%ACnh%20%C4%91%C4%83ng%20k%C3%BD%20d%E1%BA%A3i%20IP%20v%E1%BB%9Bi%20VNNIC/README.md#1-nguy%C3%AAn-t%E1%BA%AFc-th%E1%BB%B1c-hi%E1%BB%87n)
 
-## &ensp; [2. Nguyên tắc thực hiện]()
+## &ensp; [2. Nguyên tắc thực hiện](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Quy%20tr%C3%ACnh%20%C4%91%C4%83ng%20k%C3%BD%20d%E1%BA%A3i%20IP%20v%E1%BB%9Bi%20VNNIC/README.md#2-nguy%C3%AAn-t%E1%BA%AFc-th%E1%BB%B1c-hi%E1%BB%87n)
 
-## &ensp; [3. Phương thức nộp hồ sơ]()
-## &ensp; [4. Quy trình thực hiện]()
+## &ensp; [3. Phương thức nộp hồ sơ](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Quy%20tr%C3%ACnh%20%C4%91%C4%83ng%20k%C3%BD%20d%E1%BA%A3i%20IP%20v%E1%BB%9Bi%20VNNIC/README.md#3-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-n%E1%BB%99p-h%E1%BB%93-s%C6%A1)
+## &ensp; [4. Quy trình thực hiện](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Quy%20tr%C3%ACnh%20%C4%91%C4%83ng%20k%C3%BD%20d%E1%BA%A3i%20IP%20v%E1%BB%9Bi%20VNNIC/README.md#4-quy-tr%C3%ACnh-th%E1%BB%B1c-hi%E1%BB%87n)
 
 ***
 # ***I.	VNNIC là ai?***
