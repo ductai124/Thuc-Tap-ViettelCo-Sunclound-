@@ -90,7 +90,7 @@ vi /etc/nginx/nginx.conf
 * Quá hạn 6 tháng tính từ ngày cấp mà địa chỉ không được đưa vào sử dụng sẽ bị thu hồi nếu không giải trình được mục đích sử dụng chính đáng
 * Các vùng IP sẽ bị thu hồi trong các trường hợp không xác định được chủ thể do mạo danh đăng ký hoặc thông tin không chính xác.
 * Chính sách cấp phát IPv4 đang cạn kiệt: mỗi tổ chucwsc được quyền đăng ký cấp tối đa 1 dải /23 từ dải 103/8 của APNIC. Vùng địa chỉ độc lập tối thiều mà tổ chức có nhu cầu đăng ký tới VNNIC là /24 (256 địa chỉ IP).
-* Đối với IPv6, thành viên được xét cấp miễn phí IPv6 tương đương với địa chỉ IPv4 mà thành viên được cấp. Trường hợp khối IPv6 vượt quá khối IPv4 hoặc khi thành viên chưa có địa chỉ IPv4, mức phí thành viên cần đóng sẽ phụ thuộc theo phí địa chỉ IPv6.[Tham khảo thông tin sử dụng](https://www.vnnic.vn/diachiip/hotro/thamkhao/bi%E1%BB%83u-m%E1%BB%A9c-ph%C3%AD-l%E1%BB%87-ph%C3%AD)
+* Đối với IPv6, thành viên được xét cấp miễn phí IPv6 tương đương với địa chỉ IPv4 mà thành viên được cấp. Trường hợp khối IPv6 vượt quá khối IPv4 hoặc khi thành viên chưa có địa chỉ IPv4, mức phí thành viên cần đóng sẽ phụ thuộc theo phí địa chỉ IPv6. [Tham khảo thông tin sử dụng](https://www.vnnic.vn/diachiip/hotro/thamkhao/bi%E1%BB%83u-m%E1%BB%A9c-ph%C3%AD-l%E1%BB%87-ph%C3%AD)
 * Lưu ý: Khi có vùng địa chỉ IPv4 còn trống, VNNIC thực hiện niêm yết tại địa chỉ [www.diachiip.vn](https://www.vnnic.vn/diachiip/) để các tổ chức, doanh nghiệp có nhu cầu nộp hồ sơ về VNNIC theo quy định. Các hồ sơ không có giá trị bảo lưu trong các đợt mở cấp phát IPv4 tiếp theo.
 ## ***2. Nguyên tắc thực hiện***
 * Thành phần hồ sơ đăng ký địa chỉ IP chuẩn bị:
