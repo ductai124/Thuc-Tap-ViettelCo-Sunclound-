@@ -108,9 +108,7 @@ vi /etc/nginx/nginx.conf
 ## ***4. Quy trình thực hiện***
 * Trường hợp đăng ký theo chính sách chung của khu vực Châu Á - Thái Bình Dương.
 
-![](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/f6960d03e9882a91a52c2c2306dc7a2d35fd0e09/Quy%20tr%C3%ACnh%20%C4%91%C4%83ng%20k%C3%BD%20d%E1%BA%A3i%20IP%20v%E1%BB%9Bi%20VNNIC/README.md)
-
-
+![](https://user-images.githubusercontent.com/52046920/191930486-4c106498-6b11-4a6a-93ad-b2bdd64255e0.png)
 * Chi tiết:
 
 |STT|Thủ tục|Nội dung công việc|Người thực hiện|Thời lượng|
