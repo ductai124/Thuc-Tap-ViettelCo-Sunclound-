@@ -61,15 +61,31 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. Công nghệ ảo hóa]()
+# [II. Lợi ích của công nghệ ảo hóa]()
+# [III. Hypervisor]()
+## &ensp; [1. Native]()
 
-## &ensp; []()
+## &ensp; [2. Hosted]()
 
-## &ensp; []()
 
-## &ensp; []()
+# [IV. Các loại công nghệ ảo hóa]()
+## &ensp; [1. Network]()
+## &ensp; [2. Hosted]()
+# [IV. Các loại công nghệ ảo hóa]()
+## &ensp; [1. Network]()
+## &ensp; [2. Storage]()
 
-# []()
+## &ensp; [3. Server]()
+
+## &ensp; [4. Data]()
+## &ensp; [5. Data center]()
+## &ensp; [6. Application]()
+# [V. Các mức độ ảo hóa]()
+## &ensp; [1. Ảo hóa toàn phần (full virtualization)]()
+## &ensp; [2. Ảo hóa song song, 1 nửa(Para virtualization)]()
+## &ensp; [3. Ảo hóa 1 phần (Partial virtualization)]()
+## &ensp; [4. Ảo hóa Hệ điều hành (OS virtualization)]()
 ***
 # ***I.	Công nghệ ảo hóa***
 * Công nghệ ảo hóa cơ bản là tạo ra một bản sao giống với bản sao vật lý nhưng nó là bản sao ảo.
@@ -95,7 +111,7 @@ vi /etc/nginx/nginx.conf
 * Các Hypervisor native phổ biến: VMware ESXo, Microsoft Hyper-V, Apple Boot Camp
 * Thường được sử dụng cho các ứng dụng doanh nghiệp và cloud computing(điện toán đám mây)
 
-## ***1. Hosted***
+## ***2. Hosted***
 * Hypervisor Hosted được cài đặt trên nền 1 OS của 1 máy chủ (host computer).
 * Hypervisor Hosted như 1 phần mềm trên máy tính. Nó sử dụng các dịch vụ mà OS cho phép, cung cấp để phân chia tài nguyên máy ảo
 * Các Hypervisor Hosted có thể quan lý và chạy nhiều máy ả cùng 1 lúc. 
@@ -104,24 +120,7 @@ vi /etc/nginx/nginx.conf
 gồm VMware Workstation, Oracle VirtualBox và Parallels Desktop for Mac.
 * Thường được sử dụng cho cá nhân và doanh nghiệp nhỏ
 
-
-# ***IV.	Các mức độ ảo hóa***
-## ***1.	Ảo hóa toàn phần (full virtualization)***
-* Toàn bộ phần cứng của máy tính sẽ được ảo hóa hết. Nó tách biệt phần cứng, OS và dịch vụ của máy ảo với máy chủ. Các máy ảo trong ảo hóa toàn phần không kahsc gì 1 máy thật
-* Khi ảo hóa toàn phần, máy ảo có thể truy cập toàn bộ tài nguyên, tính năng của phần cứng 
-* Sử dụng phổ biến: KVM, VirtualBox, VMware ESXi,.....
-## ***2.	Ảo hóa song song (Para virtualization)***
-* Là loại ảo hóa không ảo hóa phần cứng để chạy OS ảo mà nó tạo ra 1 lớp GUI để các OS ảo và Hypervisor giao tiếp với nhau
-* Sử dụng phổ biến: Oracle VM, ...
-## ***3.	Ảo hóa 1 phần (Partial virtualization)***
-* Chỉ tiến hành ảo hóa 1 số phần cứng nhất định của máy tính nên không đủ tài nguyên vận hành 1 OS hoàn ảo hoàn chỉnh. Nó cho phép cài đặt 1 số phần mềm, ứng dụng để tranh lãng phí tài nguyên
-## ***4.	Ảo hóa Hệ điều hành (OS virtualization)***
-* Máy ảo sử dụng 1 phần của OS để có thể sử dụng toàn bộ tính năng như ảo hóa toàn phần. Các máy ảo phải chạy cùng OS với máy chủ. Máy chủ độc lập với các máy chủ ảo
-* Sử dụng phổ biến : Docker, Linux LXC,.....
-
-
-
-# ***V.	Các loại công nghệ ảo hóa***
+# ***IV.	Các loại công nghệ ảo hóa***
 * Các loại ảo hóa thường gặp
 ## ***1. Network***
 * Switch, Card mạng được ảo hóa linh động. Các Switch ảo và Card mạng ảo này có có khả năng giống với các thiết bị thật.
@@ -149,12 +148,30 @@ gồm VMware Workstation, Oracle VirtualBox và Parallels Desktop for Mac.
 * Lớp ứng dụng được tách hoàn toàn khỏi OS. Ứng dụng chạy dưới dạng đóng gói không phụ thuộc vào OS.
 * Người dùng có thể truy cập và sử dụng ứng dụng mà không cần phải cài đặt trên máy thật của mình. 
 * Khi được ảo hóa thì các ứng dụng được chạy trong môi trường sandbox. Sanbox là 1 môi trường cô lập ứng dụng ngăn chặn các phần mềm độc hại thường dùng trong bảo mật để kiểm tra cài đặt các ứng dụng.
+* Lợi ích của ảo hóa ứng dụng:
+    * Tất cả các máy tính đều có thể sử dụng phần mềm ảo như đang cài trên máy tính của mình không lo về cấu hình. tốc độ phần mềm ổn định và không phụ thuộc và cấu hình từng máy.
+    * Các máy con không sợ virus hay spyware do cài các phần mềm
+    * Sử dụng phần mềm không cần quan tâm đến OS
+    * Phân phối phần mềm linh hoạt cho các cá nhân hoặc nhóm có nhu cầu sử dụng mà không cần cài đặt. Phân phối và gỡ bỏ phần mềm nhanh gọn. 
 ***7. Desktop***
 * Cho phép triên khai các thiêt lập của máy tính cá nhân trên trên 1 máy ảo khác. 
 * Người dùng có thể truy cập vào các máy ảo desktop trên server để sử dụng chỉ với 1 máy tính có cấu hình tối thiểu 
 * Có thể truy cập từ xa trong các trường hợp không thể đến công ty. 
 * Máy ảo có thể được sử dụng như 1 máy cá nhân của người dùng với gần như đầy đủ các tính năng
 
+# ***V.	Các mức độ ảo hóa***
+## ***1.	Ảo hóa toàn phần (full virtualization)***
+* Toàn bộ phần cứng của máy tính sẽ được ảo hóa hết. Nó tách biệt phần cứng, OS và dịch vụ của máy ảo với máy chủ. Các máy ảo trong ảo hóa toàn phần không khác gì 1 máy thật
+* Khi ảo hóa toàn phần, máy ảo có thể truy cập toàn bộ tài nguyên, tính năng của phần cứng 
+* Sử dụng phổ biến: KVM, VirtualBox, VMware ESXi,.....
+## ***2.	Ảo hóa song song, 1 nửa(Para virtualization)***
+* Là loại ảo hóa không ảo hóa phần cứng 1 cách hoàn chỉnh để chạy OS ảo mà nó tạo ra 1 lớp GUI để các OS ảo và Hypervisor giao tiếp với nhau
+* Sử dụng phổ biến: Oracle VM, ...
+## ***3.	Ảo hóa 1 phần (Partial virtualization)***
+* Chỉ tiến hành ảo hóa 1 số phần cứng nhất định của máy tính nên không đủ tài nguyên vận hành 1 OS hoàn ảo hoàn chỉnh. Nó cho phép cài đặt 1 số phần mềm, ứng dụng để tranh lãng phí tài nguyên
+## ***4.	Ảo hóa Hệ điều hành (OS virtualization)***
+* Máy ảo sử dụng 1 phần của OS để có thể sử dụng toàn bộ tính năng như ảo hóa toàn phần. Các máy ảo phải chạy cùng OS với máy chủ. Máy chủ độc lập với các máy chủ ảo
+* Sử dụng phổ biến : Docker, Linux LXC,.....
 
 
 ## Tài liệu tham khảo
