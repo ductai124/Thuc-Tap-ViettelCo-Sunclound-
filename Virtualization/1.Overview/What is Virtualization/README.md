@@ -61,31 +61,31 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. Công nghệ ảo hóa]()
-# [II. Lợi ích của công nghệ ảo hóa]()
-# [III. Hypervisor]()
-## &ensp; [1. Native]()
+# [I. Công nghệ ảo hóa](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#ic%C3%B4ng-ngh%E1%BB%87-%E1%BA%A3o-h%C3%B3a)
+# [II. Lợi ích của công nghệ ảo hóa](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#iil%E1%BB%A3i-%C3%ADch-c%E1%BB%A7a-c%C3%B4ng-ngh%E1%BB%87-%E1%BA%A3o-h%C3%B3a)
+# [III. Hypervisor](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#iiihypervisor)
+## &ensp; [1. Native](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#1-native)
 
-## &ensp; [2. Hosted]()
+## &ensp; [2. Hosted](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#2-hosted)
 
 
-# [IV. Các loại công nghệ ảo hóa]()
-## &ensp; [1. Network]()
-## &ensp; [2. Hosted]()
-# [IV. Các loại công nghệ ảo hóa]()
-## &ensp; [1. Network]()
-## &ensp; [2. Storage]()
+# [IV. Các loại công nghệ ảo hóa](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#ivc%C3%A1c-lo%E1%BA%A1i-c%C3%B4ng-ngh%E1%BB%87-%E1%BA%A3o-h%C3%B3a)
+## &ensp; [1. Network](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#1-network)
+## &ensp; [2. Hosted](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#2-storage)
+# [IV. Các loại công nghệ ảo hóa](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#2-hosted)
+## &ensp; [1. Network](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#1-network)
+## &ensp; [2. Storage](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#2-storage)
 
-## &ensp; [3. Server]()
+## &ensp; [3. Server](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#3-server)
 
-## &ensp; [4. Data]()
-## &ensp; [5. Data center]()
-## &ensp; [6. Application]()
-# [V. Các mức độ ảo hóa]()
-## &ensp; [1. Ảo hóa toàn phần (full virtualization)]()
-## &ensp; [2. Ảo hóa song song, 1 nửa(Para virtualization)]()
-## &ensp; [3. Ảo hóa 1 phần (Partial virtualization)]()
-## &ensp; [4. Ảo hóa Hệ điều hành (OS virtualization)]()
+## &ensp; [4. Data](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#4-data)
+## &ensp; [5. Data center](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#5-data-center)
+## &ensp; [6. Application](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#6-application)
+# [V. Các mức độ ảo hóa](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#vc%C3%A1c-m%E1%BB%A9c-%C4%91%E1%BB%99-%E1%BA%A3o-h%C3%B3a)
+## &ensp; [1. Ảo hóa toàn phần (full virtualization)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#1%E1%BA%A3o-h%C3%B3a-to%C3%A0n-ph%E1%BA%A7n-full-virtualization)
+## &ensp; [2. Ảo hóa song song, 1 nửa(Para virtualization)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#2%E1%BA%A3o-h%C3%B3a-song-song-1-n%E1%BB%ADapara-virtualization)
+## &ensp; [3. Ảo hóa 1 phần (Partial virtualization)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#3%E1%BA%A3o-h%C3%B3a-1-ph%E1%BA%A7n-partial-virtualization)
+## &ensp; [4. Ảo hóa Hệ điều hành (OS virtualization)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/What%20is%20Virtualization/README.md#4%E1%BA%A3o-h%C3%B3a-h%E1%BB%87-%C4%91i%E1%BB%81u-h%C3%A0nh-os-virtualization)
 ***
 # ***I.	Công nghệ ảo hóa***
 * Công nghệ ảo hóa cơ bản là tạo ra một bản sao giống với bản sao vật lý nhưng nó là bản sao ảo.
