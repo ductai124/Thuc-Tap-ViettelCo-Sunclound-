@@ -61,28 +61,28 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. Cloud computing là gì]()
-# [II. Đặc tính của Cloud Computing]()
-# [III. Các công nghệ ứng dụng trong Cloud Computing]()
-## &ensp; [1. Công nghệ ảo hóa]()
+# [I. Cloud computing là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#icloud-computing-l%C3%A0-g%C3%AC)
+# [II. Đặc tính của Cloud Computing](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#ii%C4%91%E1%BA%B7c-t%C3%ADnh-c%E1%BB%A7a-cloud-computing)
+# [III. Các công nghệ ứng dụng trong Cloud Computing](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#iiic%C3%A1c-c%C3%B4ng-ngh%E1%BB%87-%E1%BB%A9ng-d%E1%BB%A5ng-trong-cloud-computing)
+## &ensp; [1. Công nghệ ảo hóa](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#1-c%C3%B4ng-ngh%E1%BB%87-%E1%BA%A3o-h%C3%B3a)
 
-## &ensp; [2. Công nghệ tự động giám sát, điều phối tài nguyên]()
+## &ensp; [2. Công nghệ tự động giám sát, điều phối tài nguyên](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#2-c%C3%B4ng-ngh%E1%BB%87-t%E1%BB%B1-%C4%91%E1%BB%99ng-gi%C3%A1m-s%C3%A1t-%C4%91i%E1%BB%81u-ph%E1%BB%91i-t%C3%A0i-nguy%C3%AAn)
 
-## &ensp; [3. Công nghệ tính toán phân tán, hệ phân tán]()
-## &ensp; [4. Công nghệ web 2.0]()
-# [IV. Các mô hình triển khai]()
-## &ensp; [1. Public Cloud]()
+## &ensp; [3. Công nghệ tính toán phân tán, hệ phân tán](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#3-c%C3%B4ng-ngh%E1%BB%87-t%C3%ADnh-to%C3%A1n-ph%C3%A2n-t%C3%A1n-h%E1%BB%87-ph%C3%A2n-t%C3%A1n)
+## &ensp; [4. Công nghệ web 2.0](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#4-c%C3%B4ng-ngh%E1%BB%87-web-20)
+# [IV. Các mô hình triển khai](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#ivc%C3%A1c-m%C3%B4-h%C3%ACnh-tri%E1%BB%83n-khai)
+## &ensp; [1. Public Cloud](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#1-public-cloud)
 
-## &ensp; [2. Private Cloud]()
+## &ensp; [2. Private Cloud](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#2-private-cloud)
 
-## &ensp; [3. Community Cloud]()
-## &ensp; [4. Hybrid Cloud]()
+## &ensp; [3. Community Cloud](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#3-community-cloud)
+## &ensp; [4. Hybrid Cloud](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#4-hybrid-cloud)
 
-# [V. Các mô hình dịch vụ của Cloud Computing]()
-## &ensp; [1. IaaS]()
-## &ensp; [2. PaaS]()
-## &ensp; [3. SaaS]()
-# [VI. Ngăn xếp Cloud]()
+# [V. Các mô hình dịch vụ của Cloud Computing](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#vc%C3%A1c-m%C3%B4-h%C3%ACnh-d%E1%BB%8Bch-v%E1%BB%A5-c%E1%BB%A7a-cloud-computing)
+## &ensp; [1. IaaS](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#1-iaas)
+## &ensp; [2. PaaS](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#2-paas)
+## &ensp; [3. SaaS](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#3-saas)
+# [VI. Ngăn xếp Cloud](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/1.Overview/Cloud%20computing/README.md#ving%C4%83n-x%E1%BA%BFp-cloud)
 ***
 # ***I.	Cloud computing là gì***
 * Cloud - Đám mây thuật ngữ dùng để chỉ mạng hoặc internet. Nó có thể cung cấp dịch vụ qua các mạng public và private là WAN và LAN hoặc VPN.
