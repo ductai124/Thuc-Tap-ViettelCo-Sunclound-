@@ -61,18 +61,18 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. Máy chủ là gì]()
-# [II. Các thành phần chính của máy chủ]()
-## &ensp; [1. Mainboard]()
-## &ensp; [2. CPU]()
-## &ensp; [3. RAM]()
-## &ensp; [4. Storage]()
-## &ensp; [5. Card Raid]()
-## &ensp; [6. PSU]()
-## &ensp; [7. Chassis]()
-## &ensp; [8. I/O(Input/Output)]()
-## &ensp; [9. OS]()
-## &ensp; [10. Applications]()
+# [I. Máy chủ là gì](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#im%C3%A1y-ch%E1%BB%A7-l%C3%A0-g%C3%AC)
+# [II. Các thành phần chính của máy chủ](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#iic%C3%A1c-th%C3%A0nh-ph%E1%BA%A7n-ch%C3%ADnh-c%E1%BB%A7a-m%C3%A1y-ch%E1%BB%A7)
+## &ensp; [1. Mainboard](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#1-mainboard)
+## &ensp; [2. CPU](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#2-cpu)
+## &ensp; [3. RAM](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#3-ram)
+## &ensp; [4. Storage](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#4-storage)
+## &ensp; [5. Card Raid](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#5-card-raid)
+## &ensp; [6. PSU](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#6-psu)
+## &ensp; [7. Chassis](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#7-chassis)
+## &ensp; [8. I/O(Input/Output)](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#8-ioinputoutput)
+## &ensp; [9. OS](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#9-os)
+## &ensp; [10. Applications](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/2.Server%20components/README.md#10-applications)
 ***
 # ***I.	Máy chủ là gì***
 * Máy chủ - Server là một hệ thống máy tính được thiết kế đáp ứng được thời gian hoạt động lâu dài và có khả năng chịu tải cao trước các yêu cầu truy xuất, cập nhật dữ liệu liên tục từ các máy tính khác nhau trên mạng.
