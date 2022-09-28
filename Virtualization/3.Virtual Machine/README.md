@@ -61,25 +61,21 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# [I. Sự khác biệt về kiến trúc vật lý và kiến trúc ảo hóa]()
-## &ensp; [1. Native]()
-## &ensp; [2. Hosted]()
-# [II. Virtual Machine]()
-## &ensp; [1 Virtual Machine File]()
-## &ensp; [2 Chia sẻ tài nguyên vật lý]()
-# [III. Lợi ích của việc sử dụng Virtual Machine]()
-# [IV. LAB tạo 1 VM theo kịch bản thời gian thực]()
+# [I. Sự khác biệt về kiến trúc vật lý và kiến trúc ảo hóa](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#is%E1%BB%B1-kh%C3%A1c-bi%E1%BB%87t-v%E1%BB%81-ki%E1%BA%BFn-tr%C3%BAc-v%E1%BA%ADt-l%C3%BD-v%C3%A0-ki%E1%BA%BFn-tr%C3%BAc-%E1%BA%A3o-h%C3%B3a)
+## &ensp; [1. Native](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#1-native)
+## &ensp; [2. Hosted](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#2-hosted)
+# [II. Virtual Machine](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#iivirtual-machine)
+## &ensp; [1 Virtual Machine File](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#1virtual-machine-file)
+## &ensp; [2 Chia sẻ tài nguyên vật lý](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#2chia-s%E1%BA%BB-t%C3%A0i-nguy%C3%AAn-v%E1%BA%ADt-l%C3%BD)
+# [III. Lợi ích của việc sử dụng Virtual Machine](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#iiil%E1%BB%A3i-%C3%ADch-c%E1%BB%A7a-vi%E1%BB%87c-s%E1%BB%AD-d%E1%BB%A5ng-virtual-machine)
+# [IV. LAB tạo 1 VM theo kịch bản thời gian thực](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#iv-lab-t%E1%BA%A1o-1-vm-theo-k%E1%BB%8Bch-b%E1%BA%A3n-th%E1%BB%9Di-gian-th%E1%BB%B1c-1)
 
-## &ensp; [1. Pre-Implementation]()
+## &ensp; [1. Pre-Implementation](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#1-pre-implementation)
 
-## &ensp; [2. Implementation Procedure]()
+## &ensp; [2. Implementation Procedure](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#2-implementation-procedure)
 
-## &ensp; [3. Post-Implementation]()
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
+## &ensp; [3. Post-Implementation](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#3-post-implementation)
+# [V. LAB]()
 ***
 # ***I.	Sự khác biệt về kiến trúc vật lý và kiến trúc ảo hóa***
 * Ta có kiến trúc vật lý thật và kiến trúc ảo hóa.
@@ -203,6 +199,6 @@ Cũng như vậy, có thể phân phối cho máy ảo nếu không có đủ b�
 * Bảo mật VM OS khách 
 * Cung cấp thông tin chi tiết về máy ảo cho người dùng cuối/Client/khách hàng
 
-## ***4. LAB***
+## ***V. LAB***
 * [Bài lab](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/51a70fa74a8761c8054b7dfcf6779be7668dc16a/Virtualization/Lab/1.CREATE%20VIRTUAL%20MACHINE/README.md)
 
