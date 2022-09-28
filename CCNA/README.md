@@ -1,10 +1,11 @@
-# Thuc-Tap-ViettelCo-Sunclound-CCNA
+# THỰC TẬP VIETTELCO-SUNCLOUD
 
 ## Người tìm hiểu và viết tài liệu : Phạm Đức Tài
 ## SDT : 0837686717
 ## Mail : phamductai123456@gmail.com
 
 ***
+# ***TÌM HIỂU VỀ CCNA***
 # Mục lục
 ## [1.Network Basic](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/1bbe933da75019359453823a745ed35643d5ee26/CCNA/1.Network%20Basic/README.md)
 ## [2.Ethernet LAN](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/1bbe933da75019359453823a745ed35643d5ee26/CCNA/2.Ethernet%20LAN/README.md)
