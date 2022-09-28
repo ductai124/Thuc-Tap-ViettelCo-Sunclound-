@@ -1,4 +1,4 @@
-# Thuc-Tap-ViettelCo-Sunclound-
+# THỰC TẬP VIETTELCO-SUNCLOUD
 
 ## Người tìm hiểu và viết tài liệu : Phạm Đức Tài
 ## SDT : 0837686717
