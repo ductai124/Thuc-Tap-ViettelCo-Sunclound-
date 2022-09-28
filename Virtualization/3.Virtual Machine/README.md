@@ -204,5 +204,5 @@ Cũng như vậy, có thể phân phối cho máy ảo nếu không có đủ b�
 * Cung cấp thông tin chi tiết về máy ảo cho người dùng cuối/Client/khách hàng
 
 ## ***4. LAB***
-* [Bài lab]()
+* [Bài lab](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/51a70fa74a8761c8054b7dfcf6779be7668dc16a/Virtualization/Lab/1.CREATE%20VIRTUAL%20MACHINE/README.md)
 
