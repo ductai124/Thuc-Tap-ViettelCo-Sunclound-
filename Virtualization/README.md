@@ -8,8 +8,8 @@
 
 # Mục lục
 ## [Tổng quan]()
-### &ensp; [Virtualization](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/89d8fb3f7a050bda452d71dca7abb45a8ccb397a/Virtualization/1.Overview/Cloud%20computing/README.md)
 ### &ensp; [Cloud Computing](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/89d8fb3f7a050bda452d71dca7abb45a8ccb397a/Virtualization/1.Overview/Cloud%20computing/README.md)
+### &ensp; [Virtualization](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/fc9f3513d31c2b34c0028beee7b2fea91cb13834/Virtualization/1.Overview/What%20is%20Virtualization/README.md)
 ## [Thành phần trong Server]()
 ## [Virtual Machine]()
 ## [ESXi 7]()
