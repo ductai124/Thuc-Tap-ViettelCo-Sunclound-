@@ -75,7 +75,7 @@ vi /etc/nginx/nginx.conf
 ## &ensp; [2. Implementation Procedure](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#2-implementation-procedure)
 
 ## &ensp; [3. Post-Implementation](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#3-post-implementation)
-# [V. LAB]()
+# [V. LAB](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/3.Virtual%20Machine/README.md#v-lab-1)
 ***
 # ***I.	Sự khác biệt về kiến trúc vật lý và kiến trúc ảo hóa***
 * Ta có kiến trúc vật lý thật và kiến trúc ảo hóa.
