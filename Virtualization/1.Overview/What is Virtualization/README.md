@@ -124,7 +124,8 @@ gồm VMware Workstation, Oracle VirtualBox và Parallels Desktop for Mac.
 * Các loại ảo hóa thường gặp
 ## ***1. Network***
 * Switch, Card mạng được ảo hóa linh động. Các Switch ảo và Card mạng ảo này có có khả năng giống với các thiết bị thật.
-* Các tài nguyên này sẽ được phân chia băng thông thành các kênh độc lập.
+* Các tài nguyên này sẽ được phân chia băng thông thành các kênh độc lập ví dụ như ảo hóa mạng có khả năng tạo ra các vlan mà máy tính không thể tạo được.
+* Có thể tạo ra vô số các cổng kết nối ảo, card mạng ảo giúp cho việc kết nối mạng trở nên dễ dàng hơn mà không bị hạn chế quá nhiều bởi các thiết bị phần cứng
 
 ## ***2. Storage***
 * Là tập hợp các thiết bị lưu trữ được ảo hóa thành 1 thiết bị lưu trữ duy nhất
