@@ -115,7 +115,7 @@ gồm VMware Workstation, Oracle VirtualBox và Parallels Desktop for Mac.
     * Compatibility Setting: Xác định phiên bản máy chủ ESXi nào mà máy ảo có thể chỵ và các tính năng phần cứng có sẵn cho máy ảo
     * Hardware Device - Thiết bị phần cứng ảo tương tự với các thiết bị phần cứng trên máy thật được máy chủ vật lý chi sẽ tài nguyên vật lý của mình để tạo ra
 
-## ***1	Virtual Machine File***
+## ***1	Virtual Machine File đối với VMware***
 * Virtual Machine bao gòm 1 số tệp được lưu trữ. Các tệp quan trọng là configuration file, virtual disk file, NVRAM setting file, và log file.
 
 |File|Usage|Description|
