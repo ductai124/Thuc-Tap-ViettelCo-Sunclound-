@@ -170,7 +170,7 @@ gồm VMware Workstation, Oracle VirtualBox và Parallels Desktop for Mac.
 ## ***3.	Ảo hóa 1 phần (Partial virtualization)***
 * Chỉ tiến hành ảo hóa 1 số phần cứng nhất định của máy tính nên không đủ tài nguyên vận hành 1 OS hoàn ảo hoàn chỉnh. Nó cho phép cài đặt 1 số phần mềm, ứng dụng để tranh lãng phí tài nguyên
 ## ***4.	Ảo hóa Hệ điều hành (OS virtualization)***
-* Máy ảo sử dụng 1 phần của OS để có thể sử dụng toàn bộ tính năng như ảo hóa toàn phần. Các máy ảo phải chạy cùng OS với máy chủ. Máy chủ độc lập với các máy chủ ảo
+* Máy ảo sử dụng 1 phần của OS để có thể sử dụng toàn bộ tính năng như ảo hóa toàn phần. Các máy ảo không phải chạy cùng OS với máy chủ. Máy chủ độc lập với các máy chủ ảo
 * Sử dụng phổ biến : Docker, Linux LXC,.....
 
 
