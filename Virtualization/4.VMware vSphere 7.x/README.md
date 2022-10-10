@@ -92,13 +92,13 @@ vi /etc/nginx/nginx.conf
 # ***II.	VMWARE vSPHERE 7***
 * Là 1 nền tảng ảo hóa của VMware, biến các trung tâm dữ liệu thành cơ sở hạ tầng Cloud Computing tổng hợp bao gồm tài nguyên CPU, Storage và mạng. vShpere quản lý các cơ sở hạ tầng này như 1 môi trường hoạt động thống nhất và cung cấp các công cụ quản trị trung tâm dữ liệu tham gia vào môi trường đó.
 
-![](https://docs.vmware.com/en/VMware-vSphere/images/GUID-5EB66614-1EE8-4F39-8C8B-1E97EEE76791-high.png)
+![](https://user-images.githubusercontent.com/52046920/194868911-a0c55ba5-104a-4d70-a6b5-79dfaceaeb22.png)
 
 * 2 Thành phần cốt lõi của vSphere là ESXi và vCenter Server
     * ESXi là nền tảng ảo hóa nơi mà người dùng tạo ra, chạy các máy ảo và thiết bị ảo. 
     * vCenter Server là dịch vụ  được sử dụng để quản lý các Server được kết nối trong mạng. 
 
-![](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.esxi.install.doc/images/GUID-5FE2EE35-63AD-4EA4-8C02-15E4407DB135-high.png)
+![](https://user-images.githubusercontent.com/52046920/194868919-7e55eebf-7f9c-439f-ab51-9a17ccec26ba.png)
 * VMWare Vsphere có quy trình thiết lập và cài đặt như sau:
     * 1. Đọc vSphere release notes
     * 2. Cài đặt ESXi
