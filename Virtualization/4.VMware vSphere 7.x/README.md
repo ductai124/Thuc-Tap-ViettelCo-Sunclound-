@@ -63,11 +63,6 @@ vi /etc/nginx/nginx.conf
 # Mục lục
 # [I. Các khái niệm Virtualization cơ bản](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/4.VMware%20vSphere%207.x/README.md#i-c%C3%A1c-kh%C3%A1i-ni%E1%BB%87m-virtualization-c%C6%A1-b%E1%BA%A3n)
 
-## &ensp; []()
-
-## &ensp; []()
-
-## &ensp; []()
 
 # [II. VMWARE vSPHERE 7](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/main/Virtualization/4.VMware%20vSphere%207.x/README.md#iivmware-vsphere-7)
 ***
