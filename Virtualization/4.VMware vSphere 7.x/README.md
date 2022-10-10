@@ -91,6 +91,7 @@ vi /etc/nginx/nginx.conf
 
 # ***II.	VMWARE vSPHERE 7***
 * Là 1 nền tảng ảo hóa của VMware, biến các trung tâm dữ liệu thành cơ sở hạ tầng Cloud Computing tổng hợp bao gồm tài nguyên CPU, Storage và mạng. vShpere quản lý các cơ sở hạ tầng này như 1 môi trường hoạt động thống nhất và cung cấp các công cụ quản trị trung tâm dữ liệu tham gia vào môi trường đó.
+
 ![](https://docs.vmware.com/en/VMware-vSphere/images/GUID-5EB66614-1EE8-4F39-8C8B-1E97EEE76791-high.png)
 
 * 2 Thành phần cốt lõi của vSphere là ESXi và vCenter Server
