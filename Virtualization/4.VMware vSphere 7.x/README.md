@@ -54,7 +54,7 @@ vi /etc/nginx/nginx.conf
  
 -->
 
-# TÌM HIỂU VỀ VMWARE vSPHERE 7 VÀ ESXi 7
+# TÌM HIỂU VỀ VMWARE vSPHERE 7
 ## Người viết : Phạm Đức Tài
 ## SDT : 0837686717
 ## Mail : phamductai123456@gmail.com
