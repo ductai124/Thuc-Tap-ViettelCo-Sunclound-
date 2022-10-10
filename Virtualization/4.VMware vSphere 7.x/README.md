@@ -110,7 +110,7 @@ vi /etc/nginx/nginx.conf
 
 
 
-# [ESXi](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/beafd5c98a37c25c309e98b0ed7ddcb270fda790/Virtualization/4.VMware%20vSphere%207.x/ESXi/README.md)
+# [ESXi](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/2cf7e606ff8779ec96e031e65ee996cb4e50c744/Virtualization/4.VMware%20vSphere%207.x/ESXi/README.md)
 # [vCENTER]()
 <!---
 # ***VI. lab***
