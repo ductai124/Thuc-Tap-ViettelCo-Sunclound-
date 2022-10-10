@@ -61,15 +61,23 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. ESXi]()
+# [II. Kiến trúc ESXi]()
+# [III. Tổng quan về ESXi 7.0 System Storage]()
+# [IV. Host Build Procedure]()
+## &ensp; [1. Các bước trước khi cài đặt ESXi]()
+
+## &ensp; [2. Quy trình cài đặt ESXi]()
+
+## &ensp; [3. Các bước sau khi cài đặt ESXi]()
+# [V. Cài đặt ESXi 7]()
+# [VI. ESXi Host Configuration and Management]()
 
 ## &ensp; []()
 
 ## &ensp; []()
 
 ## &ensp; []()
-
-# []()
 ***
 # ***I.	ESXi***
 * ESXi là nền tảng ảo hóa dùng để tạo ra và chạy các máy ảo, thiết bị ảo
@@ -157,7 +165,7 @@ Làm theo hướng dẫn trên màn hình để cài đặt, tức là nhấn F1
 * Mở các port Firewall cần thiết (Optional)
 * Xác thực Dung lượng disk host ESXi
 * Set VMs auto start với host (Optional)
-# ***IV.	Cài đặt ESXi 7***
+# ***V.	Cài đặt ESXi 7***
 * Cài đặt ESXi theo VMWare Doc gồm các bước:
    * 1. Xác minh hệ thống đáp ứng yêu cầu phần cứng tối thiểu
     * 2. Xác định option cài đặt ESXi boot từ CD hay USB,...
@@ -220,4 +228,4 @@ Làm theo hướng dẫn trên màn hình để cài đặt, tức là nhấn F1
 * Đến lựa chọn SSH và bấm phím `Enter`. Kiểm tra trạng thái bên phải nếu hiện thị là `SSH is Enabled` là đã thành công
 
 
-# ***V. ESXi Host Configuration and Management***
+# ***VI. ESXi Host Configuration and Management***
