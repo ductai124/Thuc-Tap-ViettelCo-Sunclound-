@@ -1,2 +1,0 @@
-https://docs.vmware.com/en/VMware-vSphere/index.html
-https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.esxi.install.doc/GUID-B2F01BF5-078A-4C7E-B505-5DFFED0B8C38.html
