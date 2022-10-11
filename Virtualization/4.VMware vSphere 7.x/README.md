@@ -110,7 +110,9 @@ vi /etc/nginx/nginx.conf
 
 
 
-# [ESXi](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/2cf7e606ff8779ec96e031e65ee996cb4e50c744/Virtualization/4.VMware%20vSphere%207.x/ESXi/README.md)
+# [ESXi]()
+## &ensp; &ensp; [ESXi Host Building Process](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/8521d48546ca2feb8e2925ce57e3e3b5b0c66fd5/Virtualization/4.VMware%20vSphere%207.x/ESXi/ESXi%20Host%20Building%20Process/README.md)
+## &ensp; &ensp; [ESXi Host Configuration and Management](https://github.com/ductai124/Thuc-Tap-ViettelCo-Sunclound-/blob/8521d48546ca2feb8e2925ce57e3e3b5b0c66fd5/Virtualization/4.VMware%20vSphere%207.x/ESXi/ESXi%20Host%20Configuration%20and%20Management/README.md)
 # [vCENTER]()
 <!---
 # ***VI. lab***
