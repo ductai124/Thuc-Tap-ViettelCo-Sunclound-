@@ -71,7 +71,7 @@ vi /etc/nginx/nginx.conf
 
 ## &ensp; [3. Các bước sau khi cài đặt ESXi]()
 # [V. Cài đặt ESXi 7]()
-# [VI. ESXi Host Configuration and Management]()
+
 
 ## &ensp; []()
 
@@ -118,14 +118,15 @@ vi /etc/nginx/nginx.conf
 
 |Boot Media Size|4-10 GB|10-32 GB|32-128 GB|>128 GB|
 |-|-|-|-|-|
-|System Boot|100MB||||
-|Boot-bank 0|500MB||||
-|Boot-bank 1|500MB||||
+|System Boot|100MB|100MB|100MB|100MB|
+|Boot-bank 0|500MB|1GB|4GB|4GB|
+|Boot-bank 1|500MB|1GB|4GB|4GB|
 |ESX-OSData|Còn lại|Còn lại|Còn lại|lên đến 128 GB|
 |VMFS datastore||||Còn lại cho media size>142 GB|
 
 * Đường dẫn system storage
 
+![](https://user-images.githubusercontent.com/52046920/195019828-f9ffae93-3503-44ee-87c2-755cf6a877c1.png)
 # ***IV. Host Build Procedure***
 
 ![](https://user-images.githubusercontent.com/52046920/193181056-5c1307c3-ec35-461e-ba9c-bece39ea68aa.png)
@@ -221,11 +222,3 @@ Làm theo hướng dẫn trên màn hình để cài đặt, tức là nhấn F1
 
 ![](https://user-images.githubusercontent.com/52046920/193181044-32bf038f-8ed6-4ce9-b587-2863a95a84a7.png)
 
-* Để SSH được vào ESXi Server truy cập vào VM chứa ESXi bấm phím `F2`. Sau đó lựa chọn `Troubleshooting Options`
-
-![](https://user-images.githubusercontent.com/52046920/193181046-4554ac52-560f-4124-a120-64562f850876.png)
-
-* Đến lựa chọn SSH và bấm phím `Enter`. Kiểm tra trạng thái bên phải nếu hiện thị là `SSH is Enabled` là đã thành công
-
-
-# ***VI. ESXi Host Configuration and Management***
