@@ -87,6 +87,7 @@ vi /etc/nginx/nginx.conf
 * File system này độc lập với Vmware vSphere VMFS File System được sử dụng để lưu trữ các máy ảo
 * ESXi có thể cấu hình Syslog Server từ xa và dump server(Kết xuất) từ xa. Cho phép lưu toàn bộ thông tin log trên  hệ thống bên ngoài
 * Các Log Files
+
 |STT|Tên Log|Mô tả|
 |-|-|-|
 |1|/var/log/auth.log|ESXi xác thực Shell Success hay Failure|
@@ -100,7 +101,7 @@ vi /etc/nginx/nginx.conf
 |9|/var/log/fdm.log|vSphere Log tính khả dụng cao, được tạo ra bởi dịch vụ FDM|
 
 
-# ***III. Cấu hình cơ bản trên giao diện DUCI***
+# ***III. Cấu hình cơ bản trên giao diện DCUI***
 
 
 * Giao diện DCUI
@@ -161,6 +162,174 @@ vi /etc/nginx/nginx.conf
 * `Reset System Configuration`: Reset lại hệ thống
 
 # ***III. Các giao diện quản lý  ESXi***
+
+![](https://user-images.githubusercontent.com/52046920/195477796-6cdc3eea-c8ce-4aa9-aacd-9863a3914c12.png)
+* Có 3 giao diện quản lý ESXi sau
 ## ***1. VMWare Host Client***
+* Tại màn hình giao diện DCUI ta thấy được đường dẫn để có thể quản trị ESXi
+
+![](https://user-images.githubusercontent.com/52046920/195478269-b521d372-f123-43ad-826b-67d17b09ff9c.png)
+* Truy cập vào Brower(Trình duyệt) và nhập địa chỉ của ESXi khi đang trong môi trường local với ESXi
+
+![](https://user-images.githubusercontent.com/52046920/195478265-0fa28849-ff34-4af3-92bf-7f25d6331ff8.png)
+* Sau đó đăng nhập bằng tài khoản root để truy cập giao diện quản lý ESXi VMware Host Client.
+
+![](https://user-images.githubusercontent.com/52046920/195478443-1f44062d-7b0b-4215-b30f-72e7ec8db058.png)
+
+![](https://user-images.githubusercontent.com/52046920/195479370-c69d076c-54f0-4152-a022-085f415de21e.png)
+
+![](https://user-images.githubusercontent.com/52046920/195479372-71b622d0-8ea6-494c-b600-23e66c6650d7.png)
+
+* Các Actions ESXi
+    * Tại `Services` có thể tắt SSH và Console shell
+    ![](https://user-images.githubusercontent.com/52046920/195480315-7683a295-d18c-4e33-9bdc-49b0ee546de6.png)
+    * Chế độ bảo trì `Enter maintenance mode`
+
+    ![](https://user-images.githubusercontent.com/52046920/195480320-7ab066f4-c89a-489a-bfa6-9dc2de300815.png)
+
+    ![](https://user-images.githubusercontent.com/52046920/195480323-42c1e555-71fb-49d9-9de1-2526cd175fb8.png)
+
+    * Tại `Lockdown Mode` có thể kích hoạt chế độ Lockdown giúp ngăn chặn các phiên đăng nhập mới diễn ra trên máy chủ. Do đó sẽ vô hiệu hóa được 1 số loại hình tấn công. Có 2 chế độ là:
+        * Normal Lockdown Mode: DCUI vẫn hoạt động bình thường ở chế độ này. Nếu kết nối với hệ thống vCenter Server bị mất và không thể truy cập thông qua vSphere Client. Chỉ các tài khoản đặc quyền mơi dược đăng nhập vào ESXi để có thể thoát chế độ này. Những User được quyền truy cập chế độ khóa:
+            * Các User trong dánh sách người dùng ngoại lệ cho chế độ Lockdown
+            * User được xác định trong tùy chọn nâng cao DCUI.Access của Host. Các User này được truy cập khẩn cấp trực tiếp vào giao diện điều khiển. Các User này không yêu cầu quyền admin trên Host
+
+        * Strict Lockdown Mode: Trong chế độ này, DCUI bị dừng. Nếu kết nối với Host ESXi bị mất và  vSphere Client không còn khả dụng, Host ESXi sẽ không còn khả dụng trừ khi ESXi Shell và SSH được bật và người dụng ngoại lệ được xác định(các tài khoản được truy cập trong chế độ khóa). Nếu không thì bắt buộc phải cài lại Host ESXi
+
+    ![](https://user-images.githubusercontent.com/52046920/195480317-bb428324-5081-4946-ba3f-28f08b14c237.png)
+    * Tại `Permissions` có thể tạo các user và cấp quyền cho chúng. Có 3 User tạo sẵn là vpxuser, DCUI và root(được tạo khi cài đặt ESXi)
+
+    ![](https://user-images.githubusercontent.com/52046920/195480329-8a1db4d8-fa64-48b0-9181-e54e4c24781b.png)
+
+    ![](https://user-images.githubusercontent.com/52046920/195480326-93b30244-624a-407e-84fc-f791a046526b.png)
+
+
+    * Tại `SSH Console` có thể truy cập vào ESXi bằng chế độ SSH
+
+    ![](https://user-images.githubusercontent.com/52046920/195480334-38f0f801-8764-41d9-9ccf-26cd6712a6b6.png)
+
+    ![](https://user-images.githubusercontent.com/52046920/195481506-0748b4d8-e1a6-404e-bd2b-0d883ae910b6.png)
+    * Tại chế độ `Generate support bundle` có thể tạo một gói hỗ trợ(Generate support bundle) cho máy chủ ESXi mà bạn đã đăng nhập. Gói hỗ trợ chứa các tệp nhật ký và thông tin hệ thống mà bạn có thể sử dụng để chẩn đoán và giải quyết sự cố.
+
+    ![](https://user-images.githubusercontent.com/52046920/195480332-0c92841f-e3b6-4ff0-bec0-01c07b37aa90.png)
+
+    ![](https://user-images.githubusercontent.com/52046920/195480336-3541a271-91e5-4736-a097-578ba576a3ec.png)
+
+    ![](https://user-images.githubusercontent.com/52046920/195481074-60f096d9-91ee-410e-90bc-9bdbea8b66cb.png)
+### Tạo Storage trên ESXi
+* Thêm ổ cứng cho ESXi
+
+![](https://user-images.githubusercontent.com/52046920/195610539-f5206a77-d1e2-46a1-b8e8-631a23d3568b.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610545-9fc690b3-625f-43b0-85f2-ee51785b53f7.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610548-01f7d288-3dea-47b0-8ce4-102c9cbf7f85.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610552-8ad2f8be-4805-4419-9cc0-fd05b27a59e5.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610555-dad682e2-8bb7-429c-9caa-0296aee8006e.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610557-4d33251a-66c4-4f40-8a2c-8f485ae9ba17.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610559-c5f84a67-0fc9-445f-9718-e7a99d0a9977.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610561-6f9cb99a-ec28-4a5a-8357-f68dc7516de1.png)
+
+* Quay lại web quản trị
+![](https://user-images.githubusercontent.com/52046920/195610564-52523f68-1d71-418c-81ac-f5bba06d262c.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610564-52523f68-1d71-418c-81ac-f5bba06d262c.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610568-f9803fa6-b013-447a-a772-8368c3f3a107.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610571-e03623a7-4f3f-4b56-ba18-7030e7a3e5e1.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610573-2c49c2fb-aab6-4276-aa7c-f8dd606506ea.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610578-196c4e4a-d67b-41ae-ad0e-98c8d48eda39.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610581-26a0c6be-515e-4f8d-8928-8977367bbc22.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610585-9b5a13b8-58af-4735-b1d6-6217f5d14eae.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610589-51f738d0-3001-4d97-be53-e5ff28104209.png)
+
+
+### Đẩy file ISO lên trên Storage của ESXi
+* Chọn Storage vừa tạo
+
+![](https://user-images.githubusercontent.com/52046920/195610593-78b10d83-7895-487c-84d5-df28e0a1cdc0.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610596-6b26081a-9ba1-4161-84ab-ac58e28871c5.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610598-d65b934d-e3f0-4ab0-84b2-1977138e0983.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610600-c0cca705-363d-4fea-8164-d32af7acc21f.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610602-4de235a9-de5c-4b8d-93a7-33eccba95ad5.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610608-5bfd62d1-f186-4425-8fbb-a6e7c7596877.png)
+
+### Cài đặt máy ảo
+* Chọn Host
+
+![](https://user-images.githubusercontent.com/52046920/195610615-a1f2a815-2101-444b-be24-bbbfa033163a.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610619-fc5f7b73-b5b8-4bd7-8cf5-c93eabd1ad91.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610626-b8cc0cfa-97c5-4826-b749-1e5bc31131f8.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610629-150fd8e7-a55a-4077-8c25-bd98d2dba866.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610638-dc913e38-19a2-462a-ae00-cdf87b362510.png)
+* Chọn host add để có thể chỉnh sửa nóng nagy cả khi VM đang chạy
+
+![](https://user-images.githubusercontent.com/52046920/195610641-21559af3-6a42-46a6-884c-73b13f335cfd.png)
+
+* Tương tự với Ram
+
+![](https://user-images.githubusercontent.com/52046920/195610643-9d2ff258-b4b4-4614-a41f-ce6909c76ea0.png)
+
+* Lựa chọn đường dẫn file ISO để tiến hành cài đặt
+
+![](https://user-images.githubusercontent.com/52046920/195610646-d7802756-c3d5-4907-897d-5c2ba37bd3f7.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610649-5e5ae1e2-2723-4c39-86e0-d1730206edd0.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610654-9593a66f-c9e7-43ff-b66e-d9360afcf06b.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610656-2a8209ad-816e-4dbc-95fd-692ee6fed8ed.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610658-69557a61-0097-4c8d-95fb-ab5a4832357e.png)
+
+* Lựa chọn Virtual Machines
+
+![](https://user-images.githubusercontent.com/52046920/195610661-ed8cb399-781f-4a10-8d8c-8cc4fc8398c6.png)
+
+* Chọn VM vừa tạo
+
+![](https://user-images.githubusercontent.com/52046920/195610664-c4dd2d0b-1fdb-4909-be4d-fa2e1fa7188e.png)
+
+![](https://user-images.githubusercontent.com/52046920/195610668-a14f2677-ce54-478a-b2e2-9e1b92346167.png)
+
+* Khởi động VM
+
+![](https://user-images.githubusercontent.com/52046920/195610673-6d024e1a-e5d5-4361-b218-b0255f782296.png)
+
+* Click vào cửa sổ để mở cửa sổ giao diện của VM
+
+![](https://user-images.githubusercontent.com/52046920/195610676-04586037-7223-4b9a-ab9c-33b4ae79b21d.png)
+
+* Cài đặt Window như bình thường
+
+![](https://user-images.githubusercontent.com/52046920/195610679-01ed566c-6cf4-4093-acb8-9d58bf2a34b5.png)
+
+* Để chỉnh sửa lại cấu hình phần cứng của VM lựa chọn như sau
+
+![](https://user-images.githubusercontent.com/52046920/195610690-8ebcc3ba-f5c3-410d-9e32-743f536c0eda.png)
+
+* Thay đổi lại Card mạng
+
+![](https://user-images.githubusercontent.com/52046920/195610697-164cdef9-6435-45f4-bc5e-42ad643d9042.png)
 ## ***2. vSphere CLient***
 ## ***3. CLI***
