@@ -193,7 +193,7 @@ vi /etc/nginx/nginx.conf
 
 Giải
 
-* Ta có 2 bit mượn => n = 2 => $ 2^{2} = 4 $ . Vậy ta có số mạng chia được là 4
+* Ta có 2 bit mượn => n = 2 => $2^{2} = 4$ . Vậy ta có số mạng chia được là 4
 * m + n = 8 nên m = 6 (số bít Host còn lại)
 * $2^{m}-2 = 62$ Host
 * Octet số 4 là octet chia cắt Net và Host số bit mượn là 2 nên ta có địa chỉ mạng sẽ là bội số của 64.
@@ -210,7 +210,7 @@ Giải
 
 Giải
 
-* Ta có 3 bit mượn => n = 3 => $ 2^{3} = 8 $ . Vậy ta có số mạng chia được là 8
+* Ta có 3 bit mượn => n = 3 => $2^{3} = 8$ . Vậy ta có số mạng chia được là 8
 * m + n = 8 nên m = 5 (số bít Host còn lại)
 * $2^{5}-2 = 30$ Host
 * Octet số 4 là octet chia cắt Net và Host số bit mượn là 3 nên ta có địa chỉ mạng sẽ là bội số của 32.
