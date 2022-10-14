@@ -182,7 +182,7 @@ vi /etc/nginx/nginx.conf
     * Số subnet có thể chia được(số mạng có thể chia được): 
         * $2^{n}$ nếu hỗ trợ subnet-zero hoặc $2^{n}-2$ nếu không được hỗ trợ subnet-zero.
         * Luật Subnet-zero: nếu OS trên host không bật subnet-zero thì khi chia subnet phải bỏ đi 2 mạng con broadcast và địa chỉ mạng. Nếu địa chỉ mạng bật thì được quyền sử dụng. Do hầu hết hiện tại tính năng này đều bật mặc định vậy nên nếu không có yêu cầu gì thêm mặc định tính năng này được sử dụng.
-    * Số host: $ 2^{m}-2 $
+    * Số host: $2^{m}-2$
     * m+n= tổng số bit Host nếu không cho mượn
     * Mỗi subnet:
         * Địa chỉ mạng: có octet bị mượn(chỉ tính octet chia cắt Net và Host bị mượn bao nhiêu bit) là bội số của bước nhảy ở bảng bước nhảy bên trên.
