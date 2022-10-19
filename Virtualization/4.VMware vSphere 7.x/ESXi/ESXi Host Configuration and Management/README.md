@@ -184,6 +184,7 @@ vi /etc/nginx/nginx.conf
 
 * Các Actions ESXi
     * Tại `Services` có thể tắt SSH và Console shell
+    
     ![](https://user-images.githubusercontent.com/52046920/195480315-7683a295-d18c-4e33-9bdc-49b0ee546de6.png)
     * Chế độ bảo trì `Enter maintenance mode`
 
