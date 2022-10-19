@@ -61,13 +61,15 @@ vi /etc/nginx/nginx.conf
 
 ***
 # Mục lục
-# []()
+# [I. ESXi Components]()
+# [II. File System ESXi]()
+# [III. Cấu hình cơ bản trên giao diện DCUI]()
+# [IV. Các giao diện quản lý ESXi]()
+## &ensp; [1. VMWare Host Client - Lab tạo Storage, tạo VM trên ESXi]()
 
-## &ensp; []()
+## &ensp; [2. vSphere CLient]()
 
-## &ensp; []()
-
-## &ensp; []()
+## &ensp; [3. CLI]()
 
 # []()
 ***
@@ -161,11 +163,11 @@ vi /etc/nginx/nginx.conf
 ![](https://user-images.githubusercontent.com/52046920/194996810-911fd355-7850-4dce-a714-5ef7e3467833.png)
 * `Reset System Configuration`: Reset lại hệ thống
 
-# ***III. Các giao diện quản lý  ESXi***
+# ***IV. Các giao diện quản lý  ESXi***
 
 ![](https://user-images.githubusercontent.com/52046920/195477796-6cdc3eea-c8ce-4aa9-aacd-9863a3914c12.png)
 * Có 3 giao diện quản lý ESXi sau
-## ***1. VMWare Host Client***
+## ***1. VMWare Host Client - Lab tạo Storage, tạo VM trên ESXi***
 * Tại màn hình giao diện DCUI ta thấy được đường dẫn để có thể quản trị ESXi
 
 ![](https://user-images.githubusercontent.com/52046920/195478269-b521d372-f123-43ad-826b-67d17b09ff9c.png)
@@ -190,11 +192,11 @@ vi /etc/nginx/nginx.conf
     ![](https://user-images.githubusercontent.com/52046920/195480323-42c1e555-71fb-49d9-9de1-2526cd175fb8.png)
 
     * Tại `Lockdown Mode` có thể kích hoạt chế độ Lockdown giúp ngăn chặn các phiên đăng nhập mới diễn ra trên máy chủ. Do đó sẽ vô hiệu hóa được 1 số loại hình tấn công. Có 2 chế độ là:
-        * Normal Lockdown Mode: DCUI vẫn hoạt động bình thường ở chế độ này. Nếu kết nối với hệ thống vCenter Server bị mất và không thể truy cập thông qua vSphere Client. Chỉ các tài khoản đặc quyền mơi dược đăng nhập vào ESXi để có thể thoát chế độ này. Những User được quyền truy cập chế độ khóa:
+        * `Normal Lockdown Mode`: DCUI vẫn hoạt động bình thường ở chế độ này. Nếu kết nối với hệ thống vCenter Server bị mất và không thể truy cập thông qua vSphere Client. Chỉ các tài khoản đặc quyền mơi dược đăng nhập vào ESXi để có thể thoát chế độ này. Những User được quyền truy cập chế độ khóa:
             * Các User trong dánh sách người dùng ngoại lệ cho chế độ Lockdown
             * User được xác định trong tùy chọn nâng cao DCUI.Access của Host. Các User này được truy cập khẩn cấp trực tiếp vào giao diện điều khiển. Các User này không yêu cầu quyền admin trên Host
 
-        * Strict Lockdown Mode: Trong chế độ này, DCUI bị dừng. Nếu kết nối với Host ESXi bị mất và  vSphere Client không còn khả dụng, Host ESXi sẽ không còn khả dụng trừ khi ESXi Shell và SSH được bật và người dụng ngoại lệ được xác định(các tài khoản được truy cập trong chế độ khóa). Nếu không thì bắt buộc phải cài lại Host ESXi
+        * `Strict Lockdown Mode`: Trong chế độ này, DCUI bị dừng. Nếu kết nối với Host ESXi bị mất và  vSphere Client không còn khả dụng, Host ESXi sẽ không còn khả dụng trừ khi ESXi Shell và SSH được bật và người dụng ngoại lệ được xác định(các tài khoản được truy cập trong chế độ khóa). Nếu không thì bắt buộc phải cài lại Host ESXi
 
     ![](https://user-images.githubusercontent.com/52046920/195480317-bb428324-5081-4946-ba3f-28f08b14c237.png)
     * Tại `Permissions` có thể tạo các user và cấp quyền cho chúng. Có 3 User tạo sẵn là vpxuser, DCUI và root(được tạo khi cài đặt ESXi)
@@ -216,8 +218,9 @@ vi /etc/nginx/nginx.conf
     ![](https://user-images.githubusercontent.com/52046920/195480336-3541a271-91e5-4736-a097-578ba576a3ec.png)
 
     ![](https://user-images.githubusercontent.com/52046920/195481074-60f096d9-91ee-410e-90bc-9bdbea8b66cb.png)
-### Tạo Storage trên ESXi
-* Thêm ổ cứng cho ESXi
+# Lab
+## Tạo Storage trên ESXi
+* Thêm ổ cứng cho máy ảo ESXi theo các bước sau
 
 ![](https://user-images.githubusercontent.com/52046920/195610539-f5206a77-d1e2-46a1-b8e8-631a23d3568b.png)
 
@@ -235,70 +238,91 @@ vi /etc/nginx/nginx.conf
 
 ![](https://user-images.githubusercontent.com/52046920/195610561-6f9cb99a-ec28-4a5a-8357-f68dc7516de1.png)
 
-* Quay lại web quản trị
-![](https://user-images.githubusercontent.com/52046920/195610564-52523f68-1d71-418c-81ac-f5bba06d262c.png)
+* Quay lại web quản trị Click vào `Storage`
 
 ![](https://user-images.githubusercontent.com/52046920/195610564-52523f68-1d71-418c-81ac-f5bba06d262c.png)
+* Chọn `New datastore`
 
 ![](https://user-images.githubusercontent.com/52046920/195610568-f9803fa6-b013-447a-a772-8368c3f3a107.png)
+* Chọn `Create new VMFS datastore`
 
 ![](https://user-images.githubusercontent.com/52046920/195610571-e03623a7-4f3f-4b56-ba18-7030e7a3e5e1.png)
+* Đặt tên cho Storage, chọn ổ đĩa dùng làm Storage sau đó bấm `Next`
 
 ![](https://user-images.githubusercontent.com/52046920/195610573-2c49c2fb-aab6-4276-aa7c-f8dd606506ea.png)
+* Để mặc định sau đó bấm `Next`
 
 ![](https://user-images.githubusercontent.com/52046920/195610578-196c4e4a-d67b-41ae-ad0e-98c8d48eda39.png)
+* Bấm Finish để hoàn tất khởi tạo `Storage`
 
 ![](https://user-images.githubusercontent.com/52046920/195610581-26a0c6be-515e-4f8d-8928-8977367bbc22.png)
+* Chọn `Yes`
 
 ![](https://user-images.githubusercontent.com/52046920/195610585-9b5a13b8-58af-4735-b1d6-6217f5d14eae.png)
+* Storage đã được tạo thành công
 
 ![](https://user-images.githubusercontent.com/52046920/195610589-51f738d0-3001-4d97-be53-e5ff28104209.png)
 
 
-### Đẩy file ISO lên trên Storage của ESXi
+## Đẩy file ISO lên trên Storage của ESXi
 * Chọn Storage vừa tạo
 
 ![](https://user-images.githubusercontent.com/52046920/195610593-78b10d83-7895-487c-84d5-df28e0a1cdc0.png)
+* Chọn `Datastore browser`
 
 ![](https://user-images.githubusercontent.com/52046920/195610596-6b26081a-9ba1-4161-84ab-ac58e28871c5.png)
+* Tạo 1 thư mục chưa ISO của các OS
 
 ![](https://user-images.githubusercontent.com/52046920/195610598-d65b934d-e3f0-4ab0-84b2-1977138e0983.png)
+* Bấm chọn thư mục `Iso` vừa tạo sau đó click `Upload`
 
 ![](https://user-images.githubusercontent.com/52046920/195610600-c0cca705-363d-4fea-8164-d32af7acc21f.png)
+* Chọn File từ máy thật và để Upload lên thử mục `Iso` của ESXi sau đó chờ đợi file ISO được upload lên
 
 ![](https://user-images.githubusercontent.com/52046920/195610602-4de235a9-de5c-4b8d-93a7-33eccba95ad5.png)
+* File ISO của Win7 đã được Upload lên trên thư mục `Iso`
 
 ![](https://user-images.githubusercontent.com/52046920/195610608-5bfd62d1-f186-4425-8fbb-a6e7c7596877.png)
 
-### Cài đặt máy ảo
-* Chọn Host
+## Cài đặt máy ảo
+* Chọn `Host`
 
 ![](https://user-images.githubusercontent.com/52046920/195610615-a1f2a815-2101-444b-be24-bbbfa033163a.png)
+* Chọn `Create/Register VM` để tiến hành cài đặt máy ảo
 
 ![](https://user-images.githubusercontent.com/52046920/195610619-fc5f7b73-b5b8-4bd7-8cf5-c93eabd1ad91.png)
+* Chọn `Create a new virtual machine`sau đó click `Next`
 
 ![](https://user-images.githubusercontent.com/52046920/195610626-b8cc0cfa-97c5-4826-b749-1e5bc31131f8.png)
+* Đặt tên cho máy ảo, Chọn họ nhà OS và Version OS muốn cài đặt sau đó click `Next`
 
 ![](https://user-images.githubusercontent.com/52046920/195610629-150fd8e7-a55a-4077-8c25-bd98d2dba866.png)
+* Chọn Storage lưu trữ máy ảo
 
 ![](https://user-images.githubusercontent.com/52046920/195610638-dc913e38-19a2-462a-ae00-cdf87b362510.png)
-* Chọn host add để có thể chỉnh sửa nóng nagy cả khi VM đang chạy
+
+* Tiến hành hiết lập các thông số phần cứng ảo cho máy ảo như sau
+* Tại CPU lựa chọn các thông số cho CPU và chọn `Enable CPU Host Add` để có thể chỉnh sửa CPU sau khi cài xong VM ngay cả khi VM đang chạy
 
 ![](https://user-images.githubusercontent.com/52046920/195610641-21559af3-6a42-46a6-884c-73b13f335cfd.png)
 
-* Tương tự với Ram
+* Thiết lập thông số cho Ram và mục `Memory Hot Plug` tích chọn `Enable` để có thể thay đổi thông số cho Ram sau khi cài VM kể cả khi VM vẫn đang chạy
 
 ![](https://user-images.githubusercontent.com/52046920/195610643-9d2ff258-b4b4-4614-a41f-ce6909c76ea0.png)
 
-* Lựa chọn đường dẫn file ISO để tiến hành cài đặt
+* Lựa chọn đường dẫn file ISO để tiến hành cài đặt bằng cách lựa chọn `CD/DVD Drive 1`
 
 ![](https://user-images.githubusercontent.com/52046920/195610646-d7802756-c3d5-4907-897d-5c2ba37bd3f7.png)
+* Click chọn `Datastorage ISO file`
 
 ![](https://user-images.githubusercontent.com/52046920/195610649-5e5ae1e2-2723-4c39-86e0-d1730206edd0.png)
+* Chọn file ISO Đã đẩy lên ở bước trước
 
 ![](https://user-images.githubusercontent.com/52046920/195610654-9593a66f-c9e7-43ff-b66e-d9360afcf06b.png)
+* Click `Next` sau khi đã thiết lập xong phần cứng ảo
 
 ![](https://user-images.githubusercontent.com/52046920/195610656-2a8209ad-816e-4dbc-95fd-692ee6fed8ed.png)
+* Kiểm tra lại thông số phần cứng trước khi hoàn thành thiết lập cài đặt, sau đó click `Finish`.
 
 ![](https://user-images.githubusercontent.com/52046920/195610658-69557a61-0097-4c8d-95fb-ab5a4832357e.png)
 
