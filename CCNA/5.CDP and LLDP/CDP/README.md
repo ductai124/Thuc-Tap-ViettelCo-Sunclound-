@@ -72,6 +72,9 @@ Switch>show cdp neighbors
 * Sử dụng câu lệnh sau còn có thể biết thêm được IP của thiết bị được kết nối với cổng của thiết bị cisco người đùng đang đứng tại đó kiểm tra. Và ta còn có thể biết được thêm thông tin về tên của hệ điều hành cảu thiết bị kết nối kia
 ```cisco
 Switch>show cdp neighbors detail
+#Hoặc sử dụng
+#Show cdp entry *
+#2 câu lệnh trên tương đương nhau
 ```
 
 ![](https://user-images.githubusercontent.com/52046920/182113572-a983c1cb-07b5-4081-baba-ad4477f3b4f4.png)
