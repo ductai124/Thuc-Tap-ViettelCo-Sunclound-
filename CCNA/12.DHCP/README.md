@@ -85,7 +85,7 @@ vi /etc/nginx/nginx.conf
     * **Binding**: Là một tập hợp chứa các thông tin cầu hình trong đó có chưa ít nhất 1 địa chỉ IP đã được cấp phát đến 1 DHCP Client và máy chủ DHCP sẽ quản lý các kết nối này.
     * **DHCP Lease**: Là thời gian mà thiết bị sử dụng 1 địa chỉ IP trước khi gia hạn. Mỗi IP khi được cấp phát đều có thời gian sử dụng nhất định và được cấp địa chỉ mới khi hết hạn.
 
-![](https://fptcloud.com/wp-content/uploads/2022/01/cac-thong-diep-cua-dhcp.jpg)
+![](https://user-images.githubusercontent.com/52046920/213128198-738980f9-3e8a-425d-81a3-d2504bd8800f.jpg)
 * Các thông điệp
     * **DHCP Discover**: Là gói tin được tạo khi thiết bị yêu cầu truy cập mạng gửi broadcast trên physical subnet để đến server DHCP.
     * DHCP Offer: Sau khi nhân được DHCP Discover thì DHCP Server sẽ gửi gói tin chứa thông tin địa chỉ IP và cấu hình TCP/IP bổ sung cho máy tính Client.
