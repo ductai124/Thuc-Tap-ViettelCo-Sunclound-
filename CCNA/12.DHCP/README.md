@@ -147,7 +147,7 @@ R1(config)#ip dhcp excluded-address 10.0.0.1 10.0.0.20      /// loại bỏ ip t
 
 ```cisco
 R1(config)#ip dhcp pool PHONG_KD
-R1(dhcp-config)#network 192.168.1.0 255.0.0.0              ///Dải mạng cấp DHCP
+R1(dhcp-config)#network 192.168.1.0 255.255.255.0              ///Dải mạng cấp DHCP
 R1(dhcp-config)#default-router 192.168.1.1                 ///Default gateway
 ```
 # ***III.	Cấu hình DHCP Server trên Switch Layer 3***
