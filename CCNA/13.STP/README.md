@@ -114,7 +114,7 @@ vi /etc/nginx/nginx.conf
     * Số Priority(2byte): có giá trị từ 0 – 65535 mặc định là 32768. Đây là trường ưu tiên và có thể cấu hình
     * MAC address(6byte)
 * Tiến trình bầu chọn Root-Bridge:
-    * So sánh Switch có Priority sẽ là Root-Bridge
+    * So sánh Switch có Priority min sẽ là Root-Bridge
     * Nếu các Switch được thiết lập số Priority bằng nhau(Không xác định được Root-bridge bằng Priorrity) thì so sánh MAC, MAC nhỏ nhất thì Switch được chọn làm Root-Bridge(So sánh từ trái qua phải địa chỉ MAC để biết được địa chỉ nào nhỏ hơn).
 
     ![](https://user-images.githubusercontent.com/52046920/184835219-36dadf83-3719-44ed-a31d-2c010bcec15f.png)
