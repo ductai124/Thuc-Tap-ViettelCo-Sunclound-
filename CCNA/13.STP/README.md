@@ -156,7 +156,7 @@ vi /etc/nginx/nginx.conf
     * Khi Bridge-ID của Switch láng giềng là bằng nhau thì ta xét tiếp tục đến Port-ID của các Switch láng giềng. Port nào mà kết nối vời Port của Switch láng giềng có Port ID thấp hơn thì sẽ được chọn làm Root-Port
 
 ![](https://user-images.githubusercontent.com/52046920/184888575-48099995-555b-4ed2-8cf8-d5d02b3e6221.png)
-* Khi các luật trên không giải quyết được thì nó sẽ xét đến Port ID trên chính nó
+* Khi các luật trên không giải quyết được thì nó sẽ xét đến Port ID trên chính nó là Port priority(được xét trước có giá trị (0-255) thấp hơn thì chọn(giá trị mặc định là 128)) và port number(Số thứ tự của cổng)
 
 * Thông thường các cổng nối trực tiếp đến với switch được chọn Root-Bridge sẽ là Root-Port
 
